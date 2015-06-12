@@ -1,11 +1,11 @@
-<Workspace Version="0.8.1.1473" X="21.2899873129079" Y="220.448981090736" zoom="0.593767140625" Name="RevitJournalFile.ByPaths" ID="f5a29a26-0b2b-4919-98eb-c84e800f7d75" Description="Creates a Revit journal file that starts Revit with a given project/family and launches the Dynamo addin with a given Dynamo graph." Category="DynamoAutomation">
+<Workspace Version="0.8.1.1473" X="30" Y="56.4015817124971" zoom="0.792085848423877" Name="RevitJournalFile.ByPaths" ID="cba84c10-da98-4cb1-b6b0-12e07ea1e54e" Description="Creates a Revit journal file that starts Revit with a given project/family and launches the Dynamo addin with a given Dynamo graph." Category="DynamoAutomation">
   <NamespaceResolutionMap>
     <ClassMap partialName="String" resolvedName="DSCore.String" assemblyName="DSCoreNodes.dll" />
   </NamespaceResolutionMap>
   <Elements>
-    <Dynamo.Nodes.CodeBlockNodeModel guid="f3a091f5-dc99-4580-a885-8b01e9232daa" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="565.595157135452" y="70.258978607016" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="// Replace placeholders in journal file text&#xA;jtext2 = String.Replace(jtext1,&quot;{0}&quot;,revit_file);&#xA;// The Dynamo version should be queryable through DesignScript - ToDo for Ian&#xA;jtext3 = String.Replace(jtext2,&quot;{1}&quot;,&quot;0.7.5.3566&quot;);&#xA;jtext4 = String.Replace(jtext3,&quot;{2}&quot;,dyn_file);&#xA;// Create file name for journal file&#xA;jdir + delimeter + jfile + &quot;.txt&quot;;" ShouldFocus="false" />
-    <Dynamo.Nodes.DSFunction guid="160d674e-823e-4686-808c-238d0bc16e3e" type="Dynamo.Nodes.DSFunction" nickname="File.WriteText" x="1356.80974902498" y="138.297732409884" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.IO.File.WriteText@string,string" />
-    <Dynamo.Nodes.StringInput guid="830de7d1-ea1a-405c-92da-f82d0793adeb" type="Dynamo.Nodes.StringInput" nickname="String" x="250" y="0" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+    <Dynamo.Nodes.CodeBlockNodeModel guid="f3a091f5-dc99-4580-a885-8b01e9232daa" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="513" y="456.218333333333" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="// Replace placeholders in journal file text&#xA;jtext2 = String.Replace(jtext1,&quot;{0}&quot;,revit_file);&#xA;// The Dynamo version should be queryable through DesignScript - ToDo for Ian&#xA;jtext3 = String.Replace(jtext2,&quot;{1}&quot;,&quot;0.7.5.3566&quot;);&#xA;jtext4 = String.Replace(jtext3,&quot;{2}&quot;,dyn_file);&#xA;// Create file name for journal file&#xA;jdir + delimeter + jfile + &quot;.txt&quot;;" ShouldFocus="false" />
+    <Dynamo.Nodes.DSFunction guid="160d674e-823e-4686-808c-238d0bc16e3e" type="Dynamo.Nodes.DSFunction" nickname="File.WriteText" x="1355" y="496.253333333333" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.IO.File.WriteText@string,string" />
+    <Dynamo.Nodes.StringInput guid="830de7d1-ea1a-405c-92da-f82d0793adeb" type="Dynamo.Nodes.StringInput" nickname="String" x="0" y="0" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>Dim Jrn
 Set Jrn = CrsJournalScript 
 Jrn.Command "StartupPage" , "Open this project , ID_FILE_MRU_FIRST" 
@@ -16,24 +16,24 @@ Jrn.Command "Internal" , "Flush undo and redo stacks , ID_FLUSH_UNDO"
 Jrn.Command "SystemMenu" , "Quit the application, prompts to save projects , ID_APP_EXIT"</System.String>
       <System.String value="Dim Jrn&#xD;&#xA;Set Jrn = CrsJournalScript &#xD;&#xA;Jrn.Command &quot;StartupPage&quot; , &quot;Open this project , ID_FILE_MRU_FIRST&quot; &#xD;&#xA;Jrn.Data &quot;MRUFileName&quot;  , &quot;{0}&quot; &#xD;&#xA;Jrn.RibbonEvent &quot;Execute external command:CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Dynamo Version%versions%Dynamo {1}:Dynamo.Applications.Command0&quot;&#xD;&#xA;Jrn.Data &quot;APIStringStringMapJournalData&quot;, 1, &quot;dynFile&quot;, &quot;{2}&quot;&#xD;&#xA;Jrn.Command &quot;Internal&quot; , &quot;Flush undo and redo stacks , ID_FLUSH_UNDO&quot; &#xD;&#xA;Jrn.Command &quot;SystemMenu&quot; , &quot;Quit the application, prompts to save projects , ID_APP_EXIT&quot;" />
     </Dynamo.Nodes.StringInput>
-    <Dynamo.Nodes.StringInput guid="daad4755-26b4-4b0c-b8de-9d4b8e01cb80" type="Dynamo.Nodes.StringInput" nickname="String" x="410.782872747236" y="414.581039506337" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+    <Dynamo.Nodes.StringInput guid="daad4755-26b4-4b0c-b8de-9d4b8e01cb80" type="Dynamo.Nodes.StringInput" nickname="String" x="0" y="679.253333333333" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>\</System.String>
       <System.String value="\" />
     </Dynamo.Nodes.StringInput>
-    <Dynamo.Nodes.Symbol guid="a66fcc77-b595-4175-8a1c-0b7709edddfe" type="Dynamo.Nodes.Symbol" nickname="Input" x="0" y="0" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
-      <Symbol value="Revit File" />
+    <Dynamo.Nodes.Symbol guid="a66fcc77-b595-4175-8a1c-0b7709edddfe" type="Dynamo.Nodes.Symbol" nickname="Input" x="0" y="427.563333333333" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <Symbol value="RevitFile : string" />
     </Dynamo.Nodes.Symbol>
-    <Dynamo.Nodes.Symbol guid="16456264-93cd-4278-94f3-7c8061243f1c" type="Dynamo.Nodes.Symbol" nickname="Input" x="0" y="150" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
-      <Symbol value="Dynamo File" />
+    <Dynamo.Nodes.Symbol guid="16456264-93cd-4278-94f3-7c8061243f1c" type="Dynamo.Nodes.Symbol" nickname="Input" x="0" y="511.126666666667" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <Symbol value="DynamoFile : string" />
     </Dynamo.Nodes.Symbol>
-    <Dynamo.Nodes.Symbol guid="72a05850-aedd-4827-ae2b-2fbc24a7c36f" type="Dynamo.Nodes.Symbol" nickname="Input" x="0" y="300" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
-      <Symbol value="Journal Directory" />
+    <Dynamo.Nodes.Symbol guid="72a05850-aedd-4827-ae2b-2fbc24a7c36f" type="Dynamo.Nodes.Symbol" nickname="Input" x="0" y="594.69" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <Symbol value="JournalDirectory : string" />
     </Dynamo.Nodes.Symbol>
-    <Dynamo.Nodes.Symbol guid="f5aff534-8d55-4e42-9997-8c5d77deb43e" type="Dynamo.Nodes.Symbol" nickname="Input" x="0" y="450" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
-      <Symbol value="Journal File Name" />
+    <Dynamo.Nodes.Symbol guid="f5aff534-8d55-4e42-9997-8c5d77deb43e" type="Dynamo.Nodes.Symbol" nickname="Input" x="0" y="762.816666666667" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <Symbol value="JournalFileName : string = &quot;DynamoJournalFile&quot;" />
     </Dynamo.Nodes.Symbol>
-    <Dynamo.Nodes.Output guid="fda2c024-7a29-4200-9b17-04e06187ad13" type="Dynamo.Nodes.Output" nickname="Output" x="1363.65544635436" y="278.635014836795" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
-      <Symbol value="Journal File Path" />
+    <Dynamo.Nodes.Output guid="fda2c024-7a29-4200-9b17-04e06187ad13" type="Dynamo.Nodes.Output" nickname="Output" x="1355" y="630.253333333333" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <Symbol value="JournalFilePath" />
     </Dynamo.Nodes.Output>
   </Elements>
   <Connectors>
