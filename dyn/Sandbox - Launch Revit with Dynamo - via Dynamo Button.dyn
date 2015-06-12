@@ -1,4 +1,4 @@
-<Workspace Version="0.8.1.1473" X="30" Y="142.316823899371" zoom="0.928459119496855" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="0.8.1.1473" X="64.6329260922153" Y="179.51145739322" zoom="0.763033641988502" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap />
   <Elements>
     <DSCore.File.Filename guid="bf2dece6-d61b-46eb-bf73-44b44e34a338" type="DSCore.File.Filename" nickname="File Path (Revit File)" x="0" y="84" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
@@ -72,6 +72,8 @@
     <Dynamo.Models.ConnectorModel start="597998d0-6655-45b8-9726-d75f9cba479a" start_index="0" end="7fcbb61d-5120-4752-93cc-9e2159d420f0" end_index="1" portType="0" />
     <Dynamo.Models.ConnectorModel start="79cfb3e3-95b8-4453-8790-da7ea69de931" start_index="0" end="b9b0c388-90a0-4432-8c34-b3a46706d23e" end_index="4" portType="0" />
   </Connectors>
-  <Notes />
+  <Notes>
+    <Dynamo.Models.NoteModel guid="bb2aa4e0-7a55-4929-ac67-4a3486cc47d2" text="Result: &quot;Error on opening document&quot;&#xD;&#xA;(This is referring to the Revit project file...)&#xD;&#xA;... and Revit exits." x="1109.47101559343" y="304.947469683697" />
+  </Notes>
   <Annotations />
 </Workspace>

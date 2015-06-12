@@ -1,4 +1,4 @@
-<Workspace Version="0.8.1.1473" X="-707.467014016932" Y="-52.499155689172" zoom="1.35728761025083" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+<Workspace Version="0.8.1.1473" X="30" Y="161.312106918239" zoom="0.928459119496855" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap />
   <Elements>
     <DSCore.File.Filename guid="bf2dece6-d61b-46eb-bf73-44b44e34a338" type="DSCore.File.Filename" nickname="File Path (Revit File)" x="0" y="84" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
@@ -43,7 +43,7 @@
     </Dynamo.Nodes.Function>
     <Dynamo.Nodes.CodeBlockNodeModel guid="597998d0-6655-45b8-9726-d75f9cba479a" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="761" y="194.218333333333" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="&quot;\&quot;&quot; + jfile + &quot;\&quot;&quot;;" ShouldFocus="false" />
     <Dynamo.Nodes.Function guid="afc0f194-ecdf-4528-a4ea-c1ca38bab4f1" type="Dynamo.Nodes.Function" nickname="RevitJournalFile.ByPaths" x="416.985605419137" y="192.08382726503" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
-      <ID value="1c1a79a0-b042-43fe-bd82-6d279b03687e" />
+      <ID value="f5a29a26-0b2b-4919-98eb-c84e800f7d75" />
       <Name value="RevitJournalFile.ByPaths" />
       <Description value="Creates a Revit journal file that starts Revit with a given project/family and launches the Dynamo addin with a given Dynamo graph." />
       <Inputs>
@@ -68,7 +68,7 @@
     <Dynamo.Models.ConnectorModel start="afc0f194-ecdf-4528-a4ea-c1ca38bab4f1" start_index="0" end="597998d0-6655-45b8-9726-d75f9cba479a" end_index="0" portType="0" />
   </Connectors>
   <Notes>
-    <Dynamo.Models.NoteModel guid="e6feeea4-a0b0-40cb-93f3-2940a2507501" text="Result: &quot;Error on opening document&quot;&#xD;&#xA;(where document would probably be the journal file...)&#xD;&#xA;... and Revit exits." x="1103.96215579803" y="265.795190627451" />
+    <Dynamo.Models.NoteModel guid="e6feeea4-a0b0-40cb-93f3-2940a2507501" text="Result: &quot;Error on opening document&quot;&#xD;&#xA;(This is referring to the Revit project file...)&#xD;&#xA;... and Revit exits." x="1103.96215579803" y="265.795190627451" />
   </Notes>
   <Annotations />
 </Workspace>

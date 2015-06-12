@@ -1,4 +1,4 @@
-<Workspace Version="0.8.1.1473" X="30" Y="297.019174433054" zoom="1.10065237651445" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+<Workspace Version="0.8.1.1473" X="30" Y="277.019174433054" zoom="1.10065237651445" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap />
   <Elements>
     <DSCore.File.Filename guid="bf2dece6-d61b-46eb-bf73-44b44e34a338" type="DSCore.File.Filename" nickname="File Path (Revit File)" x="0" y="104" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
@@ -40,7 +40,7 @@
     <Dynamo.Models.ConnectorModel start="4e4e4001-3a48-4034-934a-fc43e7400ff7" start_index="0" end="7fcbb61d-5120-4752-93cc-9e2159d420f0" end_index="1" portType="0" />
   </Connectors>
   <Notes>
-    <Dynamo.Models.NoteModel guid="b4433bf1-3e5f-4b20-a1d7-107d26de9da6" text="Will open a project file alright, but afterwards the Dynamo addin cannot be launched manually.&#xD;&#xA;&quot;Revit could not complete the external command. ...&quot;" x="901.678662150719" y="174.819581569292" />
+    <Dynamo.Models.NoteModel guid="b4433bf1-3e5f-4b20-a1d7-107d26de9da6" text="Will open a project file alright&#xD;&#xA;Afterwards in Revit 2015, the Dynamo addin cannot be launched manually. (&quot;Revit could not complete the external command. ...&quot;)&#xD;&#xA;In Revit 2016 this does not happen.&#xD;&#xA;Since there is no version selector in 2016, it stands to reason that that component is the culprit." x="901.678662150719" y="174.819581569292" />
   </Notes>
   <Annotations />
 </Workspace>
