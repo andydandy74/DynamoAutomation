@@ -1,2 +1,2 @@
-# AutomatingAutomation
-Examples for batch-processing of Revit models using Dynamo and RTF
+# Dynamo Automation
+Examples for batch-processing of Revit models using Dynamo
