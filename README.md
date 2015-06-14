@@ -9,9 +9,9 @@ Examples for batch-processing of Revit models using Dynamo
     - Show stopper for work flows that require family editing 
 
 ## Typical abstract scenarios
-- A1: Run the same graph on all models in a folder
-- A2: Run the same graph on all models in a list of folders
-- A3: Run the same graph on a list of models at various locations
+- A1: Run the same or multiple graph(s) on all models in a folder
+- A2: Run the same or multiple graph(s) on all models in a list of folders
+- A3: Run the same or multiple graph(s) on a list of models at various locations
 - A4: Run multiple graphs on multiple files according to a matrix
 - B: Run one graph to find all links in a project, run a second graph on all links
 - C: Run one graph to export certain families from a project, run a second graph on all families, run a third graph to load all families back into the project
