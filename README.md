@@ -20,9 +20,11 @@ Examples for batch-processing of Revit models using Dynamo
 - Original use case
     - BIM.Basics model checker (https://prezi.com/kaagf4w6iq-d/the-truth-is-in-the-model/)
 - Some typical QC examples
-    - One cleanup task
-    - One markup task
-    - One report task
+    - One cleanup task (change all elements that do not comply to a given rule)
+    - One markup task (mark all elements that do not comply to a given rule)
+    - One report task (report all elements that do not comply to a given rule)
+        - Project-based reports
+        - Aggregated report
 - Examples of family editing
     - Change font in all annotation families and reload into project (http://dynamobim.com/forums/topic/font-type-in-revit-using-dynamo/) 
     - Create multiple mass families (http://dynamobim.com/forums/topic/can-dynamo-import-geometry-and-make-new-family/) 
