@@ -1,0 +1,7 @@
+C:\Users\adieckmann\Documents\GitHub\ClockworkForDynamo\package_samples\0.7.x\extra\CurtainPanel_Sample.rvt,0,1
+C:\Users\adieckmann\Documents\GitHub\ClockworkForDynamo\package_samples\0.7.x\extra\DesignOption_Sample.rvt,1,1
+C:\Users\adieckmann\Documents\GitHub\ClockworkForDynamo\package_samples\0.7.x\extra\DetailComponent_Sample.rvt,1,1
+C:\Users\adieckmann\Documents\GitHub\ClockworkForDynamo\package_samples\0.7.x\extra\DoesntExist.rvt,1,0
+C:\Users\adieckmann\Documents\GitHub\Dynanimator\package\extra\rac_basic_sample_project.rvt,1,0
+C:\temp\Temp.rvt,0,1
+C:\doesnotexist\ImaginaryFile.rvt,1,1
