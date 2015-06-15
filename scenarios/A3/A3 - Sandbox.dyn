@@ -7,7 +7,7 @@
     <DSCore.File.Directory guid="eda3f975-b696-44e4-b524-4967fbde191e" type="DSCore.File.Directory" nickname="Directory Path (Journal File)" x="12.1160815499586" y="361.901988108915" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>C:\Users\adieckmann\Desktop</System.String>
     </DSCore.File.Directory>
-    <Dynamo.Nodes.Function guid="b9b0c388-90a0-4432-8c34-b3a46706d23e" type="Dynamo.Nodes.Function" nickname="RevitJournalFile.ByPaths2" x="1886.24881872816" y="179.103274601686" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+    <Dynamo.Nodes.Function guid="b9b0c388-90a0-4432-8c34-b3a46706d23e" type="Dynamo.Nodes.Function" nickname="RevitJournalFile.ByPaths2" x="1888.05250577021" y="191.729083896043" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
       <PortInfo index="3" default="True" />
       <PortInfo index="4" default="True" />
       <ID value="ad24f00a-41cc-423d-a028-a7723c819c0b" />
@@ -28,7 +28,7 @@
       <System.String>2015</System.String>
       <System.String value="2015" />
     </Dynamo.Nodes.StringInput>
-    <Dynamo.Nodes.Function guid="57de4f81-683a-4704-9ba7-a45592d8bc8d" type="Dynamo.Nodes.Function" nickname="RevitExecutablePath.ByVersion" x="1697.75456955406" y="-47.4563197891808" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+    <Dynamo.Nodes.Function guid="57de4f81-683a-4704-9ba7-a45592d8bc8d" type="Dynamo.Nodes.Function" nickname="RevitExecutablePath.ByVersion" x="1688.7361343438" y="-49.2600068312318" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
       <PortInfo index="0" default="True" />
       <ID value="46ad09be-4c19-4881-b316-6cd5424bad02" />
       <Name value="RevitExecutablePath.ByVersion" />
@@ -40,7 +40,7 @@
         <Output value="Revit.exe Path" />
       </Outputs>
     </Dynamo.Nodes.Function>
-    <Dynamo.Nodes.Function guid="7fcbb61d-5120-4752-93cc-9e2159d420f0" type="Dynamo.Nodes.Function" nickname="ExternalApplication.Run" x="1974.34662191169" y="-47.3445496230246" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+    <Dynamo.Nodes.Function guid="7fcbb61d-5120-4752-93cc-9e2159d420f0" type="Dynamo.Nodes.Function" nickname="ExternalApplication.Run" x="1965.32818670143" y="-49.1482366650756" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
       <ID value="471f8293-8f6c-41df-8501-7827777bc9c7" />
       <Name value="ExternalApplication.Run" />
       <Description value="Launches a given external application with the given arguments" />
@@ -52,22 +52,22 @@
         <Output value="" />
       </Outputs>
     </Dynamo.Nodes.Function>
-    <Dynamo.Nodes.DSFunction guid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="1377.40653302407" y="343.024309286236" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
-    <Dynamo.Nodes.CodeBlockNodeModel guid="bb085228-6daa-4a03-88e8-5662f9f08af8" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1526.95085765513" y="347.009853620197" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="suffix = 1..n;&#xA;&quot;DynamoJournalFile_&quot; + suffix;" ShouldFocus="false" />
-    <DSCore.Map guid="476c27ae-2200-4bb9-aabd-74e2c256a303" type="DSCore.Map" nickname="List.Map" x="2217.63517848197" y="9.76694666990245" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
-    <DSCore.File.Filename guid="dd701c36-f653-443f-b4cd-729ffbc28b96" type="DSCore.File.Filename" nickname="File Path (File Paths Text File)" x="4.90532203141936" y="44.1458340755188" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+    <Dynamo.Nodes.DSFunction guid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="1379.21022006612" y="355.650118580593" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="bb085228-6daa-4a03-88e8-5662f9f08af8" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1528.75454469718" y="359.635662914554" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="suffix = 1..n;&#xA;&quot;DynamoJournalFile_&quot; + suffix;" ShouldFocus="false" />
+    <DSCore.Map guid="476c27ae-2200-4bb9-aabd-74e2c256a303" type="DSCore.Map" nickname="List.Map" x="2208.61674327171" y="7.96325962785141" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
+    <DSCore.File.Filename guid="dd701c36-f653-443f-b4cd-729ffbc28b96" type="DSCore.File.Filename" nickname="File Path (File Paths Text File)" x="6.70900907347038" y="62.1827044960289" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\scenarios\A3\File Paths.txt</System.String>
     </DSCore.File.Filename>
-    <DSCore.File.FileObject guid="76ebc913-68be-4415-a6bb-1acf9b1b0f29" type="DSCore.File.FileObject" nickname="File.FromPath" x="411.140048077182" y="44.9011450207282" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
-    <Dynamo.Nodes.DSFunction guid="33b3bbb6-17e6-4730-b397-5d5812aefd63" type="Dynamo.Nodes.DSFunction" nickname="File.ReadText" x="565.560149980724" y="45.6564559659375" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.IO.File.ReadText@var" />
-    <Dynamo.Nodes.DSVarArgFunction guid="8a1bdbca-5fd5-49ae-84db-345e91c41df5" type="Dynamo.Nodes.DSVarArgFunction" nickname="String.Split" x="730.939426452209" y="77.9020245983235" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.String.Split@string,string[]" inputcount="2" />
-    <Dynamo.Nodes.StringInput guid="3b164414-b380-4546-bf71-67e6663feba5" type="Dynamo.Nodes.StringInput" nickname="String" x="610.813942523642" y="140.736893114805" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+    <DSCore.File.FileObject guid="76ebc913-68be-4415-a6bb-1acf9b1b0f29" type="DSCore.File.FileObject" nickname="File.FromPath" x="407.53267399308" y="62.9380154412382" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
+    <Dynamo.Nodes.DSFunction guid="33b3bbb6-17e6-4730-b397-5d5812aefd63" type="Dynamo.Nodes.DSFunction" nickname="File.ReadText" x="561.952775896622" y="63.6933263864475" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.IO.File.ReadText@var" />
+    <Dynamo.Nodes.DSVarArgFunction guid="8a1bdbca-5fd5-49ae-84db-345e91c41df5" type="Dynamo.Nodes.DSVarArgFunction" nickname="String.Split" x="727.332052368107" y="95.9388950188335" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.String.Split@string,string[]" inputcount="2" />
+    <Dynamo.Nodes.StringInput guid="3b164414-b380-4546-bf71-67e6663feba5" type="Dynamo.Nodes.StringInput" nickname="String" x="607.20656843954" y="158.773763535315" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>
 </System.String>
       <System.String value="&#xD;&#xA;" />
     </Dynamo.Nodes.StringInput>
-    <Dynamo.Nodes.DSFunction guid="3a13601d-9a5a-4636-862b-0f1e8809f598" type="Dynamo.Nodes.DSFunction" nickname="File.Exists" x="989.570922391917" y="140.815090574893" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.IO.File.Exists@string" />
-    <Dynamo.Nodes.DSFunction guid="9c5ee770-b4a7-4645-9eb1-18cf6e62b96b" type="Dynamo.Nodes.DSFunction" nickname="List.FilterByBoolMask" x="1176.02928320681" y="77.7303214966769" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
+    <Dynamo.Nodes.DSFunction guid="3a13601d-9a5a-4636-862b-0f1e8809f598" type="Dynamo.Nodes.DSFunction" nickname="File.Exists" x="985.963548307815" y="158.851960995403" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.IO.File.Exists@string" />
+    <Dynamo.Nodes.DSFunction guid="9c5ee770-b4a7-4645-9eb1-18cf6e62b96b" type="Dynamo.Nodes.DSFunction" nickname="List.FilterByBoolMask" x="1172.42190912271" y="95.7671919171869" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
   </Elements>
   <Connectors>
     <Dynamo.Models.ConnectorModel start="67216c37-2ed7-4ea5-9c18-47f2efffa549" start_index="0" end="b9b0c388-90a0-4432-8c34-b3a46706d23e" end_index="1" portType="0" />
@@ -90,23 +90,23 @@
   </Connectors>
   <Notes />
   <Annotations>
-    <Dynamo.Models.AnnotationModel guid="ee4e3f87-2ce5-4d53-8ba7-6c1518d77c4a" annotationText="INPUTS" left="-6.07848458779154" top="-77.3376859792672" width="347.983806619211" height="535.239674088182" fontSize="14" InitialTop="-47.3376859792672" InitialHeight="535.239674088182" TextblockHeight="20" backgrouund="#FF848484">
+    <Dynamo.Models.AnnotationModel guid="ee4e3f87-2ce5-4d53-8ba7-6c1518d77c4a" annotationText="INPUTS" left="-6.07848458779154" top="-93.3376859792672" width="349.787493661262" height="551.239674088182" fontSize="30" InitialTop="-47.3376859792672" InitialHeight="535.239674088182" TextblockHeight="36" backgrouund="#FF848484">
       <Models ModelGuid="67216c37-2ed7-4ea5-9c18-47f2efffa549" />
       <Models ModelGuid="eda3f975-b696-44e4-b524-4967fbde191e" />
       <Models ModelGuid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" />
       <Models ModelGuid="dd701c36-f653-443f-b4cd-729ffbc28b96" />
     </Dynamo.Models.AnnotationModel>
-    <Dynamo.Models.AnnotationModel guid="80d700ad-eb29-4195-8fbc-327bf09686ff" annotationText="Batch-process Revit files" left="1687.75456955406" top="-80.4563197891808" width="673.88060892791" height="209.223266459083" fontSize="14" InitialTop="-47.4563197891808" InitialHeight="206.223266459083" TextblockHeight="23" backgrouund="#FFFFAA45">
+    <Dynamo.Models.AnnotationModel guid="80d700ad-eb29-4195-8fbc-327bf09686ff" annotationText="Batch-process Revit files" left="1678.7361343438" top="-95.2600068312318" width="673.88060892791" height="222.223266459083" fontSize="30" InitialTop="-49.2600068312318" InitialHeight="206.223266459083" TextblockHeight="36" backgrouund="#FFFFAA45">
       <Models ModelGuid="57de4f81-683a-4704-9ba7-a45592d8bc8d" />
       <Models ModelGuid="7fcbb61d-5120-4752-93cc-9e2159d420f0" />
       <Models ModelGuid="476c27ae-2200-4bb9-aabd-74e2c256a303" />
     </Dynamo.Models.AnnotationModel>
-    <Dynamo.Models.AnnotationModel guid="a13adbac-51f3-4736-8665-06d2edbac4cb" annotationText="Create journal files" left="1367.40653302407" top="146.103274601686" width="783.84228570409" height="303.906579018511" fontSize="14" InitialTop="179.103274601686" InitialHeight="300.906579018511" TextblockHeight="23" backgrouund="#FFA4E1FF">
+    <Dynamo.Models.AnnotationModel guid="a13adbac-51f3-4736-8665-06d2edbac4cb" annotationText="Create journal files" left="1369.21022006612" top="145.729083896043" width="783.84228570409" height="316.906579018511" fontSize="30" InitialTop="191.729083896043" InitialHeight="300.906579018511" TextblockHeight="36" backgrouund="#FFA4E1FF">
       <Models ModelGuid="b9b0c388-90a0-4432-8c34-b3a46706d23e" />
       <Models ModelGuid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" />
       <Models ModelGuid="bb085228-6daa-4a03-88e8-5662f9f08af8" />
     </Dynamo.Models.AnnotationModel>
-    <Dynamo.Models.AnnotationModel guid="901e87ec-708c-4811-a86d-5630cca6ebf1" annotationText="Create list of Revit files" left="401.140048077182" top="11.9011450207282" width="929.889235129628" height="221.913945554165" fontSize="14" InitialTop="44.9011450207282" InitialHeight="218.913945554165" TextblockHeight="23" backgrouund="#FFC1D676">
+    <Dynamo.Models.AnnotationModel guid="901e87ec-708c-4811-a86d-5630cca6ebf1" annotationText="Create list of Revit files" left="397.53267399308" top="16.9380154412382" width="929.889235129628" height="234.913945554165" fontSize="30" InitialTop="62.9380154412382" InitialHeight="218.913945554165" TextblockHeight="36" backgrouund="#FFC1D676">
       <Models ModelGuid="76ebc913-68be-4415-a6bb-1acf9b1b0f29" />
       <Models ModelGuid="33b3bbb6-17e6-4730-b397-5d5812aefd63" />
       <Models ModelGuid="8a1bdbca-5fd5-49ae-84db-345e91c41df5" />
