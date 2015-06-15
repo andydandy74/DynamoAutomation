@@ -1,4 +1,4 @@
-<Workspace Version="0.8.1.1473" X="28.0438421804013" Y="280.870509229436" zoom="0.498827013023787" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="0.8.1.1473" X="164.415876404632" Y="346.326251312695" zoom="0.554419905829607" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap />
   <Elements>
     <DSCore.File.Filename guid="67216c37-2ed7-4ea5-9c18-47f2efffa549" type="DSCore.File.Filename" nickname="File Path (Dynamo File)" x="12.1160815499586" y="250.901988108915" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
@@ -7,7 +7,7 @@
     <DSCore.File.Directory guid="eda3f975-b696-44e4-b524-4967fbde191e" type="DSCore.File.Directory" nickname="Directory Path (Journal File)" x="12.1160815499586" y="361.901988108915" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>C:\Users\adieckmann\Desktop</System.String>
     </DSCore.File.Directory>
-    <Dynamo.Nodes.Function guid="b9b0c388-90a0-4432-8c34-b3a46706d23e" type="Dynamo.Nodes.Function" nickname="RevitJournalFile.ByPaths2" x="1913.30412435892" y="74.4894261627276" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+    <Dynamo.Nodes.Function guid="b9b0c388-90a0-4432-8c34-b3a46706d23e" type="Dynamo.Nodes.Function" nickname="RevitJournalFile.ByPaths2" x="1886.24881872816" y="179.103274601686" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
       <PortInfo index="3" default="True" />
       <PortInfo index="4" default="True" />
       <ID value="ad24f00a-41cc-423d-a028-a7723c819c0b" />
@@ -28,7 +28,7 @@
       <System.String>2015</System.String>
       <System.String value="2015" />
     </Dynamo.Nodes.StringInput>
-    <Dynamo.Nodes.Function guid="57de4f81-683a-4704-9ba7-a45592d8bc8d" type="Dynamo.Nodes.Function" nickname="RevitExecutablePath.ByVersion" x="1717.59512701662" y="-47.4563197891808" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+    <Dynamo.Nodes.Function guid="57de4f81-683a-4704-9ba7-a45592d8bc8d" type="Dynamo.Nodes.Function" nickname="RevitExecutablePath.ByVersion" x="1697.75456955406" y="-47.4563197891808" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
       <PortInfo index="0" default="True" />
       <ID value="46ad09be-4c19-4881-b316-6cd5424bad02" />
       <Name value="RevitExecutablePath.ByVersion" />
@@ -40,7 +40,7 @@
         <Output value="Revit.exe Path" />
       </Outputs>
     </Dynamo.Nodes.Function>
-    <Dynamo.Nodes.Function guid="7fcbb61d-5120-4752-93cc-9e2159d420f0" type="Dynamo.Nodes.Function" nickname="ExternalApplication.Run" x="1994.18717937425" y="-47.3445496230246" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+    <Dynamo.Nodes.Function guid="7fcbb61d-5120-4752-93cc-9e2159d420f0" type="Dynamo.Nodes.Function" nickname="ExternalApplication.Run" x="1974.34662191169" y="-47.3445496230246" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
       <ID value="471f8293-8f6c-41df-8501-7827777bc9c7" />
       <Name value="ExternalApplication.Run" />
       <Description value="Launches a given external application with the given arguments" />
@@ -52,9 +52,9 @@
         <Output value="" />
       </Outputs>
     </Dynamo.Nodes.Function>
-    <Dynamo.Nodes.DSFunction guid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="1404.46183865483" y="238.410460847278" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
-    <Dynamo.Nodes.CodeBlockNodeModel guid="bb085228-6daa-4a03-88e8-5662f9f08af8" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1554.00616328589" y="242.396005181239" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="suffix = 1..n;&#xA;&quot;DynamoJournalFile_&quot; + suffix;" ShouldFocus="false" />
-    <DSCore.Map guid="476c27ae-2200-4bb9-aabd-74e2c256a303" type="DSCore.Map" nickname="List.Map" x="2237.47573594453" y="9.76694666990245" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
+    <Dynamo.Nodes.DSFunction guid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="1377.40653302407" y="343.024309286236" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="bb085228-6daa-4a03-88e8-5662f9f08af8" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1526.95085765513" y="347.009853620197" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="suffix = 1..n;&#xA;&quot;DynamoJournalFile_&quot; + suffix;" ShouldFocus="false" />
+    <DSCore.Map guid="476c27ae-2200-4bb9-aabd-74e2c256a303" type="DSCore.Map" nickname="List.Map" x="2217.63517848197" y="9.76694666990245" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
     <DSCore.File.Filename guid="dd701c36-f653-443f-b4cd-729ffbc28b96" type="DSCore.File.Filename" nickname="File Path (File Paths Text File)" x="4.90532203141936" y="44.1458340755188" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\scenarios\A3\File Paths.txt</System.String>
     </DSCore.File.Filename>
@@ -89,5 +89,30 @@
     <Dynamo.Models.ConnectorModel start="9c5ee770-b4a7-4645-9eb1-18cf6e62b96b" start_index="0" end="b9b0c388-90a0-4432-8c34-b3a46706d23e" end_index="0" portType="0" />
   </Connectors>
   <Notes />
-  <Annotations />
+  <Annotations>
+    <Dynamo.Models.AnnotationModel guid="ee4e3f87-2ce5-4d53-8ba7-6c1518d77c4a" annotationText="INPUTS" left="-6.07848458779154" top="-77.3376859792672" width="347.983806619211" height="535.239674088182" fontSize="14" InitialTop="-47.3376859792672" InitialHeight="535.239674088182" TextblockHeight="20" backgrouund="#FF848484">
+      <Models ModelGuid="67216c37-2ed7-4ea5-9c18-47f2efffa549" />
+      <Models ModelGuid="eda3f975-b696-44e4-b524-4967fbde191e" />
+      <Models ModelGuid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" />
+      <Models ModelGuid="dd701c36-f653-443f-b4cd-729ffbc28b96" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="80d700ad-eb29-4195-8fbc-327bf09686ff" annotationText="Batch-process Revit files" left="1687.75456955406" top="-80.4563197891808" width="673.88060892791" height="209.223266459083" fontSize="14" InitialTop="-47.4563197891808" InitialHeight="206.223266459083" TextblockHeight="23" backgrouund="#FFFFAA45">
+      <Models ModelGuid="57de4f81-683a-4704-9ba7-a45592d8bc8d" />
+      <Models ModelGuid="7fcbb61d-5120-4752-93cc-9e2159d420f0" />
+      <Models ModelGuid="476c27ae-2200-4bb9-aabd-74e2c256a303" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="a13adbac-51f3-4736-8665-06d2edbac4cb" annotationText="Create journal files" left="1367.40653302407" top="146.103274601686" width="783.84228570409" height="303.906579018511" fontSize="14" InitialTop="179.103274601686" InitialHeight="300.906579018511" TextblockHeight="23" backgrouund="#FFA4E1FF">
+      <Models ModelGuid="b9b0c388-90a0-4432-8c34-b3a46706d23e" />
+      <Models ModelGuid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" />
+      <Models ModelGuid="bb085228-6daa-4a03-88e8-5662f9f08af8" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="901e87ec-708c-4811-a86d-5630cca6ebf1" annotationText="Create list of Revit files" left="401.140048077182" top="11.9011450207282" width="929.889235129628" height="221.913945554165" fontSize="14" InitialTop="44.9011450207282" InitialHeight="218.913945554165" TextblockHeight="23" backgrouund="#FFC1D676">
+      <Models ModelGuid="76ebc913-68be-4415-a6bb-1acf9b1b0f29" />
+      <Models ModelGuid="33b3bbb6-17e6-4730-b397-5d5812aefd63" />
+      <Models ModelGuid="8a1bdbca-5fd5-49ae-84db-345e91c41df5" />
+      <Models ModelGuid="3b164414-b380-4546-bf71-67e6663feba5" />
+      <Models ModelGuid="3a13601d-9a5a-4636-862b-0f1e8809f598" />
+      <Models ModelGuid="9c5ee770-b4a7-4645-9eb1-18cf6e62b96b" />
+    </Dynamo.Models.AnnotationModel>
+  </Annotations>
 </Workspace>

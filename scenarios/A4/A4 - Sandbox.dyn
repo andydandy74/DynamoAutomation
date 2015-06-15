@@ -1,13 +1,13 @@
-<Workspace Version="0.8.1.1473" X="51.822600022321" Y="372.619233372565" zoom="0.405156267531746" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="0.8.1.1473" X="27.3952324521921" Y="245.915380883294" zoom="0.531008470213383" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap />
   <Elements>
-    <DSCore.File.Filename guid="67216c37-2ed7-4ea5-9c18-47f2efffa549" type="DSCore.File.Filename" nickname="File Path (Dynamo File #1)" x="11.6906556079771" y="306.334700720387" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+    <DSCore.File.Filename guid="67216c37-2ed7-4ea5-9c18-47f2efffa549" type="DSCore.File.Filename" nickname="File Path (Dynamo File #1)" x="11.6906556079771" y="343.278480655725" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>C:\Users\adieckmann\Desktop\FamParam.dyn</System.String>
     </DSCore.File.Filename>
-    <DSCore.File.Directory guid="eda3f975-b696-44e4-b524-4967fbde191e" type="DSCore.File.Directory" nickname="Directory Path (Journal File)" x="11.2705727282205" y="200.833327405024" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+    <DSCore.File.Directory guid="eda3f975-b696-44e4-b524-4967fbde191e" type="DSCore.File.Directory" nickname="Directory Path (Journal File)" x="11.2705727282205" y="237.777107340362" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>C:\Users\adieckmann\Desktop</System.String>
     </DSCore.File.Directory>
-    <Dynamo.Nodes.Function guid="b9b0c388-90a0-4432-8c34-b3a46706d23e" type="Dynamo.Nodes.Function" nickname="RevitJournalFile.ByPaths2" x="2683.80203143308" y="46.3989400009926" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+    <Dynamo.Nodes.Function guid="b9b0c388-90a0-4432-8c34-b3a46706d23e" type="Dynamo.Nodes.Function" nickname="RevitJournalFile.ByPaths2" x="2576.59747971742" y="225.271334413129" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
       <PortInfo index="3" default="True" />
       <PortInfo index="4" default="True" />
       <ID value="ad24f00a-41cc-423d-a028-a7723c819c0b" />
@@ -28,7 +28,7 @@
       <System.String>2015</System.String>
       <System.String value="2015" />
     </Dynamo.Nodes.StringInput>
-    <Dynamo.Nodes.Function guid="57de4f81-683a-4704-9ba7-a45592d8bc8d" type="Dynamo.Nodes.Function" nickname="RevitExecutablePath.ByVersion" x="2484.98178609935" y="-94.2142938994911" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+    <Dynamo.Nodes.Function guid="57de4f81-683a-4704-9ba7-a45592d8bc8d" type="Dynamo.Nodes.Function" nickname="RevitExecutablePath.ByVersion" x="2373.82227418109" y="-92.2977505905556" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
       <PortInfo index="0" default="True" />
       <ID value="46ad09be-4c19-4881-b316-6cd5424bad02" />
       <Name value="RevitExecutablePath.ByVersion" />
@@ -40,7 +40,7 @@
         <Output value="Revit.exe Path" />
       </Outputs>
     </Dynamo.Nodes.Function>
-    <Dynamo.Nodes.Function guid="7fcbb61d-5120-4752-93cc-9e2159d420f0" type="Dynamo.Nodes.Function" nickname="ExternalApplication.Run" x="2761.57383845698" y="-94.1025237333349" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+    <Dynamo.Nodes.Function guid="7fcbb61d-5120-4752-93cc-9e2159d420f0" type="Dynamo.Nodes.Function" nickname="ExternalApplication.Run" x="2650.41432653872" y="-92.1859804243994" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
       <ID value="471f8293-8f6c-41df-8501-7827777bc9c7" />
       <Name value="ExternalApplication.Run" />
       <Description value="Launches a given external application with the given arguments" />
@@ -52,28 +52,28 @@
         <Output value="" />
       </Outputs>
     </Dynamo.Nodes.Function>
-    <Dynamo.Nodes.DSFunction guid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="1758.00414411745" y="103.962067532727" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
-    <Dynamo.Nodes.CodeBlockNodeModel guid="bb085228-6daa-4a03-88e8-5662f9f08af8" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="2287.4975521665" y="183.218849045024" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="suffix = 1..(a+b);&#xA;&quot;DynamoJournalFile_&quot; + suffix;" ShouldFocus="false" />
-    <DSCore.Map guid="476c27ae-2200-4bb9-aabd-74e2c256a303" type="DSCore.Map" nickname="List.Map" x="3032.86362695012" y="-36.9910274404079" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
-    <DSCore.File.Filename guid="dd701c36-f653-443f-b4cd-729ffbc28b96" type="DSCore.File.Filename" nickname="File Path (File Paths Text File)" x="4.90532203141936" y="44.1458340755188" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+    <Dynamo.Nodes.DSFunction guid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="1944.47888137185" y="349.149140099393" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="bb085228-6daa-4a03-88e8-5662f9f08af8" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="2127.71891298294" y="577.422872510962" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="suffix = 1..(a+b);&#xA;&quot;DynamoJournalFile_&quot; + suffix;" ShouldFocus="false" />
+    <DSCore.Map guid="476c27ae-2200-4bb9-aabd-74e2c256a303" type="DSCore.Map" nickname="List.Map" x="2921.70411503186" y="24.3383584455289" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
+    <DSCore.File.Filename guid="dd701c36-f653-443f-b4cd-729ffbc28b96" type="DSCore.File.Filename" nickname="File Path (File Paths Text File)" x="4.90532203141936" y="81.0896140108565" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\scenarios\A4\File Paths.txt</System.String>
     </DSCore.File.Filename>
-    <DSCore.File.FileObject guid="76ebc913-68be-4415-a6bb-1acf9b1b0f29" type="DSCore.File.FileObject" nickname="File.FromPath" x="411.140048077182" y="44.9011450207282" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
-    <Dynamo.Nodes.DSFunction guid="3a13601d-9a5a-4636-862b-0f1e8809f598" type="Dynamo.Nodes.DSFunction" nickname="File.Exists" x="1153.62798812235" y="-21.4510353150879" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.IO.File.Exists@string" />
-    <Dynamo.Nodes.DSFunction guid="9c5ee770-b4a7-4645-9eb1-18cf6e62b96b" type="Dynamo.Nodes.DSFunction" nickname="List.FilterByBoolMask" x="1554.08580365349" y="46.4353219585268" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
-    <Dynamo.Nodes.DSFunction guid="9c43f763-2b28-4fbf-bcbf-c46334e04df1" type="Dynamo.Nodes.DSFunction" nickname="CSV.ReadFromFile" x="587.936182951142" y="45.4201653438502" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.IO.CSV.ReadFromFile@var" />
-    <Dynamo.Nodes.DSFunction guid="d0a9a9e9-4753-41a8-bfeb-a2faa91b02e1" type="Dynamo.Nodes.DSFunction" nickname="List.Transpose" x="766.538105941221" y="45.7730871834298" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Transpose@var[]..[]" />
-    <Dynamo.Nodes.CodeBlockNodeModel guid="07395ab6-249f-47a4-908d-63ef4a24dfe4" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="963.075244801915" y="49.5328664337974" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="seq[0];&#xA;seq[1];&#xA;seq[2];" ShouldFocus="false" />
-    <Dynamo.Nodes.CodeBlockNodeModel guid="fe1a8223-013e-49f9-8072-8ae221d73ed7" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1331.53026330446" y="98.7676212666243" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="x == 1 &amp;&amp; fe;&#xA;y == 1 &amp;&amp; fe;" ShouldFocus="false" />
-    <Dynamo.Nodes.DSFunction guid="8d9ef0ba-e773-4fef-96d0-4b5756bb2c97" type="Dynamo.Nodes.DSFunction" nickname="List.OfRepeatedItem" x="1923.9679312666" y="396.300512994776" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.OfRepeatedItem@var[]..[],int" />
-    <DSCore.File.Filename guid="e5120ee8-dae8-4e50-b046-a7fa7accada2" type="DSCore.File.Filename" nickname="File Path (Dynamo File #2)" x="11.8028135979746" y="400.10789099378" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+    <DSCore.File.FileObject guid="76ebc913-68be-4415-a6bb-1acf9b1b0f29" type="DSCore.File.FileObject" nickname="File.FromPath" x="386.22498506102" y="81.3154678905031" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
+    <Dynamo.Nodes.DSFunction guid="3a13601d-9a5a-4636-862b-0f1e8809f598" type="Dynamo.Nodes.DSFunction" nickname="File.Exists" x="1128.71292510619" y="14.963287554687" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.IO.File.Exists@string" />
+    <Dynamo.Nodes.DSFunction guid="9c5ee770-b4a7-4645-9eb1-18cf6e62b96b" type="Dynamo.Nodes.DSFunction" nickname="List.FilterByBoolMask" x="1529.17074063733" y="82.8496448283017" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
+    <Dynamo.Nodes.DSFunction guid="9c43f763-2b28-4fbf-bcbf-c46334e04df1" type="Dynamo.Nodes.DSFunction" nickname="CSV.ReadFromFile" x="563.02111993498" y="81.8344882136251" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.IO.CSV.ReadFromFile@var" />
+    <Dynamo.Nodes.DSFunction guid="d0a9a9e9-4753-41a8-bfeb-a2faa91b02e1" type="Dynamo.Nodes.DSFunction" nickname="List.Transpose" x="741.623042925059" y="82.1874100532047" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Transpose@var[]..[]" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="07395ab6-249f-47a4-908d-63ef4a24dfe4" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="938.160181785753" y="85.9471893035723" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="seq[0];&#xA;seq[1];&#xA;seq[2];" ShouldFocus="false" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="fe1a8223-013e-49f9-8072-8ae221d73ed7" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1306.6152002883" y="135.181944136399" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="x == 1 &amp;&amp; fe;&#xA;y == 1 &amp;&amp; fe;" ShouldFocus="false" />
+    <Dynamo.Nodes.DSFunction guid="8d9ef0ba-e773-4fef-96d0-4b5756bb2c97" type="Dynamo.Nodes.DSFunction" nickname="List.OfRepeatedItem" x="2121.26955475031" y="449.310354991172" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.OfRepeatedItem@var[]..[],int" />
+    <DSCore.File.Filename guid="e5120ee8-dae8-4e50-b046-a7fa7accada2" type="DSCore.File.Filename" nickname="File Path (Dynamo File #2)" x="11.8028135979746" y="437.051670929118" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>C:\Users\adieckmann\Desktop\Home.dyn</System.String>
     </DSCore.File.Filename>
-    <Dynamo.Nodes.DSFunction guid="e5b77c13-b7e1-46dd-98e7-d62e9494b2eb" type="Dynamo.Nodes.DSFunction" nickname="List.OfRepeatedItem" x="1917.82841755784" y="201.228787551516" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.OfRepeatedItem@var[]..[],int" />
-    <Dynamo.Nodes.DSFunction guid="6c2b1a6e-84dd-4a76-a9c3-8aa7e86da677" type="Dynamo.Nodes.DSFunction" nickname="List.FilterByBoolMask" x="1560.80159251343" y="267.170591747776" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
-    <Dynamo.Nodes.DSFunction guid="45dac642-7dd7-4ac9-97d8-45e09834819e" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="1753.99616785859" y="342.161149260688" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
-    <Dynamo.Nodes.DSVarArgFunction guid="a81da288-1b79-458c-bccd-e621c9de70c7" type="Dynamo.Nodes.DSVarArgFunction" nickname="List.Join" x="2115.70832128388" y="280.346395990881" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Join@var[]..[]" inputcount="2" />
-    <Dynamo.Nodes.DSVarArgFunction guid="dee89a6a-5a3a-4652-966f-c497f75bc3e9" type="Dynamo.Nodes.DSVarArgFunction" nickname="List.Join" x="2099.94953286162" y="46.4861183972204" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Join@var[]..[]" inputcount="2" />
+    <Dynamo.Nodes.DSFunction guid="e5b77c13-b7e1-46dd-98e7-d62e9494b2eb" type="Dynamo.Nodes.DSFunction" nickname="List.OfRepeatedItem" x="2120.54348415621" y="323.26002925977" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.OfRepeatedItem@var[]..[],int" />
+    <Dynamo.Nodes.DSFunction guid="6c2b1a6e-84dd-4a76-a9c3-8aa7e86da677" type="Dynamo.Nodes.DSFunction" nickname="List.FilterByBoolMask" x="1530.77261728353" y="242.217968052705" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
+    <Dynamo.Nodes.DSFunction guid="45dac642-7dd7-4ac9-97d8-45e09834819e" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="1947.23770900631" y="592.76166494201" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
+    <Dynamo.Nodes.DSVarArgFunction guid="a81da288-1b79-458c-bccd-e621c9de70c7" type="Dynamo.Nodes.DSVarArgFunction" nickname="List.Join" x="2317.07002710359" y="373.957061347193" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Join@var[]..[]" inputcount="2" />
+    <Dynamo.Nodes.DSVarArgFunction guid="dee89a6a-5a3a-4652-966f-c497f75bc3e9" type="Dynamo.Nodes.DSVarArgFunction" nickname="List.Join" x="1757.97191259375" y="151.085937450158" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Join@var[]..[]" inputcount="2" />
   </Elements>
   <Connectors>
     <Dynamo.Models.ConnectorModel start="67216c37-2ed7-4ea5-9c18-47f2efffa549" start_index="0" end="e5b77c13-b7e1-46dd-98e7-d62e9494b2eb" end_index="0" portType="0" />
@@ -110,5 +110,38 @@
     <Dynamo.Models.ConnectorModel start="dee89a6a-5a3a-4652-966f-c497f75bc3e9" start_index="0" end="b9b0c388-90a0-4432-8c34-b3a46706d23e" end_index="0" portType="0" />
   </Connectors>
   <Notes />
-  <Annotations />
+  <Annotations>
+    <Dynamo.Models.AnnotationModel guid="13dfbcac-aa03-4e8b-a124-45f6c69c784c" annotationText="INPUTS" left="-5.09467796858064" top="-123.293209035556" width="347" height="656.344879964674" fontSize="14" InitialTop="-90.2932090355564" InitialHeight="616.401100029336" TextblockHeight="23" backgrouund="#FF848484">
+      <Models ModelGuid="67216c37-2ed7-4ea5-9c18-47f2efffa549" />
+      <Models ModelGuid="eda3f975-b696-44e4-b524-4967fbde191e" />
+      <Models ModelGuid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" />
+      <Models ModelGuid="dd701c36-f653-443f-b4cd-729ffbc28b96" />
+      <Models ModelGuid="e5120ee8-dae8-4e50-b046-a7fa7accada2" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="8b9fcd28-c272-422b-be51-502bc19f8073" annotationText="Batch-process Revit models" left="2363.82227418109" top="-125.297750590556" width="701.88184085077" height="268.636109036084" fontSize="14" InitialTop="-92.2977505905556" InitialHeight="206.223266459083" TextblockHeight="23" backgrouund="#FFFFAA45">
+      <Models ModelGuid="57de4f81-683a-4704-9ba7-a45592d8bc8d" />
+      <Models ModelGuid="7fcbb61d-5120-4752-93cc-9e2159d420f0" />
+      <Models ModelGuid="476c27ae-2200-4bb9-aabd-74e2c256a303" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="6092bef6-a236-4bb6-9323-837f07647c62" annotationText="Create list of Revit files" left="376.22498506102" top="-18.036712445313" width="1527.74692753273" height="379.254680498018" fontSize="14" InitialTop="14.963287554687" InitialHeight="376.254680498018" TextblockHeight="23" backgrouund="#FFC1D676">
+      <Models ModelGuid="76ebc913-68be-4415-a6bb-1acf9b1b0f29" />
+      <Models ModelGuid="3a13601d-9a5a-4636-862b-0f1e8809f598" />
+      <Models ModelGuid="9c5ee770-b4a7-4645-9eb1-18cf6e62b96b" />
+      <Models ModelGuid="9c43f763-2b28-4fbf-bcbf-c46334e04df1" />
+      <Models ModelGuid="d0a9a9e9-4753-41a8-bfeb-a2faa91b02e1" />
+      <Models ModelGuid="07395ab6-249f-47a4-908d-63ef4a24dfe4" />
+      <Models ModelGuid="fe1a8223-013e-49f9-8072-8ae221d73ed7" />
+      <Models ModelGuid="6c2b1a6e-84dd-4a76-a9c3-8aa7e86da677" />
+      <Models ModelGuid="dee89a6a-5a3a-4652-966f-c497f75bc3e9" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="868f9fb9-701b-4053-90f5-9b759cb8b0da" annotationText="Create journal files" left="1934.47888137185" top="192.271334413129" width="907.11859834557" height="493.490330528881" fontSize="14" InitialTop="225.271334413129" InitialHeight="490.490330528881" TextblockHeight="23" backgrouund="#FFA4E1FF">
+      <Models ModelGuid="b9b0c388-90a0-4432-8c34-b3a46706d23e" />
+      <Models ModelGuid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" />
+      <Models ModelGuid="bb085228-6daa-4a03-88e8-5662f9f08af8" />
+      <Models ModelGuid="8d9ef0ba-e773-4fef-96d0-4b5756bb2c97" />
+      <Models ModelGuid="e5b77c13-b7e1-46dd-98e7-d62e9494b2eb" />
+      <Models ModelGuid="45dac642-7dd7-4ac9-97d8-45e09834819e" />
+      <Models ModelGuid="a81da288-1b79-458c-bccd-e621c9de70c7" />
+    </Dynamo.Models.AnnotationModel>
+  </Annotations>
 </Workspace>

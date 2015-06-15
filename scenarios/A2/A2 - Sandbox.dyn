@@ -1,4 +1,4 @@
-<Workspace Version="0.8.1.1473" X="47.642478662889" Y="279.696026614777" zoom="0.526645612295837" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="0.8.1.1473" X="27.5618643836726" Y="266.014391175964" zoom="0.621733019010199" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap />
   <Elements>
     <DSCore.File.Filename guid="67216c37-2ed7-4ea5-9c18-47f2efffa549" type="DSCore.File.Filename" nickname="File Path (Dynamo File)" x="12.1160815499586" y="250.901988108915" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
@@ -7,7 +7,7 @@
     <DSCore.File.Directory guid="eda3f975-b696-44e4-b524-4967fbde191e" type="DSCore.File.Directory" nickname="Directory Path (Journal File)" x="12.1160815499586" y="361.901988108915" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>C:\Users\adieckmann\Desktop</System.String>
     </DSCore.File.Directory>
-    <Dynamo.Nodes.Function guid="b9b0c388-90a0-4432-8c34-b3a46706d23e" type="Dynamo.Nodes.Function" nickname="RevitJournalFile.ByPaths2" x="2109.74092967476" y="101.808452067579" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+    <Dynamo.Nodes.Function guid="b9b0c388-90a0-4432-8c34-b3a46706d23e" type="Dynamo.Nodes.Function" nickname="RevitJournalFile.ByPaths2" x="2107.74516594294" y="223.550039708773" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
       <PortInfo index="3" default="True" />
       <PortInfo index="4" default="True" />
       <ID value="ad24f00a-41cc-423d-a028-a7723c819c0b" />
@@ -57,8 +57,8 @@
       <PortInfo index="1" default="True" />
     </Dynamo.Nodes.DSFunction>
     <Dynamo.Nodes.CodeBlockNodeModel guid="47ac0110-7b7a-46b3-9083-88091cf8dfb3" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1002.18211431427" y="175.406989259036" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="&quot;*.rvt&quot;;" ShouldFocus="false" />
-    <Dynamo.Nodes.DSFunction guid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="1600.89864397067" y="265.729486752129" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
-    <Dynamo.Nodes.CodeBlockNodeModel guid="bb085228-6daa-4a03-88e8-5662f9f08af8" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1750.44296860173" y="269.71503108609" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="suffix = 1..n;&#xA;&quot;DynamoJournalFile_&quot; + suffix;" ShouldFocus="false" />
+    <Dynamo.Nodes.DSFunction guid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="1598.90288023885" y="387.471074393323" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="bb085228-6daa-4a03-88e8-5662f9f08af8" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1748.44720486991" y="391.456618727284" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="suffix = 1..n;&#xA;&quot;DynamoJournalFile_&quot; + suffix;" ShouldFocus="false" />
     <DSCore.Map guid="476c27ae-2200-4bb9-aabd-74e2c256a303" type="DSCore.Map" nickname="List.Map" x="2475.54153311538" y="30.5814425974083" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
     <DSCore.File.Filename guid="dd701c36-f653-443f-b4cd-729ffbc28b96" type="DSCore.File.Filename" nickname="File Path (Directory Paths Text File)" x="4.90532203141936" y="44.1458340755188" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
       <System.String>C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\scenarios\A2\Directory Paths.txt</System.String>
@@ -94,5 +94,32 @@
     <Dynamo.Models.ConnectorModel start="57b4ef1d-7389-404e-81ee-2c232d3bb571" start_index="0" end="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" end_index="0" portType="0" />
   </Connectors>
   <Notes />
-  <Annotations />
+  <Annotations>
+    <Dynamo.Models.AnnotationModel guid="26e15eee-8389-4777-9ca3-58f849a8fec2" annotationText="INPUTS" left="-6.07848458779154" top="-80.3376859792672" width="379.983806619211" height="538.239674088182" fontSize="14" InitialTop="-47.3376859792672" InitialHeight="535.239674088182" TextblockHeight="23" backgrouund="#FF848484">
+      <Models ModelGuid="67216c37-2ed7-4ea5-9c18-47f2efffa549" />
+      <Models ModelGuid="eda3f975-b696-44e4-b524-4967fbde191e" />
+      <Models ModelGuid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" />
+      <Models ModelGuid="dd701c36-f653-443f-b4cd-729ffbc28b96" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="7ff4f42d-ab6b-44f2-87b9-238380e73964" annotationText="Batch-process Revit files" left="1901.43012034152" top="-83.0581317801189" width="718.11141277386" height="232.639574377527" fontSize="14" InitialTop="-50.0581317801189" InitialHeight="229.639574377527" TextblockHeight="23" backgrouund="#FFFFAA45">
+      <Models ModelGuid="57de4f81-683a-4704-9ba7-a45592d8bc8d" />
+      <Models ModelGuid="7fcbb61d-5120-4752-93cc-9e2159d420f0" />
+      <Models ModelGuid="476c27ae-2200-4bb9-aabd-74e2c256a303" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="ff8ff25b-677d-4800-95b3-5fc3c4bfdfb7" annotationText="Create journal files" left="1588.90288023885" top="190.550039708773" width="783.84228570409" height="303.906579018511" fontSize="14" InitialTop="223.550039708773" InitialHeight="300.906579018511" TextblockHeight="23" backgrouund="#FFC1D676">
+      <Models ModelGuid="b9b0c388-90a0-4432-8c34-b3a46706d23e" />
+      <Models ModelGuid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" />
+      <Models ModelGuid="bb085228-6daa-4a03-88e8-5662f9f08af8" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="e4c05334-586b-4fad-8e86-9de9394df8d0" annotationText="Create list of Revit files" left="401.140048077182" top="11.9011450207282" width="1145.8292045393" height="256.505844238308" fontSize="14" InitialTop="44.9011450207282" InitialHeight="253.505844238308" TextblockHeight="23" backgrouund="#FFA4E1FF">
+      <Models ModelGuid="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" />
+      <Models ModelGuid="116cfd8a-5ad8-4feb-b723-edb7a4d48925" />
+      <Models ModelGuid="47ac0110-7b7a-46b3-9083-88091cf8dfb3" />
+      <Models ModelGuid="76ebc913-68be-4415-a6bb-1acf9b1b0f29" />
+      <Models ModelGuid="33b3bbb6-17e6-4730-b397-5d5812aefd63" />
+      <Models ModelGuid="8a1bdbca-5fd5-49ae-84db-345e91c41df5" />
+      <Models ModelGuid="3b164414-b380-4546-bf71-67e6663feba5" />
+      <Models ModelGuid="57b4ef1d-7389-404e-81ee-2c232d3bb571" />
+    </Dynamo.Models.AnnotationModel>
+  </Annotations>
 </Workspace>
