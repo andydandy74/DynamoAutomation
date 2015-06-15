@@ -1,0 +1,4 @@
+C:\Users\adieckmann\Documents\GitHub\ClockworkForDynamo\package_samples\0.7.x\extra
+C:\Users\adieckmann\Documents\GitHub\Dynanimator\package\extra
+C:\temp
+C:\doesnotexist
