@@ -20,9 +20,9 @@ Examples for batch-processing of Revit models using Dynamo
 - Original use case
     - BIM.Basics model checker (https://prezi.com/kaagf4w6iq-d/the-truth-is-in-the-model/)
 - Some typical QC examples
-    - One cleanup task (change all elements that do not comply to a given rule)
-    - One markup task (mark all elements that do not comply to a given rule)
-    - One report task (report all elements that do not comply to a given rule)
+    - Cleanup tasks (change all elements that do not comply to a given rule)
+    - Markup tasks (mark all elements that do not comply to a given rule)
+    - Report tasks (report all elements that do not comply to a given rule)
         - Project-based reports
         - Aggregated report
 - Examples of family editing
