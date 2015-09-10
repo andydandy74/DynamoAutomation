@@ -1,0 +1,641 @@
+' 0:< Initial VM: Avail 8388354 MB, Used 20 MB, Peak 50; RAM: Avail 4061 MB, Used 47 MB, Peak 50 
+'C 10-Sep-2015 14:23:51.534;   0:< started recording journal file 
+' Build: 20150714_1515(x64)
+' Branch: RELEASE_2016_RTM
+Dim Jrn
+Set Jrn = CrsJournalScript
+'C 10-Sep-2015 14:23:51.535;   0:< ->desktop InitApplication 
+'C 10-Sep-2015 14:23:51.559;   0:< <-desktop InitApplication 
+'C 10-Sep-2015 14:23:51.559;   0:< ->desktop InitNativeInstance 
+' 0:< Options::loadOptions: m_strDataLibraryLocations=Library=C:\ProgramData\Autodesk\RVT 2016\Libraries\Generic\ (defaultLib==\Library) 
+' 0:< ::0:: Delta VM: Avail -37 -> 8388318 MB, Used +6 -> 26 MB; RAM: Avail -31 -> 4031 MB, Used +14 -> 62 MB, Peak +14 -> 62 MB 
+'C 10-Sep-2015 14:23:51.983;   0:< License initialization complete 
+' 0:< License version: 16.0.15.1 
+' 0:< ::0:: Delta VM: Avail -177 -> 8388141 MB, Used +41 -> 68 MB, Peak +25 -> 75 MB; RAM: Avail -48 -> 3984 MB, Used +53 -> 116 MB, Peak +53 -> 116 MB 
+' 0:< SystemSettings: 
+' 0:<               4=multiCoreCharacteristic 
+' 0:<            true=isProcessUserModeExceptionPolicyDisabledForCallbackFilter 
+' 0:< ::0:: Delta VM: Avail -15 -> 8388126 MB, Used +8 -> 76 MB, Peak +7 -> 83 MB; RAM: Avail -15 -> 3969 MB, Used +14 -> 131 MB, Peak +14 -> 131 MB 
+'C 10-Sep-2015 14:23:54.941;   0:< manage licensing 
+' 0:< License mode: Standalone 
+' 0:< Status: Your license will expire in 961 days. 
+' 0:< Type: Standalone - Locked 
+' 0:< Usage: Student Version 
+' 0:< Behavior: Extendable 
+' 0:< Expiration: Saturday, April 28, 2018 
+' 0:< ::0:: Delta VM: Avail -707 -> 8387419 MB, Used +102 -> 179 MB, Peak +96 -> 179 MB; RAM: Avail -80 -> 3890 MB, Used +122 -> 253 MB, Peak +122 -> 253 MB 
+' 0:< Autodesk Revit 2016 
+' 0:< 64-bit load point = C:\Program Files\Autodesk\Revit 2016 
+' 0:< this journal = C:\ProgramData\Autodesk\Revit\Addins\2016\journal.0005.txt 
+' 0:< ::0:: Delta VM: Avail -41 -> 8387379 MB, Used +5 -> 185 MB, Peak +27 -> 206 MB; RAM: Avail +0 -> 3891 MB, Used +16 -> 270 MB, Peak +16 -> 270 MB 
+'  0.318327   1:<<<DictionaryAnalysis::initialize 
+' 0:< API_SUCCESS { Added pushbutton 35011, name Navisworks 2016, class NavisWorks13.LcRevitExportCommand, vendorId ADSK (Autodesk, www.autodesk.com), assembly C:\Program Files\Common Files\Autodesk Shared\Navisworks\2016\nwexportrevit2016\nwexportrevit2016_13.dll } 
+' 0:< API_SUCCESS { Added pushbutton 35012, name Navisworks SwitchBack 2016, class NavisWorks13.LcActivateSwitchBack, vendorId ADSK (Autodesk, www.autodesk.com), assembly C:\Program Files\Common Files\Autodesk Shared\Navisworks\2016\nwexportrevit2016\nwexportrevit2016_13.dll } 
+' 0:< Journal Init 
+'C 10-Sep-2015 14:24:05.391;   0:< Log Summary 
+' 0:< .Count 
+' 0:< ...PendingMessages = 1 
+' 0:< .Marshalling 
+' 0:< ...CompactCaching = 1 (Enabled) 
+' 0:< .ThreadPool 
+' 0:< ...ActivePoolSize = 22 
+' 0:< ...ConfiguredPoolSize = automatic 
+' 0:< ...ParallelCores = 4 
+' 0:< ...RequestedPoolSize = automatic 
+' 0:< .Tuning 
+' 0:< ...ElemTable = 1 (Serial except when multithreaded) 
+' 0:< ...Global = 0 (Scalable) 
+' 0:< ...PoolGlobal = 1 (Pool) 
+' 0:< ...PoolLocking = 1 (Locking) 
+' 0:< ...PoolScalable = 1 (Pool) 
+' 0:< ...PoolTreeNodes = 0 (Allocator) 
+' 0:< ...Scalable = 0 (Scalable) 
+' 0:< ::0:: Delta VM: Avail 8387379 MB, Used 185 MB; RAM: Avail +12 -> 3903 MB, Used 270 MB, Peak +5 -> 275 MB 
+'H 10-Sep-2015 14:24:05.393;   0:< 
+Jrn.Data "JournalDefaultTemplate"  _
+        , "Construction Template=$AllUsersAppData\Templates\Generic\Default_M_ENU.rte, Architectural Template=$AllUsersAppData\Templates\Generic\Default_M_ENU.rte, Structural Template=$AllUsersAppData\Templates\Generic\Default_M_ENU.rte, Mechanical Template=$AllUsersAppData\Templates\Generic\Default_M_ENU.rte"
+'H 10-Sep-2015 14:24:05.393;   0:< 
+Jrn.Data "JournalDefaultViewDiscipline"  _
+        , "Coordination"
+'H 10-Sep-2015 14:24:05.393;   0:< 
+Jrn.Directive "Version"  _
+        , "2016.000", "2.148"
+'H 10-Sep-2015 14:24:05.393;   0:< 
+Jrn.Directive "Username"  _
+        , "andydandy"
+'H 10-Sep-2015 14:24:05.398;   0:< 
+Jrn.Directive "CategoryDisciplineFilter"  _
+        , 31
+'H 10-Sep-2015 14:24:05.399;   0:< 
+Jrn.Directive "DisciplineOption"  _
+        , 7677
+'H 10-Sep-2015 14:24:05.399;   0:< 
+Jrn.Directive "TabDisplayOptions"  _
+        , "StayOnModifyInProject", 0
+'H 10-Sep-2015 14:24:05.399;   0:< 
+Jrn.Directive "TabDisplayOptions"  _
+        , "StayOnModifyInFamily", 1
+'H 10-Sep-2015 14:24:05.399;   0:< 
+Jrn.Directive "TabDisplayOptions"  _
+        , "ActiveCtOnSelection", 1
+'H 10-Sep-2015 14:24:05.399;   0:< 
+Jrn.Directive "AllowLinkSelection"  _
+        , 1
+'H 10-Sep-2015 14:24:05.399;   0:< 
+Jrn.Directive "AllowFaceSelection"  _
+        , 0
+'H 10-Sep-2015 14:24:05.399;   0:< 
+Jrn.Directive "AllowUnderlaySelection"  _
+        , 0
+'H 10-Sep-2015 14:24:05.400;   0:< 
+Jrn.Directive "AllowPinnedSelection"  _
+        , 1
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(b3892e5f-9161-4bbc-958a-c8ef75e94e96); VendorId(ADSK); Description(This service supports managing references to external resources such as Revit links or other referenced data.) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(a9bdf0fd-2632-429e-bc35-50ebc2b824d2); VendorId(ADSK); Description(Navisworks Export Service) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(de6db8de-dea6-40bd-9503-4ffe62ff6143); VendorId(ADSK); Description(The external service to view and modify code checking parameter in analytical elements.) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(c42c9b55-c491-4611-97e9-9e617958e13e); VendorId(ADSK); Description(The external service to view and modify service type parameter in structural elements.) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(a97444aa-af8d-4a1e-af1f-fa7b77b368ee); VendorId(ADSK); Description(The external service to view and modify internal forces in structural analytical elements.) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(d8b95737-f943-414c-9ad7-86785bf1acbc); VendorId(ADSK); Description(IFC) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(d8b95737-f943-414c-9ad7-86785bf1acbc); ServerId(ef8d0493-7f36-42b5-b9aa-8aaac716482b); Name(Default IFC); VendorId(ADSK); Description(Default IFC) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(98d317e2-e943-4cc0-a3da-2edf32a5d942); VendorId(ADSK); Description(IFC) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(98d317e2-e943-4cc0-a3da-2edf32a5d942); ServerId(660a7370-f6d6-43c8-8456-6b2eea785110); Name(Default IFC); VendorId(ADSK); Description(Default IFC) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(785d0bd7-3088-489a-af7a-593fc32e2540); VendorId(ADSK); Description(Duct fitting and accessory pressure drop service) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(b8656566-e4ef-4e6a-bedb-9ecc6b5a2780); VendorId(ADSK); Description(Pipe fitting and accessory pressure drop service) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(8c707bd6-ecd6-4150-a0df-bd6c85dd9bb0); VendorId(ADSK); Description(Duct Straight Segment Pressure Drop Calculation) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(62d13e0c-9fe1-4d8e-a0c7-1f93d24cf3f3); VendorId(ADSK); Description(Pipe Straight Segment Pressure Drop Calculation) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(bf0da776-5307-4747-8285-f358e92a90d0); VendorId(ADSK); Description(Convert Fixture Units to Flow for Plumbing Fixtures, which is applicable to Domestic Water System Flow Calculation) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(1fe75ba7-79d4-45f6-8e31-c1b83d4476a9); VendorId(ADSK); Description(This service supports custom handling of many UI operations related to external resources.) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(aaa05780-790c-43dc-bc41-1c2150227f45); VendorId(ADSK); Description(Snapping Service Description) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(52009bda-c817-4aef-aa31-36dc3742516e); VendorId(ADSK); Description(Duct fitting and accessory pressure drop UI service) } 
+' 0:< API_SUCCESS { Registered an external service.: ServiceId(1931b323-1d29-4083-b1ce-bfdcddd011af); VendorId(ADSK); Description(Pipe fitting and accessory pressure drop UI service) } 
+' 0:< ::0:: Delta VM: Avail -199 -> 8387181 MB, Used +61 -> 247 MB, Peak +40 -> 247 MB; RAM: Avail +12 -> 3916 MB, Used +84 -> 355 MB, Peak +80 -> 355 MB 
+' 0:< To make IFC server work. 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(b3892e5f-9161-4bbc-958a-c8ef75e94e96); ServerId(bd4f0f53-394a-4468-b37e-1e7949013382); Name(Revit Default DB Server); VendorId(ADSK); Description(Revit BuiltIn server for loading local resources.) } 
+' 0:< API_SUCCESS { Starting External DB Application: KeynoteDBServer, Class: KeynoteDBServer.ServerApp, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: C:\Program Files\Autodesk\Revit 2016\AddIns\Keynote\KeynoteDBServer.dll } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(bf0da776-5307-4747-8285-f358e92a90d0); ServerId(56121d7d-e1d7-42a3-bed8-f4d1d32058c8); Name(Plumbing Fixture Flow); VendorId(ADSK); Description(Calculation of flow using the Plumbing Fixture Flow method.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(62d13e0c-9fe1-4d8e-a0c7-1f93d24cf3f3); ServerId(ea275fb1-5d7b-47d6-b828-bf856df9bfd5); Name(Simplified Colebrook Equation); VendorId(ADSK); Description(Calculation of pressure drop using Darcy-Weisbach method.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(8c707bd6-ecd6-4150-a0df-bd6c85dd9bb0); ServerId(042a10e0-8d24-46a4-9596-d192b3125d0c); Name(Altshul-Tsal Equation); VendorId(ADSK); Description(Calculation of duct pressure drop using Darcy method.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(8c707bd6-ecd6-4150-a0df-bd6c85dd9bb0); ServerId(2e9a77c0-62a0-4693-9442-33312be60ad7); Name(Haaland Equation); VendorId(USERADDIN); Description(Computes Friction Factor using the Haaland Equation.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(62d13e0c-9fe1-4d8e-a0c7-1f93d24cf3f3); ServerId(58ea1b7c-2fca-453f-9ab9-7a3b9927ecc1); Name(Haaland Equation); VendorId(USERADDIN); Description(Computes Friction Factor using the Haaland Equation.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(8c707bd6-ecd6-4150-a0df-bd6c85dd9bb0); ServerId(e395a0ec-48a4-4255-b957-afbb3d73cb67); Name(Colebrook Equation); VendorId(USERADDIN); Description(Computes Friction Factor using Colebrook Equation.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(62d13e0c-9fe1-4d8e-a0c7-1f93d24cf3f3); ServerId(0875f550-6141-4e34-a6b7-547cf9cfda01); Name(Colebrook Equation); VendorId(USERADDIN); Description(Computes Friction Factor using Colebrook Equation.) } 
+' 0:< API_SUCCESS { Starting External DB Application: StraightSegmentCalculationServersApp, Class: StraightSegmentCalculationServers.ServerApp, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: C:\Program Files\Autodesk\Revit 2016\AddIns\MEPCalculation\StraightSegmentCalculationServers.dll } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(785d0bd7-3088-489a-af7a-593fc32e2540); ServerId(76eff5da-2e71-45f7-b940-cc5716328ba0); Name(Not Defined); VendorId(ADSK); Description(The Pressure Drop on the fitting will be treated as 0.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(785d0bd7-3088-489a-af7a-593fc32e2540); ServerId(8baf7d75-8b9b-46d0-b8ce-3ad1c19e6b19); Name(Coefficient from ASHRAE Table); VendorId(ADSK); Description(Version 5.0.0 of the ASHRAE duct fitting database has been implemented for duct fittings. When using this calculation method, the duct fitting coefficient will be read from the mapped ASHRAE table.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(785d0bd7-3088-489a-af7a-593fc32e2540); ServerId(5a598293-1504-46cc-a9c0-de55c82848b9); Name(Specific Coefficient); VendorId(ADSK); Description(Customize the Loss Coefficient on the fitting, then using the following method to calculate duct fitting pressure drop. this method only available for two connector fittings, like elbow, transitions, etc.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(785d0bd7-3088-489a-af7a-593fc32e2540); ServerId(46245996-eebb-4536-ac17-9c1cd917d8cf); Name(Specific Loss); VendorId(ADSK); Description(Customize the Pressure Drop on the fitting, this method only available for two connector fittings, like elbow, transitions, etc.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(b8656566-e4ef-4e6a-bedb-9ecc6b5a2780); ServerId(61e7b8e1-16d1-4fe4-82f0-327af736323f); Name(Not Defined); VendorId(ADSK); Description(The Pressure Drop on the fitting will be treated as 0.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(b8656566-e4ef-4e6a-bedb-9ecc6b5a2780); ServerId(51dd5e98-a9dd-464b-b286-4a37953610bf); Name(K Coefficient from Table); VendorId(ADSK); Description(CIBSE/ASHRAE/Crane standards are used for pipe fitting loss definition based on the pipe fitting types.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(b8656566-e4ef-4e6a-bedb-9ecc6b5a2780); ServerId(32d58662-b467-4f7b-b728-f6ad7b7ba5e3); Name(Specific Coefficient); VendorId(ADSK); Description(Customize the Loss Coefficient on the fitting, then using the following method to calculate pipe fitting pressure drop. This method only available for two connector fittings, like elbow, transitions, etc.) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(b8656566-e4ef-4e6a-bedb-9ecc6b5a2780); ServerId(16f4f7be-0ac0-461d-a9a4-1d3511cd280e); Name(Specific Loss); VendorId(ADSK); Description(Customize the Pressure Drop on the fitting, this method only available for two connector fittings, like elbow, transitions, etc.) } 
+' 0:< API_SUCCESS { Starting External DB Application: FittingAndAccessoryCalculationServers, Class: FittingAndAccessoryCalculationServers.ServerApp, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: C:\Program Files\Autodesk\Revit 2016\AddIns\MEPCalculation\FittingAndAccessoryCalculationServers.dll } 
+' 0:< API_SUCCESS { Registering DocumentOpening event by application CollaborateDB (bb3086be-63bb-44bd-99eb-d584c013cf2f). } 
+' 0:< API_SUCCESS { Registering DocumentSavedAs event by application CollaborateDB (bb3086be-63bb-44bd-99eb-d584c013cf2f). } 
+' 0:< API_SUCCESS { Registering DocumentOpened event by application CollaborateDB (bb3086be-63bb-44bd-99eb-d584c013cf2f). } 
+' 0:< API_SUCCESS { Registering DocumentClosing event by application CollaborateDB (bb3086be-63bb-44bd-99eb-d584c013cf2f). } 
+' 0:< API_SUCCESS { Starting External DB Application: CollaborateDB, Class: Autodesk.Revit.UI.Collaborate.CollaborateDBApplication, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: C:\Program Files\Autodesk\A360 Collaboration for Revit 2016\CollaborateDB.dll } 
+' 0:< ::0:: Delta VM: Avail -16 -> 8387166 MB, Used +4 -> 251 MB, Peak +4 -> 252 MB; RAM: Avail -1 -> 3915 MB, Used +10 -> 366 MB, Peak +11 -> 367 MB 
+' 0:< API_SUCCESS { Registering ApplicationClosing event by application RaaS (d4f6554b-5d68-4a13-beec-4a0647c34408). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_PHOTO_RENDER_IN_CLOUD' Executed implementation with implementation from application 'RaaS' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\RaaSForRevit\RaaSApplication.dll'. } 
+' 0:< API_SUCCESS { API registering command  Executed event by application RaaS (d4f6554b-5d68-4a13-beec-4a0647c34408). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_PHOTO_RENDER_IN_CLOUD' CanExecute implementation with implementation from application 'RaaS' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\RaaSForRevit\RaaSApplication.dll'. } 
+' 0:< API_SUCCESS { API registering command  CanExecute event by application RaaS (d4f6554b-5d68-4a13-beec-4a0647c34408). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_PHOTO_RENDER_GALLERY' Executed implementation with implementation from application 'RaaS' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\RaaSForRevit\RaaSApplication.dll'. } 
+' 0:< API_SUCCESS { API registering command  Executed event by application RaaS (d4f6554b-5d68-4a13-beec-4a0647c34408). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_PHOTO_RENDER_GALLERY' CanExecute implementation with implementation from application 'RaaS' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\RaaSForRevit\RaaSApplication.dll'. } 
+' 0:< API_SUCCESS { API registering command  CanExecute event by application RaaS (d4f6554b-5d68-4a13-beec-4a0647c34408). } 
+' 0:< ::0:: Delta VM: Avail -3 -> 8387163 MB, Used +0 -> 252 MB, Peak +1 -> 253 MB; RAM: Avail +11 -> 3927 MB, Used +1 -> 367 MB, Peak +1 -> 368 MB 
+' 0:< API_SUCCESS { Starting External Application: RaaS, Class: Autodesk.RaaS.RevitAddin.EApplication, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: RaaSApplication.dll } 
+'H 10-Sep-2015 14:24:11.534;   0:< 
+Jrn.Directive "IdleTimeTaskSymbol"  _
+        , "0.ExternalEvent"
+' 0:< API_SUCCESS { Starting External Application: AutoLoad, Class: AutoLoader.AutoLoader, Vendor : ADSK(), Assembly: AutoLoader.dll } 
+' 0:< API_SUCCESS { Registering ViewActivated event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Registering DocumentClosing event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Registering DocumentClosed event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Registering DocumentChanged event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Registering DockableFrameVisibilityChanged event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+'H 10-Sep-2015 14:24:11.731;   0:< 
+Jrn.Directive "IdleTimeTaskSymbol"  _
+        , "1.OnIdleTask"
+' 0:< API_SUCCESS { Registering Idling event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_MEP_FABRICATION_SETTINGS' CanExecute implementation with implementation from application 'FabPartBrowserApplication' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\FabricationPartBrowser\FabricationPartBrowser.dll'. } 
+' 0:< API_SUCCESS { API registering command Fabrication Settings CanExecute event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_MEP_FABRICATION_SETTINGS' Executed implementation with implementation from application 'FabPartBrowserApplication' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\FabricationPartBrowser\FabricationPartBrowser.dll'. } 
+' 0:< API_SUCCESS { API registering command Fabrication Settings Executed event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Starting External Application: FabPartBrowserApplication, Class: FabricationPartBrowser.FabPartBrowserApplication, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: FabricationPartBrowser.dll } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(52009bda-c817-4aef-aa31-36dc3742516e); ServerId(607992d7-359d-4593-b497-8aa238e2c564); Name(Duct not defined pressure drop UI server); VendorId(ADSK); Description(Duct not defined pressure drop UI server) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(52009bda-c817-4aef-aa31-36dc3742516e); ServerId(9641a039-441e-42e2-93a6-c0e2177cc23c); Name(Duct specific coefficient pressure drop UI server); VendorId(ADSK); Description(Duct specific coefficient pressure drop UI server) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(52009bda-c817-4aef-aa31-36dc3742516e); ServerId(d3b5e81d-9b8c-40da-8efb-99dd37fda611); Name(Duct specific loss pressure drop UI server); VendorId(ADSK); Description(Duct specific loss pressure drop UI server) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(52009bda-c817-4aef-aa31-36dc3742516e); ServerId(25fa8de2-67c4-47d1-91f6-bd6f0803a5ed); Name(Duct coefficient from table pressure drop UI server); VendorId(ADSK); Description(Duct coefficient from table pressure drop UI server) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(1931b323-1d29-4083-b1ce-bfdcddd011af); ServerId(62917391-e14d-4897-ad0c-05342d71e4f9); Name(Pipe not defined pressure drop UI server); VendorId(ADSK); Description(Pipe not defined pressure drop UI server) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(1931b323-1d29-4083-b1ce-bfdcddd011af); ServerId(247265b6-7b71-4147-97c6-cc52b39c12aa); Name(Pipe specific coefficient pressure drop UI server); VendorId(ADSK); Description(Pipe specific coefficient pressure drop UI server) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(1931b323-1d29-4083-b1ce-bfdcddd011af); ServerId(5978b92a-3f0b-4691-bbc8-caf2fae20a71); Name(Pipe specific loss pressure drop UI server); VendorId(ADSK); Description(Pipe specific loss pressure drop UI server) } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(1931b323-1d29-4083-b1ce-bfdcddd011af); ServerId(cda19b6f-fbd5-4725-a0ce-f159bf5d02fe); Name(Pipe K coefficient from table pressure drop UI server); VendorId(ADSK); Description(Pipe K coefficient from table pressure drop UI server) } 
+' 0:< API_SUCCESS { Starting External Application: FittingAndAccessoryCalculationUIServers, Class: FittingAndAccessoryCalculationUIServers.ServerApp, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: FittingAndAccessoryCalculationUIServers.dll } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(1fe75ba7-79d4-45f6-8e31-c1b83d4476a9); ServerId(3ffc688a-bb2e-4145-90ab-9443da02aef6); Name(Revit Default UI Server.); VendorId(ADSK); Description(Handles user interface operations related to Revit builtIn DB server for local resources.) } 
+' 0:< API_SUCCESS { Starting External Application: KeynoteUIServer, Class: KeynoteUIServer.ServerApp, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: KeynoteUIServer.dll } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(a97444aa-af8d-4a1e-af1f-fa7b77b368ee); ServerId(a97444aa-af8d-4a1e-af1f-fa7b77b368ee); Name(Internal Forces Server); VendorId(ADSK); Description(The external server to view and modify internal forces in structural analytical elements.) } 
+' 0:< API_SUCCESS { Starting External Application: Member Forces, Class: MemberForcesUI.ServerApp, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: MemberForces.dll } 
+' 0:< API_SUCCESS { Replacing command id 'ID_NUMBERING_REINF_PARTITIONS' Executed implementation with implementation from application 'Object Numbering' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\ObjectNumbering\ObjectNumberingUI.dll'. } 
+' 0:< API_SUCCESS { API registering command  Executed event by application Object Numbering (32b5860a-aec9-4df7-96b0-07168b27446e). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_NUMBERING_REINF_PARTITIONS' CanExecute implementation with implementation from application 'Object Numbering' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\ObjectNumbering\ObjectNumberingUI.dll'. } 
+' 0:< API_SUCCESS { API registering command  CanExecute event by application Object Numbering (32b5860a-aec9-4df7-96b0-07168b27446e). } 
+' 0:< API_SUCCESS { Starting External Application: Object Numbering, Class: BIM.Numbering.UI.NumberingUIApplication, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: ObjectNumberingUI.dll } 
+' 0:< API_SUCCESS { Replacing command id 'ID_MEP_DUCT_PRESSURE_LOSS_REPORT' CanExecute implementation with implementation from application 'PressureLossReport' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\MEPCalculation\PressureLossReport.dll'. } 
+' 0:< API_SUCCESS { API registering command Duct Pressure Loss Report CanExecute event by application PressureLossReport (b00d3753-d3bc-4255-9c97-e389de87a5d6). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_MEP_DUCT_PRESSURE_LOSS_REPORT' Executed implementation with implementation from application 'PressureLossReport' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\MEPCalculation\PressureLossReport.dll'. } 
+' 0:< API_SUCCESS { API registering command Duct Pressure Loss Report Executed event by application PressureLossReport (b00d3753-d3bc-4255-9c97-e389de87a5d6). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_MEP_PIPE_PRESSURE_LOSS_REPORT' CanExecute implementation with implementation from application 'PressureLossReport' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\MEPCalculation\PressureLossReport.dll'. } 
+' 0:< API_SUCCESS { API registering command Pipe Pressure Loss Report CanExecute event by application PressureLossReport (b00d3753-d3bc-4255-9c97-e389de87a5d6). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_MEP_PIPE_PRESSURE_LOSS_REPORT' Executed implementation with implementation from application 'PressureLossReport' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\MEPCalculation\PressureLossReport.dll'. } 
+' 0:< API_SUCCESS { API registering command Pipe Pressure Loss Report Executed event by application PressureLossReport (b00d3753-d3bc-4255-9c97-e389de87a5d6). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_MEP_SELECT_DUCT_PRESSURE_LOSS_REPORT' CanExecute implementation with implementation from application 'PressureLossReport' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\MEPCalculation\PressureLossReport.dll'. } 
+' 0:< API_SUCCESS { API registering command Duct Pressure Loss Report CanExecute event by application PressureLossReport (b00d3753-d3bc-4255-9c97-e389de87a5d6). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_MEP_SELECT_DUCT_PRESSURE_LOSS_REPORT' Executed implementation with implementation from application 'PressureLossReport' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\MEPCalculation\PressureLossReport.dll'. } 
+' 0:< API_SUCCESS { API registering command Duct Pressure Loss Report Executed event by application PressureLossReport (b00d3753-d3bc-4255-9c97-e389de87a5d6). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_MEP_SELECT_PIPE_PRESSURE_LOSS_REPORT' CanExecute implementation with implementation from application 'PressureLossReport' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\MEPCalculation\PressureLossReport.dll'. } 
+' 0:< API_SUCCESS { API registering command Pipe Pressure Loss Report CanExecute event by application PressureLossReport (b00d3753-d3bc-4255-9c97-e389de87a5d6). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_MEP_SELECT_PIPE_PRESSURE_LOSS_REPORT' Executed implementation with implementation from application 'PressureLossReport' dll 'C:\Program Files\Autodesk\Revit 2016\AddIns\MEPCalculation\PressureLossReport.dll'. } 
+' 0:< API_SUCCESS { API registering command Pipe Pressure Loss Report Executed event by application PressureLossReport (b00d3753-d3bc-4255-9c97-e389de87a5d6). } 
+' 0:< API_SUCCESS { Starting External Application: PressureLossReport, Class: PressureLossReport.PressureLossReportApplication, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: PressureLossReport.dll } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(c42c9b55-c491-4611-97e9-9e617958e13e); ServerId(1b91ce46-ddb4-44ec-a942-d45efadde353); Name(SectionTypeParameterServer); VendorId(ADSK); Description(Provides implementation for Section Type parameters) } 
+' 0:< API_SUCCESS { Starting External Application: Structural Section Properties, Class: SectionProperties.ServerApp, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: SectionProperties.dll } 
+' 0:< API_SUCCESS { Registering ViewActivated event by application Collaborate (14f73f04-900e-4e24-8d85-44c71092b6e9). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_COLLABORATE' Executed implementation with implementation from application 'Collaborate' dll 'C:\Program Files\Autodesk\A360 Collaboration for Revit 2016\Collaborate.dll'. } 
+' 0:< API_SUCCESS { API registering command Collaborate Executed event by application Collaborate (14f73f04-900e-4e24-8d85-44c71092b6e9). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_COLLABORATE' CanExecute implementation with implementation from application 'Collaborate' dll 'C:\Program Files\Autodesk\A360 Collaboration for Revit 2016\Collaborate.dll'. } 
+' 0:< API_SUCCESS { API registering command Collaborate CanExecute event by application Collaborate (14f73f04-900e-4e24-8d85-44c71092b6e9). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_COLLABORATE_360' Executed implementation with implementation from application 'Collaborate' dll 'C:\Program Files\Autodesk\A360 Collaboration for Revit 2016\Collaborate.dll'. } 
+' 0:< API_SUCCESS { API registering command  Executed event by application Collaborate (14f73f04-900e-4e24-8d85-44c71092b6e9). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_COLLABORATE_360' CanExecute implementation with implementation from application 'Collaborate' dll 'C:\Program Files\Autodesk\A360 Collaboration for Revit 2016\Collaborate.dll'. } 
+' 0:< API_SUCCESS { API registering command  CanExecute event by application Collaborate (14f73f04-900e-4e24-8d85-44c71092b6e9). } 
+' 0:< API_SUCCESS { Starting External Application: Collaborate, Class: Autodesk.Revit.UI.Collaborate.CollaborateApplication, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: C:\Program Files\Autodesk\A360 Collaboration for Revit 2016\Collaborate.dll } 
+' 0:< API_SUCCESS { Replacing command id 'ID_COLLABORATE_BROWSER' Executed implementation with implementation from application 'CollaborateBrowser' dll 'C:\Program Files\Autodesk\A360 Collaboration for Revit 2016\CollaborateBrowser.dll'. } 
+' 0:< API_SUCCESS { API registering command A360 Projects Executed event by application CollaborateBrowser (901c7e33-857c-4c9c-846c-8f971c7cf72a). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_COLLABORATE_BROWSER' CanExecute implementation with implementation from application 'CollaborateBrowser' dll 'C:\Program Files\Autodesk\A360 Collaboration for Revit 2016\CollaborateBrowser.dll'. } 
+' 0:< API_SUCCESS { API registering command A360 Projects CanExecute event by application CollaborateBrowser (901c7e33-857c-4c9c-846c-8f971c7cf72a). } 
+' 0:< API_SUCCESS { Starting External Application: CollaborateBrowser, Class: Autodesk.Revit.UI.CollaborateBrowser.CollaborateBrowserApplication, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: C:\Program Files\Autodesk\A360 Collaboration for Revit 2016\CollaborateBrowser.dll } 
+'C 10-Sep-2015 14:24:12.762;   0:< Loading bcg.dll: Autodesk.Bcg, Version=1.7.3.0, Culture=neutral, PublicKeyToken=d672471c03b2c408 
+' 0:< ::0:: Delta VM: Avail -12 -> 8387152 MB, Used +2 -> 254 MB, Peak +1 -> 254 MB; RAM: Avail -6 -> 3921 MB, Used +7 -> 375 MB, Peak +6 -> 375 MB 
+'C 10-Sep-2015 14:24:12.941;   0:< SkyscraperClientHost: Initialize Success: True 
+' 0:< API_SUCCESS { Starting External Application: SkyscraperClientHostApplication, Class: SkyscraperClientHost.SkyscraperClientHostApplication, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: C:\Program Files\Autodesk\A360 Collaboration for Revit 2016\SkyscraperClientHost.dll } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6400, name: , text: Glue, class: BIM360RevitAddin.GlueItCommand, assembly: C:\Program Files\Autodesk\BIM360GlueAddins\Revit2016Addin\BIM360GlueRevit2016Addin.dll } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6401, name: , text: Clash
+'Pinpoint, class: BIM360RevitAddin.GluePinPointCommand, assembly: C:\Program Files\Autodesk\BIM360GlueAddins\Revit2016Addin\BIM360GlueRevit2016Addin.dll } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6402, name: , text: Equipment
+'Properties, class: BIM360RevitAddin.EquipmentCommand, assembly: C:\Program Files\Autodesk\BIM360GlueAddins\Revit2016Addin\BIM360GlueRevit2016Addin.dll } 
+' 0:< API_SUCCESS { Registering ApplicationInitialized event by application Ribbon (bdec973b-c46f-49be-87a6-4fc4d6aba9c2). } 
+' 0:< API_SUCCESS { Registering ApplicationClosing event by application Ribbon (bdec973b-c46f-49be-87a6-4fc4d6aba9c2). } 
+' 0:< API_SUCCESS { Starting External Application: Ribbon, Class: BIM360RevitAddin.HorizontalRibbon, Vendor : BIM360(Autodesk, Inc, www.autodesk.com), Assembly: C:\Program Files\Autodesk\BIM360GlueAddins\Revit2016Addin\BIM360GlueRevit2016Addin.dll } 
+' 0:< API_SUCCESS { Registering ApplicationInitialized event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Registering DocumentOpened event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Registering DocumentCreated event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Registering DocumentSavedAs event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Registering DocumentSaved event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Registering DocumentClosed event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Registering ApplicationClosing event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_TEAM' Executed implementation with implementation from application 'Communicator for Autodesk Revit' dll 'C:\ProgramData\Autodesk\Revit\Addins\2016\Communicator\SmartMonkey.dll'. } 
+' 0:< API_SUCCESS { API registering command Communicator Executed event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_TEAM' CanExecute implementation with implementation from application 'Communicator for Autodesk Revit' dll 'C:\ProgramData\Autodesk\Revit\Addins\2016\Communicator\SmartMonkey.dll'. } 
+' 0:< API_SUCCESS { API registering command Communicator CanExecute event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Starting External Application: Communicator for Autodesk Revit, Class: Autodesk.Revit.SmartMonkeyPlugin.SmartMonkeyApplication, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: Communicator\SmartMonkey.dll } 
+' 0:< ::0:: Delta VM: Avail -11 -> 8387142 MB, Used +1 -> 256 MB, Peak +1 -> 256 MB; RAM: Avail +1 -> 3923 MB, Used +4 -> 379 MB, Peak +4 -> 379 MB 
+' 0:< API_SUCCESS { Registering Idling event by application Dynamo For Revit (8d83c886-b739-4acd-a9db-1bc78f315b2b). } 
+' 0:< API_SUCCESS { Registering ViewActivated event by application Dynamo For Revit (8d83c886-b739-4acd-a9db-1bc78f315b2b). } 
+' 0:< API_SUCCESS { Registering ViewActivating event by application Dynamo For Revit (8d83c886-b739-4acd-a9db-1bc78f315b2b). } 
+' 0:< API_SUCCESS { Registering DocumentClosing event by application Dynamo For Revit (8d83c886-b739-4acd-a9db-1bc78f315b2b). } 
+' 0:< API_SUCCESS { Registering DocumentClosed event by application Dynamo For Revit (8d83c886-b739-4acd-a9db-1bc78f315b2b). } 
+' 0:< API_SUCCESS { Registering DocumentOpened event by application Dynamo For Revit (8d83c886-b739-4acd-a9db-1bc78f315b2b). } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6403, name: , text: Dynamo 0.8, class: Dynamo.Applications.DynamoRevit, assembly: C:\Program Files\Dynamo 0.8\Revit_2016\DynamoRevitDS.dll } 
+' 0:< Third Party Updater 'Dynamo For Revit: Sun and Shadow Settings Updater' registered for all documents. 
+' 0:< API_SUCCESS { Registering DocumentChanged event by application Dynamo For Revit (8d83c886-b739-4acd-a9db-1bc78f315b2b). } 
+' 0:< API_SUCCESS { Starting External Application: Dynamo For Revit, Class: Dynamo.Applications.VersionLoader, Vendor : ADSK(Dynamo), Assembly: C:\Program Files\Dynamo 0.8\Revit_2016\DynamoRevitVersionSelector.dll } 
+' 0:< API_SUCCESS { Replacing command id 'ID_VIEWS_FOR_A360' Executed implementation with implementation from application 'Views For A360' dll 'C:\ProgramData\Autodesk\Revit\Addins\2016\.\ExportViewSelectorAddin\ExportViewSelectorAddin.dll'. } 
+' 0:< API_SUCCESS { API registering command Views For A360 Executed event by application Views For A360 (78bd1446-1817-4842-8075-591b0424acaa). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_VIEWS_FOR_A360' CanExecute implementation with implementation from application 'Views For A360' dll 'C:\ProgramData\Autodesk\Revit\Addins\2016\.\ExportViewSelectorAddin\ExportViewSelectorAddin.dll'. } 
+' 0:< API_SUCCESS { API registering command Views For A360 CanExecute event by application Views For A360 (78bd1446-1817-4842-8075-591b0424acaa). } 
+' 0:< API_SUCCESS { Starting External Application: Views For A360, Class: Autodesk.Revit.Addin.ExportViewSelector.ExportViewSelectorApp, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: .\ExportViewSelectorAddin\ExportViewSelectorAddin.dll } 
+' 0:< ::0:: Delta VM: Avail -30 -> 8387112 MB, Used +4 -> 260 MB, Peak +11 -> 268 MB; RAM: Avail +1 -> 3924 MB, Used +4 -> 384 MB, Peak +4 -> 384 MB 
+' 0:< API_SUCCESS { Replacing command id 'ID_EXPORT_NAVISWORKS' Executed implementation with implementation from application 'File exporter for Navisworks 2016' dll 'C:\Program Files\Common Files\Autodesk Shared\Navisworks\2016\nwexportrevit2016\nwexportrevit2016_13.dll'. } 
+' 0:< API_SUCCESS { API registering command  Executed event by application File exporter for Navisworks 2016 (280bb447-f630-48b0-99be-6a776ac7b5c8). } 
+' 0:< API_SUCCESS { Replacing command id 'ID_EXPORT_NAVISWORKS' CanExecute implementation with implementation from application 'File exporter for Navisworks 2016' dll 'C:\Program Files\Common Files\Autodesk Shared\Navisworks\2016\nwexportrevit2016\nwexportrevit2016_13.dll'. } 
+' 0:< API_SUCCESS { API registering command  CanExecute event by application File exporter for Navisworks 2016 (280bb447-f630-48b0-99be-6a776ac7b5c8). } 
+' 0:< API_SUCCESS { An external server has been registered.: ServiceId(a9bdf0fd-2632-429e-bc35-50ebc2b824d2); ServerId(68e1934c-ec3b-410c-8c82-434f0cf25446); Name(Navisworks 2016); VendorId(Autodesk Navisworks); Description(Autodesk Navisworks Exporters 2016) } 
+' 0:< API_SUCCESS { Starting External Application: File exporter for Navisworks 2016, Class: NavisWorks13.LcRevitExportApplication, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: C:\Program Files\Common Files\Autodesk Shared\Navisworks\2016\nwexportrevit2016\nwexportrevit2016_13.dll } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6404, name: , text: Hello World..., class: RevitLookup.HelloWorld, assembly: C:\ProgramData\Autodesk\Revit\Addins\2016\RevitLookup.dll } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6405, name: , text: Snoop DB..., class: RevitLookup.CmdSnoopDb, assembly: C:\ProgramData\Autodesk\Revit\Addins\2016\RevitLookup.dll } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6406, name: , text: Snoop Current Selection..., class: RevitLookup.CmdSnoopModScope, assembly: C:\ProgramData\Autodesk\Revit\Addins\2016\RevitLookup.dll } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6407, name: , text: Snoop Active View..., class: RevitLookup.CmdSnoopActiveView, assembly: C:\ProgramData\Autodesk\Revit\Addins\2016\RevitLookup.dll } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6408, name: , text: Snoop Application..., class: RevitLookup.CmdSnoopApp, assembly: C:\ProgramData\Autodesk\Revit\Addins\2016\RevitLookup.dll } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6409, name: , text: Test Framework..., class: RevitLookup.CmdTestShell, assembly: C:\ProgramData\Autodesk\Revit\Addins\2016\RevitLookup.dll } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6410, name: , text: Events..., class: RevitLookup.CmdEvents, assembly: C:\ProgramData\Autodesk\Revit\Addins\2016\RevitLookup.dll } 
+' 0:< API_SUCCESS { Registering DocumentClosed event by application Revit Lookup (356cda5a-e6c5-4c2f-a9ef-b3222116b8c8). } 
+' 0:< API_SUCCESS { Registering DocumentOpened event by application Revit Lookup (356cda5a-e6c5-4c2f-a9ef-b3222116b8c8). } 
+' 0:< API_SUCCESS { Registering DocumentSaved event by application Revit Lookup (356cda5a-e6c5-4c2f-a9ef-b3222116b8c8). } 
+' 0:< API_SUCCESS { Registering DocumentSavedAs event by application Revit Lookup (356cda5a-e6c5-4c2f-a9ef-b3222116b8c8). } 
+' 0:< API_SUCCESS { Starting External Application: Revit Lookup, Class: RevitLookup.App, Vendor : ADSK(Autodesk, www.autodesk.com), Assembly: RevitLookup.dll } 
+' 0:< API_SUCCESS { Added pushbutton Id: 6411, name: , text: Parametric 
+' System, class: Parametric_System.Command, assembly: C:\Program Files\Schueco\ParametricSystem\2016\SchuecoParametricSystem.dll } 
+' 0:< API_SUCCESS { Starting External Application: Schueco Parametric System Revit Addin, Class: Parametric_System.SchuecoParametricSystem, Vendor : twsc(), Assembly: C:\Program Files\Schueco\ParametricSystem\2016\SchuecoParametricSystem.dll } 
+' 0:< ::0:: Delta VM: Avail -10 -> 8387102 MB, Used +5 -> 265 MB, Peak +4 -> 273 MB; RAM: Avail +9 -> 3934 MB, Used +6 -> 390 MB, Peak +13 -> 397 MB 
+'C 10-Sep-2015 14:24:15.709;   0:< ->processShellCommand 
+'C 10-Sep-2015 14:24:15.709;   0:< <-processShellCommand 
+' 0:< ::0:: Delta VM: Avail -16 -> 8387087 MB, Used +15 -> 281 MB, Peak +9 -> 282 MB; RAM: Avail 3934 MB, Used +0 -> 391 MB 
+'C 10-Sep-2015 14:24:15.729;   0:< ->DesktopMFCApp::doStartupWarnings 
+'C 10-Sep-2015 14:24:15.729;   0:< manage involvement 
+' 0:< ::0:: Delta VM: Avail -28 -> 8387060 MB, Used +15 -> 296 MB, Peak +14 -> 296 MB; RAM: Avail -9 -> 3926 MB, Used +12 -> 403 MB, Peak +14 -> 411 MB 
+'C 10-Sep-2015 14:24:15.950;   0:< manage debug modes 
+'C 10-Sep-2015 14:24:15.951;   0:< MFCApp::testGraphicsHardware 
+' 0:< ::0:: Delta VM: Avail -44 -> 8387016 MB, Used +4 -> 300 MB, Peak +4 -> 300 MB; RAM: Avail -15 -> 3911 MB, Used +7 -> 411 MB 
+' 0:< Revit Graphics Information 
+' 0:< 	Current Mode : DirectX Hardware 
+' 0:< 	Use Hardware: ON 
+' 0:< 	Use Overlays : ON 
+' 0:< START CanUseHardware(forced) 
+' 1:< 
+'OGS Device Memory Size: 4050 MB 
+' 1:< ::0:: Delta VM: Avail -62 -> 8386955 MB, Used +43 -> 344 MB, Peak +44 -> 345 MB; RAM: Avail -12 -> 3900 MB, Used +12 -> 423 MB, Peak +12 -> 424 MB 
+' 1:< DX Device: DirectX 11, Hardware 
+'C 10-Sep-2015 14:24:17.328;   1:< START video card certification 
+' 1:< ::0:: Delta VM: Avail -17 -> 8386939 MB, Used +5 -> 350 MB, Peak +10 -> 356 MB; RAM: Avail 3900 MB, Used +5 -> 429 MB, Peak +10 -> 435 MB 
+' 1:< 
+'Current driver version: 9.18.13.4181
+'Certified driver(s):  
+' 1:< VIDEO CARD ENVIRONMENT: CARD="NVIDIA GeForce GT 330M" ManufacturerID="10DE" DeviceID="0A29" osID="2000" DRIVER="9.18.13.4181" DEVICE="DX11" FL_Caps="45" (Shader Model) 
+'C 10-Sep-2015 14:24:17.430;   1:< FINISH video card certification 
+'  0.764421   1:<<<CanUseHardware(forced) 
+' 0:< 
+'Can use hardware=y
+'Hardware support flags:
+'FeatureLevelLow=n
+'DrvOlderThanTested=n
+'DrvNewerThanTested=n
+'CardIsNotListed=y
+'NotCertifiedEnv=n
+'3GBSwitchIsOn=n
+'SoftwareModeForced=n 
+' 0:< FINISH CanUseHardware(forced) 
+'C 10-Sep-2015 14:24:17.431;   0:< MFCApp::testMSAA 
+' 0:< Revit Graphics Information 
+' 0:< 	Current Mode : DirectX Hardware 
+' 0:< 	Use Hardware: ON 
+' 0:< 	Use Overlays : ON 
+'C 10-Sep-2015 14:24:17.431;   0:< postConditionalWarnings 
+'C 10-Sep-2015 14:24:17.431;   0:< giveAtomRegistrationWarnings 
+'C 10-Sep-2015 14:24:17.431;   0:< warnings->consumeAll 
+'C 10-Sep-2015 14:24:17.431;   0:< Process result of DebugModes-Changed Task Dialog 
+'C 10-Sep-2015 14:24:17.431;   0:< isMaterialLibraryAvailable 
+'C 10-Sep-2015 14:24:17.432;   0:< start up warnings for AddIns 
+'C 10-Sep-2015 14:24:17.433;   0:< <-DesktopMFCApp::doStartupWarnings 
+'C 10-Sep-2015 14:24:17.433;   0:< <-desktop InitNativeInstance 
+'C 10-Sep-2015 14:24:17.433;   0:< ->desktop InitManagedInstance 
+' 1:< API_SUCCESS { Registering ViewActivated event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 1:< API_SUCCESS { Registering DocumentSynchronizingWithCentral event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 1:< API_SUCCESS { Registering DocumentSynchronizedWithCentral event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+'C 10-Sep-2015 14:24:17.833;   0:< <-desktop InitManagedInstance 
+'C 10-Sep-2015 14:24:17.881;   0:< appPriv idle 
+'C 10-Sep-2015 14:24:18.009;   0:< started journal file playback of "C:\ProgramData\Autodesk\Revit\Addins\2016\DynamoJournalFile_1.txt" 
+ ' 0:< ::0:: Delta VM: Avail -18 -> 8386921 MB, Used +10 -> 360 MB, Peak +4 -> 360 MB; RAM: Avail -27 -> 3874 MB, Used +19 -> 448 MB, Peak +13 -> 449 MB 
+ ' 28.033672  0:<<Event timer/ALL_GAPS  28.033672/TurnOff_GAPs 1% 
+ 'E 10-Sep-2015 14:24:18.987;   0:< 
+ Jrn.Command "StartupPage" , "Open this project , ID_FILE_MRU_FIRST"
+ 'H 10-Sep-2015 14:24:18.989;   0:< 
+ Jrn.Data "MRUFileName"  _
+         , "..\..\..\..\..\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir1\4Walls.rvt"
+ ' 1:< ::1:: Delta VM: Avail -17 -> 8386904 MB, Used 360 MB; RAM: Avail -1 -> 3873 MB, Used +0 -> 449 MB 
+ ' 1:<   System (MB) [Available /  Total ]  [Revit Memory Usage (MB)   ] 
+ ' 1:< RAM Statistics:     3873 /     8117       449=InUse      449=Peak  
+ ' 1:< VM  Statistics:  8386904 /  8388607       360=InUse      360=Peak  
+ ' 2:< API_SUCCESS { An external server has been registered.: ServiceId(b3892e5f-9161-4bbc-958a-c8ef75e94e96); ServerId(d2c3617d-7a16-45bc-b395-44897852f485); Name(A360); VendorId(ADSK); Description(This server is the A360 Resource Server.) } 
+ ' 2:< File: Open 
+ ' 3:< DataStorage 000000004A04A190 is created 
+ ' 3:< Connecting session [$2cd3229a] to Worksharing Log [C:\ProgramData\Autodesk\Revit\Addins\2016\journal.0005.txt] 
+ ' 3:< Additional IP address/name found for host MBPAD3: 2002:89e2:d337::89e2:d337  
+ ' 3:< Additional IP address/name found for host MBPAD3: 137.226.211.55  
+ ' 3:< Additional IP address/name found for host MBPAD3: 10.0.1.76  
+ ' 4:< DataStorage 000000004A04A310 is created 
+  ' 6:< ::1:: Delta VM: Avail -25 -> 8386879 MB, Used +12 -> 373 MB, Peak +12 -> 373 MB; RAM: Avail -24 -> 3850 MB, Used +9 -> 458 MB, Peak +9 -> 458 MB 
+  'Warning: Event timer reset skipped - TrustedUtility::readStreams 
+  'E 10-Sep-2015 14:24:19.207;   6:< 
+  ' [Jrn.BasicFileInfo] Rvt.Attr.Worksharing: Not enabled Rvt.Attr.UserName:  Rvt.Attr.CentralModelPath:  Rvt.Attr.RevitBuildVersion: Autodesk Revit 2016 (Build: 20150714_1515(x64)) Rvt.Attr.LastSavePath: C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir1\4Walls.rvt Rvt.Attr.ProjectSpark: notProjectSpark Rvt.Attr.LocaleWhenSaved: DEU 
+  ' 7:< [ISL] On open, Adler Checksum: 0x15f5c21d [C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir1\4Walls.rvt] 
+  ' 6:< [ISL] Read last modification time: 10-Sep-2015 12:15:12 (UTC: 10-Sep-2015 10:15:12) 
+  ' 6:< File was saved in Autodesk Revit 2016 (Build: 20150714_1515(x64)) 
+  ' 8:< ::2:: Delta VM: Avail -69 -> 8386810 MB, Used +27 -> 400 MB, Peak +27 -> 400 MB; RAM: Avail -29 -> 3821 MB, Used +32 -> 491 MB, Peak +34 -> 493 MB 
+  ' 8:< Loaded elemStream#1: uncompSize=28550800, compSize=5208730, count=43510 
+  '  0.553650          8:<<<loadLatestVersion 
+  ' 7:< ::2:: Delta VM: Avail -18 -> 8386793 MB, Used +3 -> 403 MB, Peak +4 -> 405 MB; RAM: Avail -31 -> 3791 MB, Used +11 -> 503 MB, Peak +9 -> 503 MB 
+  '  0.410579          8:<<<commitSwapouts 
+  '  0.965381         7:<<loadSelectedEpochs 
+  '  1.061872        6:<<TrustedUtility::readStreams/ALL_GAPS   0.096491/Threshold_GAPs 95% 
+  '  0.136372        6:<<ADocumentUpgrade::docUpgrade [C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir1\4Walls.rvt] 
+  '  1.342254      4:<<loadSerialize/ALL_GAPS   0.144009/TurnOff_GAPs 100% 
+  '  1.342455     3:<<LoadFromStorage 
+  ' 2:< No key-based tree File: RevitKeynotes_DEU.txt - in this Library Location: C:\ProgramData\Autodesk\RVT 2016\Libraries\Generic\ - file does not exist: C:\ProgramData\Autodesk\RVT 2016\Libraries\Generic\RevitKeynotes_DEU.txt 
+  ' 2:< No key-based tree File: UniformatClassifications.txt - in this Library Location: C:\ProgramData\Autodesk\RVT 2016\Libraries\Generic\ - file does not exist: C:\ProgramData\Autodesk\RVT 2016\Libraries\Generic\UniformatClassifications.txt 
+  ' 4:< Unnecessary nesting;Document\PostLoadDocument.cpp;178;String_Revit_DelayedPropagatoinRegen ;N++E(N); 
+  ' 5:<   System (MB) [Available /  Total ]  [Revit Memory Usage (MB)   ] 
+  ' 5:< RAM Statistics:     3787 /     8117       505=InUse      505=Peak  
+  ' 5:< VM  Statistics:  8386793 /  8388607       403=InUse      405=Peak  
+  ' 5:< Element Expansion Statistics: 
+  ' 5:<  0% Opening Plans                    (0) 
+  ' 5:<  0% Opening RC Plans                 (0) 
+  ' 5:<  0% Opening 3d Views                 (0) 
+  ' 5:<  0% Opening Elevations and Sections  (0) 
+  ' 5:<  0% In Regnerate                     (0) 
+  ' 5:<  0% In Autojoin                      (0) 
+  ' 5:<  0% In Overlap Checking              (0) 
+  ' 5:<  0% Reviewing PostedWarnings         (0) 
+  ' 5:<  100% Other                            (2649716) 
+  ' 5:< total bytes expanded: 2649716 
+  ' 5:< ;EES;0;0;0;0;0;0;0;0;100; 
+  ' 6:< Connecting session [$6107e2a3] to Worksharing Log [C:\ProgramData\Autodesk\Revit\Addins\2016\journal.0005.txt] 
+  ' 6:< Additional IP address/name found for host MBPAD3: 2002:89e2:d337::89e2:d337  
+  ' 6:< Additional IP address/name found for host MBPAD3: 137.226.211.55  
+  ' 6:< Additional IP address/name found for host MBPAD3: 10.0.1.76  
+  ' 3:< Unnecessary nesting;Document\PostLoadDocument.cpp;432;ID_SETTINGS_SNAPPING ;N++E(N); 
+  'C 10-Sep-2015 14:24:20.596;   4:< The current load request is an automated one. 
+  '  0.137049      4:<<<Keynoting Settings -> readFile 
+  'C 10-Sep-2015 14:24:20.647;   4:< The current load request is an automated one. 
+  ' 3:< Document save history --> : 
+  ' 3:<   Revit 2015 - Preview Pre-Release 2015 (2015.000) : 20140120_1515(x64) 
+  ' 3:<   Revit 2015 2015 (2015.000) : 20150704_0715(x64) 
+  ' 3:<   Revit 2016 2016 (2016.000) : 20150714_1515(x64) 
+  ' 3:< Document save history <-- 
+  '  0.193563     3:<<[Cloud]postLoadDocument/ALL_GAPS   0.056514/Threshold_GAPs 95% 
+  ' 1:< ::2:: Delta VM: Avail -22 -> 8386772 MB, Used +21 -> 425 MB, Peak +20 -> 425 MB; RAM: Avail -20 -> 3771 MB, Used +14 -> 517 MB, Peak +14 -> 517 MB 
+  '  1.657255    2:<<FormOrAbandon::openFromModelPath [C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir1\4Walls.rvt]/ALL_GAPS   0.121238/Threshold_GAPs 8% 
+  'Warning: Event timer reset skipped - [Cloud]standardOpenDocumentFile 
+  'H 10-Sep-2015 14:24:20.875;   1:< 
+  Jrn.Directive "DocSymbol"  _
+          , "[4Walls.rvt]"
+  ' 2:< ::2:: Delta VM: Avail -5 -> 8386768 MB, Used +8 -> 433 MB, Peak +8 -> 433 MB; RAM: Avail -20 -> 3752 MB, Used +13 -> 531 MB, Peak +13 -> 531 MB 
+  'C 10-Sep-2015 14:24:21.195;   2:< Protein : Register Preview Factories 
+  'C 10-Sep-2015 14:24:21.196;   2:< Protein : Initialize Renderer Module 
+  'C 10-Sep-2015 14:24:21.196;   2:< Protein : Load the MR Renderer plug-in 
+  ' 2:< ::2:: Delta VM: Avail -27 -> 8386742 MB, Used +1 -> 435 MB, Peak +1 -> 435 MB; RAM: Avail -4 -> 3748 MB, Used +1 -> 533 MB, Peak +1 -> 533 MB 
+  'C 10-Sep-2015 14:24:21.285;   2:< Protein : initialize RPC plug-ins 
+  ' 2:< ::2:: Delta VM: Avail -22 -> 8386720 MB, Used +1 -> 437 MB, Peak +3 -> 438 MB; RAM: Avail +1 -> 3749 MB, Used +2 -> 535 MB, Peak +2 -> 535 MB 
+  'C 10-Sep-2015 14:24:21.430;   2:< Protein : Open Protein content Libraries 
+  'C 10-Sep-2015 14:24:21.536;   2:< Protein : Load Library:  
+  ' 2:< C:\Program Files (x86)\Common Files\Autodesk Shared\Materials\2016\assetlibrary_base.adsklib 
+  'C 10-Sep-2015 14:24:21.536;   2:< Protein : Texture Path:  
+  ' 2:< C:/Program Files (x86)/Common Files/Autodesk Shared/Materials/Textures/ 
+  ' 2:< ::2:: Delta VM: Avail -5 -> 8386715 MB, Used +8 -> 445 MB, Peak +8 -> 447 MB; RAM: Avail -19 -> 3731 MB, Used +9 -> 545 MB, Peak +9 -> 545 MB 
+  'C 10-Sep-2015 14:24:24.564;   2:< Protein : Notify Plugins to load the content on the asset library 
+  'C 10-Sep-2015 14:24:24.564;   2:< Protein : Register the Protein RenderingAsset Manager 
+  ' 2:< Before : Create Display Manager 
+  ' 2:<   System (MB) [Available /  Total ]  [Revit Memory Usage (MB)   ] 
+  ' 2:< RAM Statistics:     3730 /     8117       545=InUse      546=Peak  
+  ' 2:< VM  Statistics:  8386715 /  8388607       445=InUse      447=Peak  
+  ' 2:< Revit Graphics Information 
+  ' 2:< 	Current Mode : DirectX Hardware 
+  ' 2:< 	Use Hardware: ON 
+  ' 2:< 	Use Overlays : ON 
+  ' 2:< DX Device: DirectX 11, WARP 
+  ' 2:< After : Create Display Manager 
+  ' 2:<   System (MB) [Available /  Total ]  [Revit Memory Usage (MB)   ] 
+  ' 2:< RAM Statistics:     3730 /     8117       546=InUse      547=Peak  
+  ' 2:< VM  Statistics:  8386711 /  8388607       445=InUse      447=Peak  
+   ' 2:< ::2:: Delta VM: Avail -13 -> 8386703 MB, Used +3 -> 449 MB, Peak +2 -> 449 MB; RAM: Avail -7 -> 3724 MB, Used +5 -> 551 MB, Peak +5 -> 551 MB 
+   ' 2:< Activate "[4Walls.rvt]" , Floor Plan: Ebene 0 
+   ' 2:< View Open: Element expansion used 0.000000 seconds averaging 0.000000 seconds/hit for 0 hits. 
+' 2:< View Open: Element expansion used 0.000000 seconds averaging 0.000000 seconds/hit for 0 hits. 
+' 5:< ::2:: Delta VM: Avail +11 -> 8386714 MB, Used 449 MB, Peak +1 -> 451 MB; RAM: Avail -6 -> 3718 MB, Used -3 -> 549 MB, Peak +2 -> 553 MB 
+'  4.127630!!!! 3:!!!BIG_GAP [Cloud]openOntoDesktop 
+' 2:< At line number 5 of source journal
+'DBG_INFO: Detected unfrozen change of selection.: line 609 of d:\ship\2016_px64\source\revit\revitui\modscope\ModScope.cpp. 
+' 2:< ::2:: Delta VM: Avail -7 -> 8386708 MB, Used +0 -> 450 MB; RAM: Avail -11 -> 3708 MB, Used +4 -> 553 MB, Peak +0 -> 554 MB 
+' 2:< <<Begin build CT>>
+'
+'Edit mode: IDR_COMMON
+'Command: 
+'Category: 0
+'Bar list: 
+'	
+'Presenter list: 
+'	
+'Product: Unknown
+'
+'
+'Edit mode context, but no edit mode set.
+'<<End build CT>> 
+  ' 2:< ::2:: Delta VM: Avail -3 -> 8386705 MB, Used +0 -> 451 MB, Peak +1 -> 452 MB; RAM: Avail +15 -> 3723 MB, Used +2 -> 555 MB, Peak +1 -> 556 MB 
+  ' 2:< View Open: Element expansion used 0.000000 seconds averaging 0.000000 seconds/hit for 0 hits. 
+  '  4.637393    2:<<[Cloud]openOntoDesktop 
+  ' 1:< Third Party Updater 'Revit: ObjectNumberingUpdater' registered for document '4Walls.rvt'. 
+  ' 1:< Third Party Updater 'Revit: ObjectNumberingUpdater' registered for document '4Walls.rvt'. 
+  ' 1:<   System (MB) [Available /  Total ]  [Revit Memory Usage (MB)   ] 
+  ' 1:< RAM Statistics:     3722 /     8117       556=InUse      557=Peak  
+  ' 1:< VM  Statistics:  8386705 /  8388607       451=InUse      453=Peak  
+  ' 1:< Element Expansion Statistics: 
+  ' 1:<  3% Opening Plans                    (84815) 
+  ' 1:<  0% Opening RC Plans                 (0) 
+  ' 1:<  0% Opening 3d Views                 (0) 
+  ' 1:<  0% Opening Elevations and Sections  (0) 
+  ' 1:<  0% In Regnerate                     (0) 
+  ' 1:<  0% In Autojoin                      (0) 
+  ' 1:<  0% In Overlap Checking              (0) 
+  ' 1:<  0% Reviewing PostedWarnings         (0) 
+  ' 1:<  97% Other                            (3023996) 
+  ' 1:< total bytes expanded: 3108811 
+  ' 1:< ;EES;3;0;0;0;0;0;0;0;97; 
+  ' 1:<   System (MB) [Available /  Total ]  [Revit Memory Usage (MB)   ] 
+  ' 1:< RAM Statistics:     3722 /     8117       556=InUse      557=Peak  
+  ' 1:< VM  Statistics:  8386705 /  8388607       451=InUse      453=Peak  
+  '  6.676743-- 1:<<[Cloud]standardOpenDocumentFile 
+   '  6.770263  0:<<Event timer/ALL_GAPS   0.475615/TurnOff_GAPs 12% 
+   'E 10-Sep-2015 14:24:25.757;   0:< 
+   ' [Jrn.File Input Information] COMMON.FILE_INPUT.FILE_TYPE: .rvt 05812224.000000
+ 'E 10-Sep-2015 14:24:25.760;   0:< 
+ Jrn.Size        0 ,    791 ,    529
+ 'E 10-Sep-2015 14:24:25.761;   0:< 
+ Jrn.Size        0 ,    770 ,    508
+ 'E 10-Sep-2015 14:24:25.766;   0:< 
+ Jrn.Size        0 ,    790 ,    528
+ 'E 10-Sep-2015 14:24:25.767;   0:< 
+ Jrn.Size        0 ,    769 ,    507
+' 1:< At line number 5 of source journal
+'DBG_INFO: GIncrementalDrawTask::okForParallel() == true:  MultiThread Drawing Mode: line 492 of GraphUtil\GIncrementalDrawTask.cpp. 
+' 0:< ViewElemCache::updateConsolidationData(): DBViewPlan, id=24771, SL_ModelDefault, GReps=5, inSeqOfTotal=100%, inSeqOfOk=100%, seqLen=5.0, seqNodes=87.0 
+' 0:< GInstanceTrfDataOGS::getGReps(): GReps=6, drawn=5, drawnOfTotal=83%, instancedOfTotal=0%, drawInstancedOfDrawn=0%, drawInstancedOfInstanced=0%, meanTfrNum=0.0 
+' 0:< ::7:: Delta VM: Avail -16 -> 8386690 MB, Used +16 -> 467 MB, Peak +15 -> 468 MB; RAM: Avail -21 -> 3703 MB, Used +20 -> 576 MB, Peak +20 -> 576 MB 
+'  0.513486   1:<<<;PERF;MISC;drawing 
+'C 10-Sep-2015 14:24:26.310;   0:< idle0_doc 
+' 0:< <<Begin build CT>>
+'
+'Edit mode: IDR_COMMON
+'Command: ID_BUTTON_SELECT
+'Category: 0
+'Bar list: 
+'	Dialog_Revit_DynamicLabelDBar
+'	Dialog_Essentials_FilterSelectionNew
+'Presenter list: 
+'	PP_DebugTab_Binding_Demo
+'Product: Revit
+'
+'
+'***********************************************************
+'***********************************************************
+'<<End build CT>> 
+ '  0.815339  0:<<Event timer 
+ 'E 10-Sep-2015 14:24:26.573;   0:< 
+ 
+ Jrn.RibbonEvent "Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%Visual Programming%Dynamo 0.8:Dynamo.Applications.DynamoRevit"
+' 1:< ::8:: Delta VM: Avail -13 -> 8386678 MB, Used +2 -> 469 MB, Peak +3 -> 471 MB; RAM: Avail +4 -> 3707 MB, Used +5 -> 582 MB, Peak +6 -> 583 MB 
+' 1:< API_SUCCESS { Registering Idling event by application Dynamo For Revit (8d83c886-b739-4acd-a9db-1bc78f315b2b). } 
+' 2:< ::8:: Delta VM: Avail -312 -> 8386366 MB, Used +292 -> 762 MB, Peak +293 -> 764 MB; RAM: Avail -292 -> 3416 MB, Used +305 -> 887 MB, Peak +305 -> 889 MB 
+'  8.545583!!! 2:!!!BIG_GAP API External Command Time 
+' 0:< ::8:: Delta VM: Avail -2 -> 8386365 MB, Used -188 -> 575 MB, Peak +16 -> 781 MB; RAM: Avail +182 -> 3599 MB, Used -187 -> 701 MB, Peak +18 -> 907 MB 
+' 10.037028   1:<<API External Command Time 
+' 10.076366  0:<<Event timer 
+'H 10-Sep-2015 14:24:36.649;   0:< 
+Jrn.Data "APIStringStringMapJournalData"  _
+        , 3, "dynAutomation", "true" _
+        , "dynPath", "C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\scenarios\Revit\2016\CountWalls.dyn", "dynShowUI" _
+        , "false"
+ 'E 10-Sep-2015 14:24:36.743;   0:< 
+ Jrn.Command "Internal" , "Flush undo and redo stacks , ID_FLUSH_UNDO"
+ ' 0:< Unnecessary nesting;ArrowUI_4;-1;ID_FLUSH_UNDO ;N++EB(NB); 
+'C 10-Sep-2015 14:24:36.752;   0:< idle0_doc 
+ '  0.147697  0:<<Event timer/ALL_GAPS   0.147697/Threshold_GAPs 3% 
+ 'E 10-Sep-2015 14:24:36.797;   0:< 
+ Jrn.Command "Internal" , "Close the active project , ID_REVIT_FILE_CLOSE"
+ ' 0:< Unnecessary nesting;ArrowUI_4;-1;ID_REVIT_FILE_CLOSE ;N++EB(NB); 
+ ' 1:<   System (MB) [Available /  Total ]  [Revit Memory Usage (MB)   ] 
+ ' 1:< RAM Statistics:     3598 /     8117       702=InUse      907=Peak  
+ ' 1:< VM  Statistics:  8386364 /  8388607       576=InUse      781=Peak  
+ ' 1:<   System (MB) [Available /  Total ]  [Revit Memory Usage (MB)   ] 
+ ' 1:< RAM Statistics:     3598 /     8117       702=InUse      907=Peak  
+ ' 1:< VM  Statistics:  8386364 /  8388607       576=InUse      781=Peak  
+ ' 1:< API_SUCCESS { An external server has been registered.: ServiceId(b3892e5f-9161-4bbc-958a-c8ef75e94e96); ServerId(d2c3617d-7a16-45bc-b395-44897852f485); Name(A360); VendorId(ADSK); Description(This server is the A360 Resource Server.) } 
+  ' 0:< PropertiesPalette Action:Activate 
+  ' 0:< CrsTimer event occurred for 0 times in DesktopMFCView [Floor Plan: Ebene 0] 
+  ' 0:< Properties Palette Deactivate 
+ ' 0:< FileCheckTrigger dependencies update 
+ ' 0:< <<Begin build CT>>
+ '
+ 'Edit mode: 
+ 'Command: ID_BUTTON_SELECT
+ 'Category: 0
+ 'Bar list: 
+ '	Dialog_Revit_DynamicLabelDBar
+ 'Presenter list: 
+ '	PP_DebugTab_Binding_Demo
+ '	PP_Elements_Are_In_ModScope
+ 'Product: Revit
+ '
+ '
+ '***********************************************************
+ '***********************************************************
+ '<<End build CT>> 
+ ' 0:< Browser Deactivate 
+ ' 0:<   System (MB) [Available /  Total ]  [Revit Memory Usage (MB)   ] 
+ ' 0:< RAM Statistics:     3599 /     8117       700=InUse      907=Peak  
+ ' 0:< VM  Statistics:  8386366 /  8388607       574=InUse      781=Peak ;oCD; 
+ ' 0:< ::10:: Delta VM: Avail -13 -> 8386352 MB, Used -1 -> 574 MB; RAM: Avail +2 -> 3601 MB, Used +1 -> 702 MB 
+ ' 0:< Third Party Updater 'Revit: ObjectNumberingUpdater' has been unregistered. 
+ ' 0:< Third Party Updater 'Revit: ObjectNumberingUpdater' has been unregistered. 
+ ' 0:< Before : Destroy Display Manager 
+ ' 0:<   System (MB) [Available /  Total ]  [Revit Memory Usage (MB)   ] 
+ ' 0:< RAM Statistics:     3601 /     8117       702=InUse      907=Peak  
+ ' 0:< VM  Statistics:  8386352 /  8388607       574=InUse      781=Peak  
+ ' 0:< After : Destroy Display Manager 
+ ' 0:<   System (MB) [Available /  Total ]  [Revit Memory Usage (MB)   ] 
+ ' 0:< RAM Statistics:     3601 /     8117       702=InUse      907=Peak  
+ ' 0:< VM  Statistics:  8386352 /  8388607       574=InUse      781=Peak  
+ ' 0:< DummyStorage destroying DataStorageInterface 0x000000004A04A310 
+ ' 0:< ::10:: Delta VM: Avail +17 -> 8386370 MB, Used -7 -> 568 MB; RAM: Avail +8 -> 3609 MB, Used -11 -> 691 MB 
+ ' 0:< compact data space: 87130 blocks, occupying total of 26156560 bytes 
+ ' 0:< freed 87130 blocks 
+ ' 0:< ::10:: Delta VM: Avail -60 -> 8386310 MB, Used +10 -> 579 MB; RAM: Avail -16 -> 3594 MB, Used +19 -> 711 MB 
+ '  2.048925  0:<<Event timer/ALL_GAPS   2.048925/TurnOff_GAPs 1% 
+ 'E 10-Sep-2015 14:24:38.846;   0:< 
+ Jrn.Command "SystemMenu" , "Quit the application; prompts to save projects , ID_APP_EXIT"
+' 0:< ::11:: Delta VM: Avail +21 -> 8386332 MB, Used -6 -> 574 MB; RAM: Avail +1 -> 3596 MB, Used -5 -> 706 MB 
+'C 10-Sep-2015 14:24:39.038;   0:< ->desktop ExitManagedInstance 
+'C 10-Sep-2015 14:24:39.093;   0:< <-desktop ExitManagedInstance 
+'C 10-Sep-2015 14:24:39.093;   0:< ->desktop ExitNativeInstance 
+' 0:< API_SUCCESS { Unregistering ViewActivated event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Unregistering DocumentClosing event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Unregistering DocumentClosed event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Unregistering DocumentChanged event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Unregistering DockableFrameVisibilityChanged event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Unregistering Idling event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Restoring command id 'ID_MEP_FABRICATION_SETTINGS' CanExecute implementation. } 
+' 0:< API_SUCCESS { API unregistering command Fabrication Settings CanExecute event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Restoring command id 'ID_MEP_FABRICATION_SETTINGS' Executed implementation. } 
+' 0:< API_SUCCESS { API unregistering command Fabrication Settings Executed event by application FabPartBrowserApplication (ee72acb7-2d70-484e-9cdf-0f7006b1183e). } 
+' 0:< API_SUCCESS { Unregistering ViewActivated event by application Collaborate (14f73f04-900e-4e24-8d85-44c71092b6e9). } 
+' 0:< API_SUCCESS { Unregistering ApplicationClosing event by application Ribbon (bdec973b-c46f-49be-87a6-4fc4d6aba9c2). } 
+' 0:< API_SUCCESS { Restoring command id 'ID_TEAM' Executed implementation. } 
+' 0:< API_SUCCESS { API unregistering command Communicator Executed event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Restoring command id 'ID_TEAM' CanExecute implementation. } 
+' 0:< API_SUCCESS { API unregistering command Communicator CanExecute event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Unregistering DocumentOpened event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Unregistering DocumentCreated event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Unregistering DocumentSavedAs event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Unregistering DocumentSaved event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Unregistering ApplicationClosing event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Unregistering DocumentSynchronizingWithCentral event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Unregistering DocumentSynchronizedWithCentral event by application Communicator for Autodesk Revit (a729345d-1c99-4ac0-91f2-28d93237fe14). } 
+' 0:< API_SUCCESS { Unregistering DocumentClosed event by application Revit Lookup (356cda5a-e6c5-4c2f-a9ef-b3222116b8c8). } 
+' 0:< API_SUCCESS { Unregistering DocumentOpened event by application Revit Lookup (356cda5a-e6c5-4c2f-a9ef-b3222116b8c8). } 
+' 0:< API_SUCCESS { Unregistering DocumentSaved event by application Revit Lookup (356cda5a-e6c5-4c2f-a9ef-b3222116b8c8). } 
+' 0:< API_SUCCESS { Unregistering DocumentSavedAs event by application Revit Lookup (356cda5a-e6c5-4c2f-a9ef-b3222116b8c8). } 
+' 0:< API_SUCCESS { Unregistering DocumentSavedAs event by application CollaborateDB (bb3086be-63bb-44bd-99eb-d584c013cf2f). } 
+' 0:< API_SUCCESS { Unregistering DocumentOpened event by application CollaborateDB (bb3086be-63bb-44bd-99eb-d584c013cf2f). } 
+' 0:< API_SUCCESS { Unregistering DocumentClosing event by application CollaborateDB (bb3086be-63bb-44bd-99eb-d584c013cf2f). } 
+' 0:< Forcibly unregistering Updater with id:51c0be9b-07a8-443a-be8c-21db815b17e7 
+' 0:< Forcibly removing all update triggers for all Updaters 
+' 0:< Unregistering all external services. 
+'C 10-Sep-2015 14:24:39.721;   0:< Protein : Unload plug-ins 
+'C 10-Sep-2015 14:24:39.721;   0:< Protein : Release Plugins 
+' 0:< ::11:: Delta VM: Avail +30 -> 8386363 MB, Used -12 -> 562 MB; RAM: Avail +6 -> 3602 MB, Used -9 -> 698 MB 
+'C 10-Sep-2015 14:24:39.727;   0:< Protein : Release Renderer Module 
+'C 10-Sep-2015 14:24:39.728;   0:< Protein : Destroy RenderingAsset Library Manager 
+'C 10-Sep-2015 14:24:39.734;   0:< Protein : ProteinSdkManager has been destroyed successfully 
+'C 10-Sep-2015 14:24:39.972;   0:< stopped at line 9 journal file playback 
+'C 10-Sep-2015 14:24:39.972;   0:< finished recording journal file 
+' 0:< [00001b90]DBG_WARN: changeActiveLog must be run in main or drawing thread - instead it was run in (id = 7056, tag = <blank> : [was ]).: line 35 of MainThreadInfo.cpp. 

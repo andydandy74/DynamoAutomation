@@ -1,0 +1,9 @@
+'Dim Jrn 
+Set Jrn = CrsJournalScript 
+Jrn.Command "StartupPage" , "Open this project , ID_FILE_MRU_FIRST" 
+Jrn.Data "MRUFileName"  , "C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2015\dir1\6Walls.rvt" 
+Jrn.RibbonEvent "Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%Visual Programming%Dynamo 0.8:Dynamo.Applications.DynamoRevit" 
+Jrn.Data "APIStringStringMapJournalData", 3, "dynPath", "C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\scenarios\Revit\CountWalls.dyn", "dynShowUI", "false", "dynAutomation", "true" 
+Jrn.Command "Internal" , "Flush undo and redo stacks , ID_FLUSH_UNDO" 
+Jrn.Command "Internal" , "Close the active project , ID_REVIT_FILE_CLOSE" 
+Jrn.Command "SystemMenu" , "Quit the application; prompts to save projects , ID_APP_EXIT"
