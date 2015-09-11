@@ -1,4 +1,4 @@
-<Workspace Version="0.8.3.2514" X="37.1998087633513" Y="431.264601639742" zoom="0.580419458087621" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="0.8.3.2514" X="36.1574623929167" Y="210.298791144231" zoom="0.346894192509509" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap />
   <Elements>
     <DSCore.File.Filename guid="67216c37-2ed7-4ea5-9c18-47f2efffa549" type="DSCore.File.Filename" nickname="File Path (Dynamo File)" x="-17.7502608169143" y="194" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
@@ -9,7 +9,7 @@
       <System.String value="2016" />
     </Dynamo.Nodes.StringInput>
     <DSCore.File.Directory guid="f78c275d-f336-48c3-9da3-d4fb4153e244" type="DSCore.File.Directory" nickname="Directory Path (Revit Models)" x="-14.8629103377234" y="23.9196057211356" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
-      <System.String>C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2015\dir1</System.String>
+      <System.String>C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir1</System.String>
     </DSCore.File.Directory>
     <DSCore.File.DirectoryObject guid="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" type="DSCore.File.DirectoryObject" nickname="Directory.FromPath" x="277.720315766961" y="24.3924478659693" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
     <Dynamo.Nodes.DSFunction guid="116cfd8a-5ad8-4feb-b723-edb7a4d48925" type="Dynamo.Nodes.DSFunction" nickname="Directory.Contents" x="488.203091845352" y="49.1177791691007" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.IO.Directory.Contents@var,string">
@@ -51,6 +51,55 @@
     <Dynamo.Nodes.CodeBlockNodeModel guid="a111ecb9-0160-43bc-90ad-da27d8c5457b" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1239.24132939455" y="327.122607264682" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="// Create file name for journal file&#xA;jdir + delimiter + &quot;DynamoJournalFile_&quot; + n + &quot;.txt&quot;;" ShouldFocus="false" />
     <DSCoreNodesUI.StringNodes.FromObject guid="14e7d21f-8ebe-4a3d-a39d-ed7062ae795e" type="DSCoreNodesUI.StringNodes.FromObject" nickname="String from Object" x="1053.30557130821" y="409.089808542582" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
     <Dynamo.Nodes.CodeBlockNodeModel guid="d05804dc-6876-4664-976e-4aac4ad33d51" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="899.654450810459" y="412.760489016931" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="1..n;" ShouldFocus="false" />
+    <Dynamo.Nodes.DSFunction guid="8903bbd9-b835-4ea0-92c2-d0787c17c35e" type="Dynamo.Nodes.DSFunction" nickname="File.Move" x="3584.67285981327" y="751.956601216311" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.IO.File.Move@string,string,bool">
+      <PortInfo index="2" default="True" />
+    </Dynamo.Nodes.DSFunction>
+    <Dynamo.Nodes.DSFunction guid="891d7f0e-2206-4548-848e-af486814c623" type="Dynamo.Nodes.DSFunction" nickname="List.FilterByBoolMask" x="2797.62478012643" y="699.426656717591" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
+    <DSCoreNodesUI.BoolSelector guid="bcc0a4e2-ac50-46fd-9ed8-fa399e482b58" type="DSCoreNodesUI.BoolSelector" nickname="Overwrite Existing Journal Files?" x="-12.2601299452956" y="460.820979728775" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.Boolean>True</System.Boolean>
+    </DSCoreNodesUI.BoolSelector>
+    <Dynamo.Nodes.Function guid="10b356e0-ec49-45ab-a0e1-17240764d4eb" type="Dynamo.Nodes.Function" nickname="List.AnyTrue" x="2656.24948428683" y="776.996865539726" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False">
+      <ID value="605e21d1-67ee-4465-8543-67f7781dd84d" />
+      <Name value="List.AnyTrue" />
+      <Description value="Returns true if any item in a list of booleans is true." />
+      <Inputs>
+        <Input value="seq" />
+      </Inputs>
+      <Outputs>
+        <Output value="any?" />
+      </Outputs>
+    </Dynamo.Nodes.Function>
+    <Dynamo.Nodes.DSFunction guid="b26cabac-9e83-4d66-8d48-228dd7c8f649" type="Dynamo.Nodes.DSFunction" nickname="List.Transpose" x="2488.2609934373" y="778.686908547969" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.Transpose@var[]..[]" />
+    <Dynamo.Nodes.DSFunction guid="9a3e63a2-f03a-4831-9d84-07eebb0206e1" type="Dynamo.Nodes.DSFunction" nickname="String.Replace" x="3013.94927086867" y="782.842763531997" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.String.Replace@string,string,string" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="366cd2f6-245c-4899-aa45-13e221528455" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="2309.47736799768" y="782.278095328298" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="{a,b};" ShouldFocus="false" />
+    <Dynamo.Nodes.DSFunction guid="a5b6f9bf-53da-419a-9729-6526b33e6ff2" type="Dynamo.Nodes.DSFunction" nickname="List.ContainsItem" x="1855.60453019947" y="778.334056868152" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.ContainsItem@var[]..[],var" />
+    <Dynamo.Nodes.Function guid="487dd916-e954-4c82-87f2-72437f85ed90" type="Dynamo.Nodes.Function" nickname="String.MatchRegularExpression" x="2050.45289138214" y="1035.28477588443" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False">
+      <ID value="f7ef95e1-3082-4cda-a204-a35fd8dc81ed" />
+      <Name value="String.MatchRegularExpression" />
+      <Description value="Determines if a regular expression matches a string (or a list of strings) and returns a boolean value (or a list, depending on the input). The syntax for regular expressions is explained at&#xD;&#xA;http://ironpython-test.readthedocs.org/en/latest/howto/regex.html" />
+      <Inputs>
+        <Input value="RegEx" />
+        <Input value="str" />
+      </Inputs>
+      <Outputs>
+        <Output value="bool" />
+      </Outputs>
+    </Dynamo.Nodes.Function>
+    <Dynamo.Nodes.DSFunction guid="5aa825f4-3efd-4953-8b17-48398728a2ba" type="Dynamo.Nodes.DSFunction" nickname="String.Replace" x="1830.39225156967" y="970.945381376871" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.String.Replace@string,string,string" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="afa95b45-1ddd-4f2c-b20f-e5af49475d64" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1664.92585245117" y="1095.72257301848" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" CodeText="&quot;&quot;;" ShouldFocus="false" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="2638bbb9-d635-4533-ad4e-390f27b4e47a" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1587.78291405883" y="1001.00829469051" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="dir + &quot;\\&quot;;" ShouldFocus="false" />
+    <Dynamo.Nodes.StringInput guid="e1e98b84-eb1a-4a35-a2df-9588a221b2d0" type="Dynamo.Nodes.StringInput" nickname="String" x="1849.918483009" y="1131.7542041077" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>journal.[0-9]+.txt</System.String>
+      <System.String value="journal.[0-9]+.txt" />
+    </Dynamo.Nodes.StringInput>
+    <Dynamo.Nodes.DSFunction guid="80fe209e-a7a7-4fe6-942b-d613acc5124a" type="Dynamo.Nodes.DSFunction" nickname="Directory.Contents" x="1540.16825908772" y="870.218382660641" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.IO.Directory.Contents@var,string">
+      <PortInfo index="1" default="True" />
+    </Dynamo.Nodes.DSFunction>
+    <DSCore.File.DirectoryObject guid="47a2d589-966e-4358-99b5-fa50c335adf3" type="DSCore.File.DirectoryObject" nickname="Directory.FromPath" x="1328.95787201354" y="871.908425668883" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
+    <DSCore.File.Directory guid="96a754c3-68ef-4eee-8e60-71fb1a6cce65" type="DSCore.File.Directory" nickname="Directory Path (Journal Files)" x="-14.7433043417934" y="362.047372277111" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>C:\Users\adieckmann\Desktop</System.String>
+    </DSCore.File.Directory>
+    <Dynamo.Nodes.CodeBlockNodeModel guid="99421411-610f-4053-8bb5-22beaf3f1479" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="3010.58978955838" y="595.231552876009" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="// We're using this nifty device to ensure that&#xA;// moving the files will only happen&#xA;// once all the models have been processed&#xA;passthrough = {execution_done, paths};&#xA;passthrough[1];" ShouldFocus="false" />
   </Elements>
   <Connectors>
     <Dynamo.Models.ConnectorModel start="67216c37-2ed7-4ea5-9c18-47f2efffa549" start_index="0" end="794bf4d9-0344-4321-a2b9-7a31029c33f4" end_index="1" portType="0" />
@@ -62,28 +111,54 @@
     <Dynamo.Models.ConnectorModel start="116cfd8a-5ad8-4feb-b723-edb7a4d48925" start_index="0" end="794bf4d9-0344-4321-a2b9-7a31029c33f4" end_index="0" portType="0" />
     <Dynamo.Models.ConnectorModel start="47ac0110-7b7a-46b3-9083-88091cf8dfb3" start_index="0" end="116cfd8a-5ad8-4feb-b723-edb7a4d48925" end_index="1" portType="0" />
     <Dynamo.Models.ConnectorModel start="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" start_index="0" end="d05804dc-6876-4664-976e-4aac4ad33d51" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="476c27ae-2200-4bb9-aabd-74e2c256a303" start_index="0" end="99421411-610f-4053-8bb5-22beaf3f1479" end_index="0" portType="0" />
     <Dynamo.Models.ConnectorModel start="794bf4d9-0344-4321-a2b9-7a31029c33f4" start_index="0" end="476c27ae-2200-4bb9-aabd-74e2c256a303" end_index="0" portType="0" />
     <Dynamo.Models.ConnectorModel start="70df6728-8313-4b1c-931b-4d450c313bd5" start_index="0" end="a111ecb9-0160-43bc-90ad-da27d8c5457b" end_index="1" portType="0" />
     <Dynamo.Models.ConnectorModel start="b2cdfdd3-8702-45b3-b3ee-790cc9a4caee" start_index="0" end="476c27ae-2200-4bb9-aabd-74e2c256a303" end_index="1" portType="0" />
     <Dynamo.Models.ConnectorModel start="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" start_index="0" end="b2cdfdd3-8702-45b3-b3ee-790cc9a4caee" end_index="0" portType="0" />
     <Dynamo.Models.ConnectorModel start="cce77cd9-6a3f-416f-bb4b-fcbffb3877ff" start_index="0" end="a111ecb9-0160-43bc-90ad-da27d8c5457b" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="cce77cd9-6a3f-416f-bb4b-fcbffb3877ff" start_index="0" end="47a2d589-966e-4358-99b5-fa50c335adf3" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="cce77cd9-6a3f-416f-bb4b-fcbffb3877ff" start_index="0" end="2638bbb9-d635-4533-ad4e-390f27b4e47a" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="cce77cd9-6a3f-416f-bb4b-fcbffb3877ff" start_index="0" end="9a3e63a2-f03a-4831-9d84-07eebb0206e1" end_index="1" portType="0" />
     <Dynamo.Models.ConnectorModel start="a111ecb9-0160-43bc-90ad-da27d8c5457b" start_index="0" end="794bf4d9-0344-4321-a2b9-7a31029c33f4" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="a111ecb9-0160-43bc-90ad-da27d8c5457b" start_index="0" end="a5b6f9bf-53da-419a-9729-6526b33e6ff2" end_index="0" portType="0" />
     <Dynamo.Models.ConnectorModel start="14e7d21f-8ebe-4a3d-a39d-ed7062ae795e" start_index="0" end="a111ecb9-0160-43bc-90ad-da27d8c5457b" end_index="2" portType="0" />
     <Dynamo.Models.ConnectorModel start="d05804dc-6876-4664-976e-4aac4ad33d51" start_index="0" end="14e7d21f-8ebe-4a3d-a39d-ed7062ae795e" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="891d7f0e-2206-4548-848e-af486814c623" start_index="0" end="9a3e63a2-f03a-4831-9d84-07eebb0206e1" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="891d7f0e-2206-4548-848e-af486814c623" start_index="0" end="99421411-610f-4053-8bb5-22beaf3f1479" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="bcc0a4e2-ac50-46fd-9ed8-fa399e482b58" start_index="0" end="8903bbd9-b835-4ea0-92c2-d0787c17c35e" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="10b356e0-ec49-45ab-a0e1-17240764d4eb" start_index="0" end="891d7f0e-2206-4548-848e-af486814c623" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="b26cabac-9e83-4d66-8d48-228dd7c8f649" start_index="0" end="10b356e0-ec49-45ab-a0e1-17240764d4eb" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="9a3e63a2-f03a-4831-9d84-07eebb0206e1" start_index="0" end="8903bbd9-b835-4ea0-92c2-d0787c17c35e" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="366cd2f6-245c-4899-aa45-13e221528455" start_index="0" end="b26cabac-9e83-4d66-8d48-228dd7c8f649" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="a5b6f9bf-53da-419a-9729-6526b33e6ff2" start_index="0" end="366cd2f6-245c-4899-aa45-13e221528455" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="487dd916-e954-4c82-87f2-72437f85ed90" start_index="0" end="366cd2f6-245c-4899-aa45-13e221528455" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="5aa825f4-3efd-4953-8b17-48398728a2ba" start_index="0" end="487dd916-e954-4c82-87f2-72437f85ed90" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="afa95b45-1ddd-4f2c-b20f-e5af49475d64" start_index="0" end="5aa825f4-3efd-4953-8b17-48398728a2ba" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="2638bbb9-d635-4533-ad4e-390f27b4e47a" start_index="0" end="5aa825f4-3efd-4953-8b17-48398728a2ba" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="e1e98b84-eb1a-4a35-a2df-9588a221b2d0" start_index="0" end="487dd916-e954-4c82-87f2-72437f85ed90" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="80fe209e-a7a7-4fe6-942b-d613acc5124a" start_index="0" end="891d7f0e-2206-4548-848e-af486814c623" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="80fe209e-a7a7-4fe6-942b-d613acc5124a" start_index="0" end="5aa825f4-3efd-4953-8b17-48398728a2ba" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="80fe209e-a7a7-4fe6-942b-d613acc5124a" start_index="0" end="a5b6f9bf-53da-419a-9729-6526b33e6ff2" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="47a2d589-966e-4358-99b5-fa50c335adf3" start_index="0" end="80fe209e-a7a7-4fe6-942b-d613acc5124a" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="96a754c3-68ef-4eee-8e60-71fb1a6cce65" start_index="0" end="9a3e63a2-f03a-4831-9d84-07eebb0206e1" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="99421411-610f-4053-8bb5-22beaf3f1479" start_index="1" end="8903bbd9-b835-4ea0-92c2-d0787c17c35e" end_index="0" portType="0" />
   </Connectors>
   <Notes />
   <Annotations>
-    <Dynamo.Models.AnnotationModel guid="77fd9b0d-7ae0-466b-be55-0be30965eac5" annotationText="INPUTS" left="-27.7502608169143" top="-142.807429959293" width="232" height="432.807429959293" fontSize="30" InitialTop="-96.8074299592926" InitialHeight="493.250030035248" TextblockHeight="36" backgrouund="#FF848484">
+    <Dynamo.Models.AnnotationModel guid="77fd9b0d-7ae0-466b-be55-0be30965eac5" annotationText="INPUTS" left="-27.7502608169143" top="-142.807429959293" width="232" height="671.628409688068" fontSize="30" InitialTop="-96.8074299592926" InitialHeight="493.250030035248" TextblockHeight="36" backgrouund="#FF848484">
       <Models ModelGuid="67216c37-2ed7-4ea5-9c18-47f2efffa549" />
       <Models ModelGuid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" />
       <Models ModelGuid="f78c275d-f336-48c3-9da3-d4fb4153e244" />
+      <Models ModelGuid="96a754c3-68ef-4eee-8e60-71fb1a6cce65" />
+      <Models ModelGuid="bcc0a4e2-ac50-46fd-9ed8-fa399e482b58" />
     </Dynamo.Models.AnnotationModel>
     <Dynamo.Models.AnnotationModel guid="3abdf6e1-fc24-484c-8df7-6a43034cbe5b" annotationText="Create list of Revit files" left="267.720315766961" top="-21.6075521340307" width="435.482776078391" height="236.967890618731" fontSize="30" InitialTop="24.3924478659693" InitialHeight="220.967890618731" TextblockHeight="36" backgrouund="#FFA4E1FF">
       <Models ModelGuid="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" />
       <Models ModelGuid="116cfd8a-5ad8-4feb-b723-edb7a4d48925" />
       <Models ModelGuid="47ac0110-7b7a-46b3-9083-88091cf8dfb3" />
     </Dynamo.Models.AnnotationModel>
-    <Dynamo.Models.AnnotationModel guid="aad60285-6aa0-4f28-947b-6f79b68becb2" annotationText="Create journal files" left="732.749050958904" top="118.221362111409" width="1284.53867192319" height="387.539126905521" fontSize="30" InitialTop="164.221362111409" InitialHeight="300.906579018511" TextblockHeight="36" backgrouund="#FFC1D676">
+    <Dynamo.Models.AnnotationModel guid="aad60285-6aa0-4f28-947b-6f79b68becb2" annotationText="Create journal files" left="732.749050958904" top="118.221362111409" width="1284.53867192319" height="387.539126905522" fontSize="30" InitialTop="164.221362111409" InitialHeight="300.906579018511" TextblockHeight="36" backgrouund="#FFC1D676">
       <Models ModelGuid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" />
       <Models ModelGuid="794bf4d9-0344-4321-a2b9-7a31029c33f4" />
       <Models ModelGuid="70df6728-8313-4b1c-931b-4d450c313bd5" />
@@ -97,9 +172,26 @@
       <Models ModelGuid="b2cdfdd3-8702-45b3-b3ee-790cc9a4caee" />
       <Models ModelGuid="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" />
     </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="6d384047-604b-4a39-954c-0f098feecdc9" annotationText="Clean up journal files" left="1318.95787201354" top="549.231552876009" width="2423.71498779973" height="650.522651231692" fontSize="30" InitialTop="595.231552876009" InitialHeight="632.832608223449" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="8903bbd9-b835-4ea0-92c2-d0787c17c35e" />
+      <Models ModelGuid="891d7f0e-2206-4548-848e-af486814c623" />
+      <Models ModelGuid="10b356e0-ec49-45ab-a0e1-17240764d4eb" />
+      <Models ModelGuid="b26cabac-9e83-4d66-8d48-228dd7c8f649" />
+      <Models ModelGuid="9a3e63a2-f03a-4831-9d84-07eebb0206e1" />
+      <Models ModelGuid="366cd2f6-245c-4899-aa45-13e221528455" />
+      <Models ModelGuid="a5b6f9bf-53da-419a-9729-6526b33e6ff2" />
+      <Models ModelGuid="487dd916-e954-4c82-87f2-72437f85ed90" />
+      <Models ModelGuid="5aa825f4-3efd-4953-8b17-48398728a2ba" />
+      <Models ModelGuid="afa95b45-1ddd-4f2c-b20f-e5af49475d64" />
+      <Models ModelGuid="2638bbb9-d635-4533-ad4e-390f27b4e47a" />
+      <Models ModelGuid="e1e98b84-eb1a-4a35-a2df-9588a221b2d0" />
+      <Models ModelGuid="80fe209e-a7a7-4fe6-942b-d613acc5124a" />
+      <Models ModelGuid="47a2d589-966e-4358-99b5-fa50c335adf3" />
+      <Models ModelGuid="99421411-610f-4053-8bb5-22beaf3f1479" />
+    </Dynamo.Models.AnnotationModel>
   </Annotations>
   <Presets />
   <Cameras>
-    <Camera Name="Hintergrundvorschau" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
   </Cameras>
 </Workspace>
