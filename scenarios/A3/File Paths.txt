@@ -1,7 +1,4 @@
-C:\Users\adieckmann\Documents\GitHub\ClockworkForDynamo\package_samples\0.7.x\extra\CurtainPanel_Sample.rvt
-C:\Users\adieckmann\Documents\GitHub\ClockworkForDynamo\package_samples\0.7.x\extra\DesignOption_Sample.rvt
-C:\Users\adieckmann\Documents\GitHub\ClockworkForDynamo\package_samples\0.7.x\extra\DetailComponent_Sample.rvt
-C:\Users\adieckmann\Documents\GitHub\ClockworkForDynamo\package_samples\0.7.x\extra\DoesntExist.rvt
-C:\Users\adieckmann\Documents\GitHub\Dynanimator\package\extra\rac_basic_sample_project.rvt
+C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir1\4Walls.rvt
+C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir2\8Walls.rvt
 C:\temp\Temp.rvt
 C:\doesnotexist\ImaginaryFile.rvt
