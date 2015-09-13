@@ -1,11 +1,11 @@
 # Dynamo Automation
 Examples for batch-processing of Revit models using Dynamo
 
-##Current Dynamo limitations
-- Dynamo can only process one model at a time
+##Previous Dynamo limitations
+- Dynamo could only process one model at a time
     - Great for project-specific work, not so great for global recurring tasks
     - Running the same graph on multiple models = a lot of tedious manual labour
-- Dynamo cannot switch between files (e.g. project vs. family)
+- Dynamo could not switch between files (e.g. project vs. family)
     - Show stopper for work flows that require family editing 
 
 ## Typical abstract scenarios
