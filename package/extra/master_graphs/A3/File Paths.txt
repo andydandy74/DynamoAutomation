@@ -1,0 +1,4 @@
+C:\temp\DynamoAutomation\revit_models\2016\dir1\4Walls.rvt
+C:\temp\DynamoAutomation\revit_models\2016\dir2\8Walls.rvt
+C:\temp\Temp.rvt
+C:\doesnotexist\ImaginaryFile.rvt

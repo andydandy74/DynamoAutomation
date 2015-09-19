@@ -1,4 +1,0 @@
-C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir1\4Walls.rvt
-C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir2\8Walls.rvt
-C:\temp\Temp.rvt
-C:\doesnotexist\ImaginaryFile.rvt

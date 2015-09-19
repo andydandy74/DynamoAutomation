@@ -1,4 +1,0 @@
-C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir1
-C:\Users\adieckmann\Documents\GitHub\DynamoAutomation\revit-models\2016\dir2
-C:\temp
-C:\doesnotexist

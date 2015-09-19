@@ -1,0 +1,69 @@
+<Workspace Version="0.8.1.1473" X="30" Y="155.597249508841" zoom="1.16011787819253" Name="Home" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <DSCore.File.Filename guid="bf2dece6-d61b-46eb-bf73-44b44e34a338" type="DSCore.File.Filename" nickname="File Path (Revit File)" x="0" y="83" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <System.String>C:\Program Files\Autodesk\Revit 2015\Samples\rac_basic_sample_project.rvt</System.String>
+    </DSCore.File.Filename>
+    <DSCore.File.Filename guid="67216c37-2ed7-4ea5-9c18-47f2efffa549" type="DSCore.File.Filename" nickname="File Path (Dynamo File #1)" x="0" y="194" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <System.String>C:\Users\adieckmann\Desktop\FamParam.dyn</System.String>
+    </DSCore.File.Filename>
+    <DSCore.File.Directory guid="eda3f975-b696-44e4-b524-4967fbde191e" type="DSCore.File.Directory" nickname="Directory Path (Journal File)" x="0" y="305" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <System.String>C:\Users\adieckmann\Desktop</System.String>
+    </DSCore.File.Directory>
+    <Dynamo.Nodes.Function guid="b9b0c388-90a0-4432-8c34-b3a46706d23e" type="Dynamo.Nodes.Function" nickname="RevitJournalFile.ByPaths2" x="492" y="153" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+      <PortInfo index="3" default="True" />
+      <PortInfo index="4" default="True" />
+      <ID value="ad24f00a-41cc-423d-a028-a7723c819c0b" />
+      <Name value="RevitJournalFile.ByPaths2" />
+      <Description value="Creates a Revit journal file that starts Revit with a given project/family and launches the Dynamo addin with a given Dynamo graph." />
+      <Inputs>
+        <Input value="RevitFile" />
+        <Input value="DynamoFile" />
+        <Input value="JournalDirectory" />
+        <Input value="JournalFileName" />
+        <Input value="DynamoVersion" />
+      </Inputs>
+      <Outputs>
+        <Output value="JournalFilePath" />
+      </Outputs>
+    </Dynamo.Nodes.Function>
+    <Dynamo.Nodes.StringInput guid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" type="Dynamo.Nodes.StringInput" nickname="Revit Version" x="0" y="0" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <System.String>2015</System.String>
+      <System.String value="2015" />
+    </Dynamo.Nodes.StringInput>
+    <Dynamo.Nodes.Function guid="57de4f81-683a-4704-9ba7-a45592d8bc8d" type="Dynamo.Nodes.Function" nickname="RevitExecutablePath.ByVersion" x="492" y="45" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+      <PortInfo index="0" default="True" />
+      <ID value="46ad09be-4c19-4881-b316-6cd5424bad02" />
+      <Name value="RevitExecutablePath.ByVersion" />
+      <Description value="Returns the path of Revit.exe based on a given Revit version" />
+      <Inputs>
+        <Input value="RevitVersion" />
+      </Inputs>
+      <Outputs>
+        <Output value="Revit.exe Path" />
+      </Outputs>
+    </Dynamo.Nodes.Function>
+    <Dynamo.Nodes.Function guid="7fcbb61d-5120-4752-93cc-9e2159d420f0" type="Dynamo.Nodes.Function" nickname="ExternalApplication.Run" x="847" y="86" isVisible="true" isUpstreamVisible="true" lacing="Shortest">
+      <ID value="471f8293-8f6c-41df-8501-7827777bc9c7" />
+      <Name value="ExternalApplication.Run" />
+      <Description value="Launches a given external application with the given arguments" />
+      <Inputs>
+        <Input value="ExecutablePath" />
+        <Input value="Arguments" />
+      </Inputs>
+      <Outputs>
+        <Output value="" />
+      </Outputs>
+    </Dynamo.Nodes.Function>
+  </Elements>
+  <Connectors>
+    <Dynamo.Models.ConnectorModel start="bf2dece6-d61b-46eb-bf73-44b44e34a338" start_index="0" end="b9b0c388-90a0-4432-8c34-b3a46706d23e" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="67216c37-2ed7-4ea5-9c18-47f2efffa549" start_index="0" end="b9b0c388-90a0-4432-8c34-b3a46706d23e" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="eda3f975-b696-44e4-b524-4967fbde191e" start_index="0" end="b9b0c388-90a0-4432-8c34-b3a46706d23e" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="b9b0c388-90a0-4432-8c34-b3a46706d23e" start_index="0" end="7fcbb61d-5120-4752-93cc-9e2159d420f0" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="4270b4df-1a46-4508-84bb-2b0496d7ce3c" start_index="0" end="57de4f81-683a-4704-9ba7-a45592d8bc8d" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="57de4f81-683a-4704-9ba7-a45592d8bc8d" start_index="0" end="7fcbb61d-5120-4752-93cc-9e2159d420f0" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+</Workspace>
