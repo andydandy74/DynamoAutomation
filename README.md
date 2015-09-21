@@ -15,6 +15,7 @@ Examples for batch-processing of Revit models using Dynamo
 - A4: Run multiple graphs on multiple files according to a matrix
 - B: Run one graph to find all links in a project, run a second graph on all links
 - C: Run one graph to export certain families from a project, run a second graph on all families, run a third graph to load all families back into the project
+- D: Automate applications other than Revit using Dynamo
 
 ## Typical concrete scenarios aka actual real life use cases
 - Original use case
