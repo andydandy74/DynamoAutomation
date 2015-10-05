@@ -1,5 +1,0 @@
-C:\temp\DynamoAutomation\revit_models\2016\dir1\4Walls.rvt,1,1
-C:\temp\DynamoAutomation\revit_models\2016\dir1\6Walls.rvt,0,1
-C:\temp\DynamoAutomation\revit_models\2016\dir2\8Walls.rvt,1,0
-C:\temp\Temp.rvt,0,1
-C:\doesnotexist\ImaginaryFile.rvt,1,1
