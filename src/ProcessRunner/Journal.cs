@@ -43,7 +43,7 @@ namespace Dynamo.Automation
                                             "Jrn.Command \"Internal\" , \"Flush undo and redo stacks , ID_FLUSH_UNDO\" \n" +
                                             "Jrn.Command \"Internal\" , \"Close the active project , ID_REVIT_FILE_CLOSE\" \n" +
                                             "Jrn.Command \"SystemMenu\" , \"Quit the application; prompts to save projects , ID_APP_EXIT\"",
-                    revitFilePath, workspacePath.Replace(' ', '/'));
+                    revitFilePath.Replace(' ', '/'), workspacePath.Replace(' ', '/'));
 
                 tw.Write(journal);
                 tw.Flush();
