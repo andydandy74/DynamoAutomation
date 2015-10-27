@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>DynamoAutomation</name>
+  </assembly>
+  <namespaces>
+    <namespace name="Dynamo.Automation">
+      <category>DynamoAutomation</category>
+    </namespace>
+    <namespace name="ProcessRunner">
+      <category>DynamoAutomation</category>
+    </namespace>
+  </namespaces>
+</doc>
