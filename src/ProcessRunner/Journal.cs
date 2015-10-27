@@ -38,7 +38,7 @@ namespace Dynamo.Automation
                                             "Set Jrn = CrsJournalScript \n" +
                                             "Jrn.Command \"StartupPage\" , \"Open this project , ID_FILE_MRU_FIRST\" \n" +
                                             "Jrn.Data \"MRUFileName\"  , \"{0}\" \n" +
-                                            "Jrn.RibbonEvent \"Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%Visual Programming%Dynamo 0.8:Dynamo.Applications.DynamoRevit\" \n" +
+                                            "Jrn.RibbonEvent \"Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%Visual Programming%Dynamo 0.9:Dynamo.Applications.DynamoRevit\" \n" +
                                             "Jrn.Data \"APIStringStringMapJournalData\", 3, \"dynPath\", \"{1}\", \"dynShowUI\", \"false\", \"dynAutomation\", \"true\" \n" +
                                             "Jrn.Command \"Internal\" , \"Flush undo and redo stacks , ID_FLUSH_UNDO\" \n" +
                                             "Jrn.Command \"Internal\" , \"Close the active project , ID_REVIT_FILE_CLOSE\" \n" +
