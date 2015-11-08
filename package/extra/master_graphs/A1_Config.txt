@@ -1,7 +1,0 @@
-ModelDir=C:\temp\DynamoAutomation\revit_models\dir1
-GraphPath=C:\temp\DynamoAutomation\slave_graphs\CountWalls_R2016_withConfig.dyn
-RevitVersion=2016
-OutputDir=C:\temp\DynamoAutomation\output
-JournalFileName=DynamoJournalFile
-ReportFileName=AutomatedReport
-JournalOverwrite=1
