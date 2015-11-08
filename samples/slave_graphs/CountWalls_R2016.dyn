@@ -1,0 +1,84 @@
+<Workspace Version="0.9.0.2912" X="-32.4192091881012" Y="46.0254285691542" zoom="0.924858236440094" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <DSRevitNodesUI.Categories guid="a1b481e4-3038-4e53-b00e-f21a4b13d76c" type="DSRevitNodesUI.Categories" nickname="Categories" x="67.4905696124428" y="321.073853689766" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" index="901:Walls" />
+    <DSRevitNodesUI.ElementsOfCategory guid="86da885a-5120-45bc-a54f-e1c67eb5fb34" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="494.707927658824" y="509.320646527581" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
+    <Dynamo.Nodes.DSFunction guid="9a0d06cb-240d-4ac3-8d11-aba6891cec85" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="719.707927658824" y="509.320646527581" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
+    <DSCore.File.Directory guid="b066a9d0-31d4-4f28-ba3c-4d161303c593" type="DSCore.File.Directory" nickname="Directory Path (CSV File)" x="67.4905696124428" y="147.631105928971" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>C:\temp\DynamoAutomation\output</System.String>
+    </DSCore.File.Directory>
+    <Dynamo.Nodes.CodeBlockNodeModel guid="0b2d35fc-7c6c-43d0-9152-9786ca8ecee0" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="534.772888693244" y="151.13139858178" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="dir + delimiter + filename + &quot;.CSV&quot;;" ShouldFocus="false" />
+    <DSCore.File.FileObject guid="b56ba219-5342-4019-901c-2e454465cbb5" type="DSCore.File.FileObject" nickname="File.FromPath" x="974.247774480712" y="218.752225519288" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
+    <Dynamo.Nodes.DSFunction guid="354492b0-6d2c-4197-8881-32ca4dd65427" type="Dynamo.Nodes.DSFunction" nickname="CSV.ReadFromFile" x="1136.5" y="218.5" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.IO.CSV.ReadFromFile@var" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="826d1c6f-31cf-4233-82f7-4c2a7a4408cb" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="897.768758519357" y="495.859222195237" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="{{path,count,scriptname,now}};" ShouldFocus="false" />
+    <Dynamo.Nodes.DSVarArgFunction guid="be472102-c3b3-4093-9b24-6537e1b4dfad" type="Dynamo.Nodes.DSVarArgFunction" nickname="List.Join" x="1315.26557863501" y="327.63056379822" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.Join@var[]..[]" inputcount="2" />
+    <Dynamo.Nodes.DSFunction guid="1bff762a-58a3-40ae-adf9-ff51f9273071" type="Dynamo.Nodes.DSFunction" nickname="CSV.WriteToFile" x="1469.29228486648" y="146.446587537092" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.IO.CSV.WriteToFile@string,var[][]" />
+    <Dynamo.Nodes.DSFunction guid="7495ef22-b2a1-4e7a-86c4-89f415e2fb44" type="Dynamo.Nodes.DSFunction" nickname="DateTime.Now" x="729.24947068553" y="604.81471180948" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.DateTime.Now" />
+    <Dynamo.Nodes.StringInput guid="1fbc42df-1ae6-4c3d-b85c-55de2c264070" type="Dynamo.Nodes.StringInput" nickname="Filename (CSV File)" x="67.4905696124428" y="251.328886339839" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>AutomatedReport</System.String>
+      <System.String value="AutomatedReport" />
+    </Dynamo.Nodes.StringInput>
+    <Dynamo.Nodes.StringInput guid="54df5cc7-46dd-4f16-a1cf-da37fbe7caea" type="Dynamo.Nodes.StringInput" nickname="Script Name" x="67.4905696124428" y="419.680189765969" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>CountWalls_R2016.dyn</System.String>
+      <System.String value="CountWalls_R2016.dyn" />
+    </Dynamo.Nodes.StringInput>
+    <Dynamo.Nodes.StringInput guid="2fa77feb-8762-4f37-a6cd-a811aae84fc2" type="Dynamo.Nodes.StringInput" nickname="String" x="419.928549555559" y="165.471860253857" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>\</System.String>
+      <System.String value="\" />
+    </Dynamo.Nodes.StringInput>
+    <Dynamo.Nodes.DSFunction guid="1d21f7c1-ae2d-4871-a7be-1599b35fa678" type="Dynamo.Nodes.DSFunction" nickname="Document.Current" x="513.8438461171" y="403.597289559919" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="RevitNodes.dll" function="Revit.Application.Document.Current" />
+    <Dynamo.Nodes.DSFunction guid="3b0e1d84-1c7f-4901-ae43-65997be36a23" type="Dynamo.Nodes.DSFunction" nickname="Document.FilePath" x="674.884725911892" y="403.597289559919" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="RevitNodes.dll" function="Revit.Application.Document.FilePath" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Models.ConnectorModel start="a1b481e4-3038-4e53-b00e-f21a4b13d76c" start_index="0" end="86da885a-5120-45bc-a54f-e1c67eb5fb34" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="86da885a-5120-45bc-a54f-e1c67eb5fb34" start_index="0" end="9a0d06cb-240d-4ac3-8d11-aba6891cec85" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="9a0d06cb-240d-4ac3-8d11-aba6891cec85" start_index="0" end="826d1c6f-31cf-4233-82f7-4c2a7a4408cb" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="b066a9d0-31d4-4f28-ba3c-4d161303c593" start_index="0" end="0b2d35fc-7c6c-43d0-9152-9786ca8ecee0" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="0b2d35fc-7c6c-43d0-9152-9786ca8ecee0" start_index="0" end="b56ba219-5342-4019-901c-2e454465cbb5" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="0b2d35fc-7c6c-43d0-9152-9786ca8ecee0" start_index="0" end="1bff762a-58a3-40ae-adf9-ff51f9273071" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="b56ba219-5342-4019-901c-2e454465cbb5" start_index="0" end="354492b0-6d2c-4197-8881-32ca4dd65427" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="354492b0-6d2c-4197-8881-32ca4dd65427" start_index="0" end="be472102-c3b3-4093-9b24-6537e1b4dfad" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="826d1c6f-31cf-4233-82f7-4c2a7a4408cb" start_index="0" end="be472102-c3b3-4093-9b24-6537e1b4dfad" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="be472102-c3b3-4093-9b24-6537e1b4dfad" start_index="0" end="1bff762a-58a3-40ae-adf9-ff51f9273071" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="7495ef22-b2a1-4e7a-86c4-89f415e2fb44" start_index="0" end="826d1c6f-31cf-4233-82f7-4c2a7a4408cb" end_index="3" portType="0" />
+    <Dynamo.Models.ConnectorModel start="1fbc42df-1ae6-4c3d-b85c-55de2c264070" start_index="0" end="0b2d35fc-7c6c-43d0-9152-9786ca8ecee0" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="54df5cc7-46dd-4f16-a1cf-da37fbe7caea" start_index="0" end="826d1c6f-31cf-4233-82f7-4c2a7a4408cb" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="2fa77feb-8762-4f37-a6cd-a811aae84fc2" start_index="0" end="0b2d35fc-7c6c-43d0-9152-9786ca8ecee0" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="1d21f7c1-ae2d-4871-a7be-1599b35fa678" start_index="0" end="3b0e1d84-1c7f-4901-ae43-65997be36a23" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="3b0e1d84-1c7f-4901-ae43-65997be36a23" start_index="0" end="826d1c6f-31cf-4233-82f7-4c2a7a4408cb" end_index="0" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Models.NoteModel guid="28730600-1a38-415a-a7ad-aa24f8ea8aeb" text="Example for a slave graph that retrieves information from a model and adds it to an existing CSV file." x="68.3821246464702" y="79.7112424141703" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Models.AnnotationModel guid="1ce2f105-a096-4d98-ba41-7590b939f38b" annotationText="Collect data from model" left="484.707927658824" top="357.597289559919" width="787.060830860533" height="340.217422249561" fontSize="30" InitialTop="403.597289559919" InitialHeight="239" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="86da885a-5120-45bc-a54f-e1c67eb5fb34" />
+      <Models ModelGuid="9a0d06cb-240d-4ac3-8d11-aba6891cec85" />
+      <Models ModelGuid="826d1c6f-31cf-4233-82f7-4c2a7a4408cb" />
+      <Models ModelGuid="7495ef22-b2a1-4e7a-86c4-89f415e2fb44" />
+      <Models ModelGuid="3b0e1d84-1c7f-4901-ae43-65997be36a23" />
+      <Models ModelGuid="1d21f7c1-ae2d-4871-a7be-1599b35fa678" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="93920b2d-76ac-4eb4-a490-813b68b9dd6f" annotationText="INPUTS" left="57.4905696124428" top="33.7112424141703" width="314.891555034027" height="453.968947351799" fontSize="30" InitialTop="79.7112424141703" InitialHeight="126" TextblockHeight="36" backgrouund="#FFB5B5B5">
+      <Models ModelGuid="b066a9d0-31d4-4f28-ba3c-4d161303c593" />
+      <Models ModelGuid="a1b481e4-3038-4e53-b00e-f21a4b13d76c" />
+      <Models ModelGuid="1fbc42df-1ae6-4c3d-b85c-55de2c264070" />
+      <Models ModelGuid="54df5cc7-46dd-4f16-a1cf-da37fbe7caea" />
+      <Models ModelGuid="28730600-1a38-415a-a7ad-aa24f8ea8aeb" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="799ec6e0-34c1-430a-b2e6-477dc83e8edf" annotationText="Collect data from CSV file" left="409.928549555559" top="105.13139858178" width="859.571450444441" height="206.620826937508" fontSize="30" InitialTop="151.13139858178" InitialHeight="191.651335311573" TextblockHeight="36" backgrouund="#FFA4E1FF">
+      <Models ModelGuid="0b2d35fc-7c6c-43d0-9152-9786ca8ecee0" />
+      <Models ModelGuid="b56ba219-5342-4019-901c-2e454465cbb5" />
+      <Models ModelGuid="354492b0-6d2c-4197-8881-32ca4dd65427" />
+      <Models ModelGuid="2fa77feb-8762-4f37-a6cd-a811aae84fc2" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="5a3e3b67-dc90-49d3-914f-b0d1138c3909" annotationText="Append collected data to CSV file" left="1305.26557863501" top="64.446587537092" width="300.02670623147" height="382.183976261128" fontSize="30" InitialTop="146.446587537092" InitialHeight="281.519287833828" TextblockHeight="72" backgrouund="#FFFFC999">
+      <Models ModelGuid="be472102-c3b3-4093-9b24-6537e1b4dfad" />
+      <Models ModelGuid="1bff762a-58a3-40ae-adf9-ff51f9273071" />
+    </Dynamo.Models.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Hintergrundvorschau" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

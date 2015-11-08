@@ -1,0 +1,158 @@
+<Workspace Version="0.9.0.2912" X="426.835631097987" Y="337.121942032803" zoom="0.312483500640708" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <DSCore.File.Filename guid="67216c37-2ed7-4ea5-9c18-47f2efffa549" type="DSCore.File.Filename" nickname="File Path (Dynamo File)" x="-1269.94106979833" y="281.118619024977" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>C:\temp\DynamoAutomation\slave_graphs\CountWindows_R2016.dyn</System.String>
+    </DSCore.File.Filename>
+    <Dynamo.Nodes.StringInput guid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" type="Dynamo.Nodes.StringInput" nickname="Revit Version" x="-1269.94106979833" y="-9.68881093431565" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>2016</System.String>
+      <System.String value="2016" />
+    </Dynamo.Nodes.StringInput>
+    <DSCore.File.DirectoryObject guid="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" type="DSCore.File.DirectoryObject" nickname="Directory.FromPath" x="87.2845817509387" y="114.897698981601" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
+    <Dynamo.Nodes.DSFunction guid="116cfd8a-5ad8-4feb-b723-edb7a4d48925" type="Dynamo.Nodes.DSFunction" nickname="Directory.Contents" x="291.695326130581" y="159.816895565048" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.IO.Directory.Contents@var,string">
+      <PortInfo index="1" default="True" />
+    </Dynamo.Nodes.DSFunction>
+    <Dynamo.Nodes.CodeBlockNodeModel guid="47ac0110-7b7a-46b3-9083-88091cf8dfb3" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="131.48767157605" y="223.951407332523" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" CodeText="&quot;*.rvt&quot;;" ShouldFocus="false" />
+    <Dynamo.Nodes.DSFunction guid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" type="Dynamo.Nodes.DSFunction" nickname="List.Count" x="716.742494671128" y="425.199058192952" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
+    <Dynamo.Nodes.Function guid="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" type="Dynamo.Nodes.Function" nickname="RevitExecutablePath.ByVersion" x="2479.71672894793" y="-2.17580602544314" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False">
+      <PortInfo index="0" default="True" />
+      <ID value="46ad09be-4c19-4881-b316-6cd5424bad02" />
+      <Name value="RevitExecutablePath.ByVersion" />
+      <Description value="Returns the path of Revit.exe based on a given Revit version" />
+      <Inputs>
+        <Input value="RevitVersion" />
+      </Inputs>
+      <Outputs>
+        <Output value="Revit.exe Path" />
+      </Outputs>
+    </Dynamo.Nodes.Function>
+    <Dynamo.Nodes.Function guid="cce77cd9-6a3f-416f-bb4b-fcbffb3877ff" type="Dynamo.Nodes.Function" nickname="RevitAddinsPath.ByVersion" x="863.791750380581" y="234.561236057654" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False">
+      <PortInfo index="0" default="True" />
+      <ID value="724f7387-be43-4916-8958-8eea0cdc4774" />
+      <Name value="RevitAddinsPath.ByVersion" />
+      <Description value="Returns the path of Revit Addins folder based on a given Revit version" />
+      <Inputs>
+        <Input value="RevitVersion" />
+      </Inputs>
+      <Outputs>
+        <Output value="Revit Addins Directory Path" />
+      </Outputs>
+    </Dynamo.Nodes.Function>
+    <Dynamo.Nodes.CodeBlockNodeModel guid="a111ecb9-0160-43bc-90ad-da27d8c5457b" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1227.29441401633" y="330.208456478294" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="// Create file names for journal files&#xA;jdir + delimiter + jfilename + &quot;_&quot; + n + &quot;.txt&quot;;" ShouldFocus="false" />
+    <DSCoreNodesUI.StringNodes.FromObject guid="14e7d21f-8ebe-4a3d-a39d-ed7062ae795e" type="DSCoreNodesUI.StringNodes.FromObject" nickname="String from Object" x="1046.35063273463" y="422.70540853478" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="d05804dc-6876-4664-976e-4aac4ad33d51" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="885.717307251475" y="427.039498402717" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="1..n;" ShouldFocus="false" />
+    <DSCoreNodesUI.BoolSelector guid="bcc0a4e2-ac50-46fd-9ed8-fa399e482b58" type="DSCoreNodesUI.BoolSelector" nickname="Overwrite Existing Journal Files?" x="-1269.94106979833" y="547.939598753752" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.Boolean>True</System.Boolean>
+    </DSCoreNodesUI.BoolSelector>
+    <DSCore.File.Directory guid="96a754c3-68ef-4eee-8e60-71fb1a6cce65" type="DSCore.File.Directory" nickname="Directory Path (Journal Files)" x="-1269.94106979833" y="449.165991302088" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>C:\temp\DynamoAutomation\output</System.String>
+    </DSCore.File.Directory>
+    <Dynamo.Nodes.CodeBlockNodeModel guid="9c39c5fc-da8a-475e-843d-e2a2ee918f0e" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="2030.33837157291" y="95.2480709354085" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="// You'll need an English language version of Revit&#xA;// in order to run the journals.&#xA;// If that is your default language&#xA;// you won't need this code block.&#xA;// This is what needs to appended to the exectuable path for Revit 2016.&#xA;// It may be different for Revit 2015.&#xA;&quot; /language ENU &quot; + jpath;" ShouldFocus="false" />
+    <Dynamo.Nodes.Function guid="a661f91b-b550-4d46-b2b0-5e20340ab532" type="Dynamo.Nodes.Function" nickname="JournalFiles.Cleanup" x="3041.89767401638" y="275.672709728587" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False">
+      <ID value="85066088-1616-40b1-96e1-c33e685c6948" />
+      <Name value="JournalFiles.Cleanup" />
+      <Description value="Moves all journal files created during a batch-processing operation to a specified directory" />
+      <Inputs>
+        <Input value="destinationDirectory" />
+        <Input value="overwriteExistingFiles" />
+        <Input value="executionDone" />
+        <Input value="generatedJournalFiles" />
+      </Inputs>
+      <Outputs>
+        <Output value="" />
+      </Outputs>
+    </Dynamo.Nodes.Function>
+    <Dynamo.Nodes.DSFunction guid="6aec9035-23c4-4e0e-bc6f-463055f5fa0a" type="Dynamo.Nodes.DSFunction" nickname="Journal.ByWorkspacePath" x="1765.3776881992" y="157.491996139235" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="..\..\..\Users\adieckmann\AppData\Roaming\Dynamo\0.9\packages\DynamoAutomation\bin\DynamoAutomation.dll" function="Dynamo.Automation.Journal.ByWorkspacePath@string,string,string" />
+    <DSCore.File.Filename guid="65f9b69d-1ba4-4a18-b97e-4fca944f3e2b" type="DSCore.File.Filename" nickname="File Path (CSV File of Directory Paths)" x="-1269.94106979833" y="113.462352958378" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>C:\temp\DynamoAutomation\misc\A2_Directory_Paths.txt</System.String>
+    </DSCore.File.Filename>
+    <DSCore.File.FileObject guid="19f65dd2-6357-4838-81f3-1b15d93c55a7" type="DSCore.File.FileObject" nickname="File.FromPath" x="-776.528999043102" y="112.148450685005" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
+    <Dynamo.Nodes.DSFunction guid="15c2ad29-5de6-4e10-ba02-0299d09e4a20" type="Dynamo.Nodes.DSFunction" nickname="CSV.ReadFromFile" x="-608.960604066578" y="112.148450685005" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.IO.CSV.ReadFromFile@var" />
+    <Dynamo.Nodes.DSFunction guid="3833f553-d6d1-481a-bec5-c8f900fed434" type="Dynamo.Nodes.DSFunction" nickname="Flatten" x="-436.229074676018" y="112.148450685005" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="BuiltIn" function="Flatten@var[]..[]" />
+    <Dynamo.Nodes.DSFunction guid="fb452123-10b2-4443-9b2f-e7bd6eb70f6a" type="Dynamo.Nodes.DSFunction" nickname="Flatten" x="561.370525516925" y="160.363561888714" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="BuiltIn" function="Flatten@var[]..[]" />
+    <Dynamo.Nodes.StringInput guid="179f28d5-af46-42cd-89d0-d5b0c8034f7f" type="Dynamo.Nodes.StringInput" nickname="String" x="1100.23096585657" y="344.338438327246" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>\</System.String>
+      <System.String value="\" />
+    </Dynamo.Nodes.StringInput>
+    <Dynamo.Nodes.StringInput guid="5e630ae3-4bff-4973-91ad-fb86901dfeb8" type="Dynamo.Nodes.StringInput" nickname="Journal File Name" x="-1269.94106979833" y="376.959093516148" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>DynamoJournalFile</System.String>
+      <System.String value="DynamoJournalFile" />
+    </Dynamo.Nodes.StringInput>
+    <Dynamo.Nodes.DSFunction guid="df5c9bd1-8f38-42d5-9d4b-3b61d0ad5777" type="Dynamo.Nodes.DSFunction" nickname="Directory.Exists" x="-288.956737507661" y="182.928158003515" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.IO.Directory.Exists@string" />
+    <Dynamo.Nodes.DSFunction guid="4dcb7b88-30ae-4cf0-acd4-0b40e898a11e" type="Dynamo.Nodes.DSFunction" nickname="List.FilterByBoolMask" x="-115.019804374655" y="115.264944181497" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
+    <Dynamo.Nodes.DSFunction guid="288280f9-c5f3-45f3-9979-f1f2d2804f83" type="Dynamo.Nodes.DSFunction" nickname="Process.ByPathAndArguments" x="2778.17465202107" y="78.9342209116831" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="..\..\..\Users\adieckmann\AppData\Roaming\Dynamo\0.9\packages\DynamoAutomation\bin\DynamoAutomation.dll" function="ProcessRunner.Process.ByPathAndArguments@string,string" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Models.ConnectorModel start="67216c37-2ed7-4ea5-9c18-47f2efffa549" start_index="0" end="6aec9035-23c4-4e0e-bc6f-463055f5fa0a" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="4270b4df-1a46-4508-84bb-2b0496d7ce3c" start_index="0" end="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="4270b4df-1a46-4508-84bb-2b0496d7ce3c" start_index="0" end="cce77cd9-6a3f-416f-bb4b-fcbffb3877ff" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" start_index="0" end="116cfd8a-5ad8-4feb-b723-edb7a4d48925" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="116cfd8a-5ad8-4feb-b723-edb7a4d48925" start_index="0" end="fb452123-10b2-4443-9b2f-e7bd6eb70f6a" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="47ac0110-7b7a-46b3-9083-88091cf8dfb3" start_index="0" end="116cfd8a-5ad8-4feb-b723-edb7a4d48925" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" start_index="0" end="d05804dc-6876-4664-976e-4aac4ad33d51" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" start_index="0" end="288280f9-c5f3-45f3-9979-f1f2d2804f83" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="cce77cd9-6a3f-416f-bb4b-fcbffb3877ff" start_index="0" end="a111ecb9-0160-43bc-90ad-da27d8c5457b" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="a111ecb9-0160-43bc-90ad-da27d8c5457b" start_index="0" end="6aec9035-23c4-4e0e-bc6f-463055f5fa0a" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="14e7d21f-8ebe-4a3d-a39d-ed7062ae795e" start_index="0" end="a111ecb9-0160-43bc-90ad-da27d8c5457b" end_index="3" portType="0" />
+    <Dynamo.Models.ConnectorModel start="d05804dc-6876-4664-976e-4aac4ad33d51" start_index="0" end="14e7d21f-8ebe-4a3d-a39d-ed7062ae795e" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="bcc0a4e2-ac50-46fd-9ed8-fa399e482b58" start_index="0" end="a661f91b-b550-4d46-b2b0-5e20340ab532" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="96a754c3-68ef-4eee-8e60-71fb1a6cce65" start_index="0" end="a661f91b-b550-4d46-b2b0-5e20340ab532" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="9c39c5fc-da8a-475e-843d-e2a2ee918f0e" start_index="0" end="288280f9-c5f3-45f3-9979-f1f2d2804f83" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="6aec9035-23c4-4e0e-bc6f-463055f5fa0a" start_index="0" end="9c39c5fc-da8a-475e-843d-e2a2ee918f0e" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="6aec9035-23c4-4e0e-bc6f-463055f5fa0a" start_index="0" end="a661f91b-b550-4d46-b2b0-5e20340ab532" end_index="3" portType="0" />
+    <Dynamo.Models.ConnectorModel start="65f9b69d-1ba4-4a18-b97e-4fca944f3e2b" start_index="0" end="19f65dd2-6357-4838-81f3-1b15d93c55a7" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="19f65dd2-6357-4838-81f3-1b15d93c55a7" start_index="0" end="15c2ad29-5de6-4e10-ba02-0299d09e4a20" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="15c2ad29-5de6-4e10-ba02-0299d09e4a20" start_index="0" end="3833f553-d6d1-481a-bec5-c8f900fed434" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="3833f553-d6d1-481a-bec5-c8f900fed434" start_index="0" end="df5c9bd1-8f38-42d5-9d4b-3b61d0ad5777" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="3833f553-d6d1-481a-bec5-c8f900fed434" start_index="0" end="4dcb7b88-30ae-4cf0-acd4-0b40e898a11e" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="fb452123-10b2-4443-9b2f-e7bd6eb70f6a" start_index="0" end="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="fb452123-10b2-4443-9b2f-e7bd6eb70f6a" start_index="0" end="6aec9035-23c4-4e0e-bc6f-463055f5fa0a" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="179f28d5-af46-42cd-89d0-d5b0c8034f7f" start_index="0" end="a111ecb9-0160-43bc-90ad-da27d8c5457b" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="5e630ae3-4bff-4973-91ad-fb86901dfeb8" start_index="0" end="a111ecb9-0160-43bc-90ad-da27d8c5457b" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="df5c9bd1-8f38-42d5-9d4b-3b61d0ad5777" start_index="0" end="4dcb7b88-30ae-4cf0-acd4-0b40e898a11e" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="4dcb7b88-30ae-4cf0-acd4-0b40e898a11e" start_index="0" end="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="288280f9-c5f3-45f3-9979-f1f2d2804f83" start_index="0" end="a661f91b-b550-4d46-b2b0-5e20340ab532" end_index="2" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Models.NoteModel guid="e8f37bfe-8687-4476-8efb-ff798a6b6e61" text="Example for scenario A2: Process a list of directories of standalone Revit models, in this case based on the contents of C:\temp\DynamoAutomation\misc\A2_Directory_Paths.txt&#xD;&#xA;The slave graph will count the windows in each model and write the results into indvidual reports located in C:\temp\DynamoAutomation\output&#xD;&#xA;&#xD;&#xA;REQUIRED PACKAGES:&#xD;&#xA;- Clockwork for Dynamo 0.9.x&#xD;&#xA;- DynamoAutomation" x="-1266.95333869053" y="-202.900100413597" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Models.AnnotationModel guid="77fd9b0d-7ae0-466b-be55-0be30965eac5" annotationText="INPUTS" left="-1279.94106979833" top="-248.900100413597" width="445" height="864.839699167349" fontSize="30" InitialTop="-202.900100413597" InitialHeight="493.250030035248" TextblockHeight="36" backgrouund="#FF848484">
+      <Models ModelGuid="67216c37-2ed7-4ea5-9c18-47f2efffa549" />
+      <Models ModelGuid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" />
+      <Models ModelGuid="96a754c3-68ef-4eee-8e60-71fb1a6cce65" />
+      <Models ModelGuid="bcc0a4e2-ac50-46fd-9ed8-fa399e482b58" />
+      <Models ModelGuid="65f9b69d-1ba4-4a18-b97e-4fca944f3e2b" />
+      <Models ModelGuid="5e630ae3-4bff-4973-91ad-fb86901dfeb8" />
+      <Models ModelGuid="e8f37bfe-8687-4476-8efb-ff798a6b6e61" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="3abdf6e1-fc24-484c-8df7-6a43034cbe5b" annotationText="Create list of Revit files" left="-786.528999043102" top="66.148450685005" width="1466.89952456003" height="250.802956647518" fontSize="30" InitialTop="112.148450685005" InitialHeight="220.967890618731" TextblockHeight="36" backgrouund="#FFA4E1FF">
+      <Models ModelGuid="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" />
+      <Models ModelGuid="116cfd8a-5ad8-4feb-b723-edb7a4d48925" />
+      <Models ModelGuid="47ac0110-7b7a-46b3-9083-88091cf8dfb3" />
+      <Models ModelGuid="15c2ad29-5de6-4e10-ba02-0299d09e4a20" />
+      <Models ModelGuid="3833f553-d6d1-481a-bec5-c8f900fed434" />
+      <Models ModelGuid="19f65dd2-6357-4838-81f3-1b15d93c55a7" />
+      <Models ModelGuid="fb452123-10b2-4443-9b2f-e7bd6eb70f6a" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="aad60285-6aa0-4f28-947b-6f79b68becb2" annotationText="Create journal files" left="706.742494671128" top="111.491996139235" width="1259.63519352807" height="408.547502263482" fontSize="30" InitialTop="157.491996139235" InitialHeight="300.906579018511" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" />
+      <Models ModelGuid="cce77cd9-6a3f-416f-bb4b-fcbffb3877ff" />
+      <Models ModelGuid="d05804dc-6876-4664-976e-4aac4ad33d51" />
+      <Models ModelGuid="14e7d21f-8ebe-4a3d-a39d-ed7062ae795e" />
+      <Models ModelGuid="a111ecb9-0160-43bc-90ad-da27d8c5457b" />
+      <Models ModelGuid="6aec9035-23c4-4e0e-bc6f-463055f5fa0a" />
+      <Models ModelGuid="179f28d5-af46-42cd-89d0-d5b0c8034f7f" />
+    </Dynamo.Models.AnnotationModel>
+    <Dynamo.Models.AnnotationModel guid="63137442-b4a2-4433-8971-95051be282fd" annotationText="Batch-process Revit files" left="2020.33837157291" top="-48.1758060254431" width="1241.55930244347" height="494.84851575403" fontSize="30" InitialTop="-2.17580602544314" InitialHeight="209.614407160124" TextblockHeight="36" backgrouund="#FFFFAA45">
+      <Models ModelGuid="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" />
+      <Models ModelGuid="9c39c5fc-da8a-475e-843d-e2a2ee918f0e" />
+      <Models ModelGuid="a661f91b-b550-4d46-b2b0-5e20340ab532" />
+      <Models ModelGuid="288280f9-c5f3-45f3-9979-f1f2d2804f83" />
+    </Dynamo.Models.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

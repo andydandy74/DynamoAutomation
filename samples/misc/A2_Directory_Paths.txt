@@ -1,0 +1,4 @@
+C:\temp\DynamoAutomation\revit_models\dir1
+C:\temp\DynamoAutomation\revit_models\dir2
+C:\temp
+C:\doesnotexist

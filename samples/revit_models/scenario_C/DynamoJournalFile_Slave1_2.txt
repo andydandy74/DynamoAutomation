@@ -1,0 +1,9 @@
+'Dim Jrn 
+Set Jrn = CrsJournalScript 
+Jrn.Command "StartupPage" , "Open this project , ID_FILE_MRU_FIRST" 
+Jrn.Data "MRUFileName"  , "C:\temp\DynamoAutomation\revit_models\scenario_C\fam2.rfa" 
+Jrn.RibbonEvent "Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%Visual Programming%Dynamo 0.9:Dynamo.Applications.DynamoRevit" 
+Jrn.Data "APIStringStringMapJournalData", 3, "dynPath", "C:\temp\DynamoAutomation\slave_graphs\ScenarioC_Slave1_AlterFamily.dyn", "dynShowUI", "false", "dynAutomation", "true" 
+Jrn.Command "Internal" , "Flush undo and redo stacks , ID_FLUSH_UNDO" 
+Jrn.Command "Internal" , "Close the active project , ID_REVIT_FILE_CLOSE" 
+Jrn.Command "SystemMenu" , "Quit the application; prompts to save projects , ID_APP_EXIT"
