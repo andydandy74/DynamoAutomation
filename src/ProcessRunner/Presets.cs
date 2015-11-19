@@ -119,14 +119,34 @@ namespace Dynamo.Automation
                         name += xmlNode.SelectSingleNode("System.Int32").InnerText + "-";
                     }
                     presetModel.SetAttribute("Name", name);
-
-                    doc.DocumentElement.SelectSingleNode("Presets").AppendChild(presetModel);
+                    //if (doc.DocumentElement.SelectSingleNode("Presets").ChildNodes.Attributes.Exist("Name", name) == null) //[redinkinc] doesn't work yet...
+                        doc.DocumentElement.SelectSingleNode("Presets").AppendChild(presetModel);
                 }
 
                 min = min + step;
             }
             
 
+        }
+
+        /// <summary>
+        /// Remove all Presets from a specified file
+        /// </summary>
+        /// <param name="dynFilePath">The .dyn file with the presets to be removed.</param>
+        /// <returns>The dynFilePath</returns>
+        public static string Clear(string dynFilePath)
+        {
+            var xmlDocument = new XmlDocument();
+            xmlDocument.Load(dynFilePath);
+
+            var xmlWorkspace = xmlDocument.DocumentElement;
+            var presets = xmlWorkspace.SelectSingleNode("Presets");
+
+            presets?.RemoveAll();
+
+            xmlDocument.Save(dynFilePath);
+
+            return dynFilePath;
         }
 
     }
