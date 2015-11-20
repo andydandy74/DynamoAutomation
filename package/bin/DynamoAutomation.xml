@@ -4,6 +4,40 @@
         <name>DynamoAutomation</name>
     </assembly>
     <members>
+        <member name="T:Dynamo.Automation.Presets">
+            <summary>
+            Automates Preset creation.
+            </summary>
+        </member>
+        <member name="M:Dynamo.Automation.Presets.ByWorkspacePathAndSliderNames(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Creates Presets of all possible combinations of any given Integer Slider values within a Dynamo workspace and adds them to the original workspace file.
+            </summary>
+            <param name="dynFilePath">The path to the .dyn file.</param>
+            <param name="intSliderNames">The names of the Integer Sliders. If more than one Slider has the same name, the node will iterate through all of them.</param>
+            <returns>The dynFilePath with the added Presets.</returns>
+        </member>
+        <member name="M:Dynamo.Automation.Presets.ByWorkspacePathSliderNamesAndNewPath(System.String,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            Creates Presets of all possible combinations of any given Integer Slider values within a Dynamo workspace and adds them to a new preset file.
+            </summary>
+            <param name="dynFilePath">The path to the .dyn file.</param>
+            <param name="intSliderNames">The names of the Integer Sliders. If more than one Slider has this name, the will be all iterated.</param>
+            <param name="presetFilePath">File path for the new preset file.</param>
+            <returns>The path of the new preset file.</returns>
+        </member>
+        <member name="M:Dynamo.Automation.Presets.Clear(System.String)">
+            <summary>
+            Remove all Presets from a specified file
+            </summary>
+            <param name="dynFilePath">The path to the .dyn file.</param>
+            <returns>The dynFilePath.</returns>
+        </member>
+        <member name="T:ProcessRunner.Process">
+            <summary>
+            Runs external processes
+            </summary>
+        </member>
         <member name="M:ProcessRunner.Process.ByPathAndArguments(System.String,System.String)">
             <summary>
             Run a process and return the exit code.
@@ -12,13 +46,18 @@
             <param name="args">The command line arguments to the process.</param>
             <returns>The exit code for the process.</returns>
         </member>
+        <member name="T:Dynamo.Automation.Journal">
+            <summary>
+            Automates Journal creation.
+            </summary>
+        </member>
         <member name="M:Dynamo.Automation.Journal.ByWorkspacePath(System.String,System.String,System.String)">
             <summary>
             Create a journal file for executing a Dynamo workspace on a Revit file.
             
-            This journal file uses 3 keys specifically for the purpose of automating dynamo.
+            This journal file uses three keys specifically for the purpose of automating Dynamo.
             dynPath - Specifies the path to the Dynamo workspace to execute.
-            dynShowUI - Specifies whether the Dynamo UI should be visible.
+            dynShowUI - Specifies whether the Dynamo UI should be visible (set to false - Dynamo will run headless).
             dynAutomation - Specifies that Dynamo should run in 'automation' mode. This mode is similar to testing in that
             Dynamo is never run in the idle loop. The workspace is executed immediately, and control is returned to the DynamoRevit
             external application.
@@ -26,7 +65,7 @@
             <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file.</param>
             <param name="workspacePath">The path to the Dynamo workspace.</param>
             <param name="journalFilePath">The path of the generated journal file.</param>
-            <returns></returns>
+            <returns>The path of the generated journal file.</returns>
         </member>
     </members>
 </doc>
