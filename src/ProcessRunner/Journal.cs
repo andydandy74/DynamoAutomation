@@ -3,14 +3,17 @@ using System.IO;
 
 namespace Dynamo.Automation
 {
+    /// <summary>
+    /// Automates Journal creation.
+    /// </summary>
     public class Journal
     {
         /// <summary>
         /// Create a journal file for executing a Dynamo workspace on a Revit file.
         /// 
-        /// This journal file uses 3 keys specifically for the purpose of automating dynamo.
+        /// This journal file uses three keys specifically for the purpose of automating Dynamo.
         /// dynPath - Specifies the path to the Dynamo workspace to execute.
-        /// dynShowUI - Specifies whether the Dynamo UI should be visible.
+        /// dynShowUI - Specifies whether the Dynamo UI should be visible (set to false - Dynamo will run headless).
         /// dynAutomation - Specifies that Dynamo should run in 'automation' mode. This mode is similar to testing in that
         /// Dynamo is never run in the idle loop. The workspace is executed immediately, and control is returned to the DynamoRevit
         /// external application.
@@ -18,7 +21,7 @@ namespace Dynamo.Automation
         /// <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file.</param>
         /// <param name="workspacePath">The path to the Dynamo workspace.</param>
         /// <param name="journalFilePath">The path of the generated journal file.</param>
-        /// <returns></returns>
+        /// <returns>The path of the generated journal file.</returns>
         public static string ByWorkspacePath(string revitFilePath, string workspacePath, string journalFilePath)
         {
             if (!File.Exists(workspacePath))

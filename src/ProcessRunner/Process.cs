@@ -3,6 +3,9 @@ using System.Diagnostics;
 
 namespace ProcessRunner
 {
+    /// <summary>
+    /// Runs external processes
+    /// </summary>
     public class Process
     {
         /// <summary>

@@ -9,24 +9,24 @@ namespace Dynamo.Automation
     public static class Presets
     {
         /// <summary>
-        /// Creates an automatic Preset set of all combinations from Sliders of a Dynamo project with a specific name and adds them to the original file.
+        /// Creates Presets of all possible combinations of any given Integer Slider values within a Dynamo workspace and adds them to the original workspace file.
         /// </summary>
-        /// <param name="dynFilePath">The .dyn file with the presets to be added.</param>
-        /// <param name="intSliderNames">The names of the Integer Sliders. If more than one Slider has this name, the will be all iterated.</param>
-        /// <returns>The dynFilePath with the added Presets</returns>
-        public static string Create(string dynFilePath, List<string> intSliderNames)
+        /// <param name="dynFilePath">The path to the .dyn file.</param>
+        /// <param name="intSliderNames">The names of the Integer Sliders. If more than one Slider has the same name, the node will iterate through all of them.</param>
+        /// <returns>The dynFilePath with the added Presets.</returns>
+        public static string ByWorkspacePathAndSliderNames(string dynFilePath, List<string> intSliderNames)
         {
-            return Create(dynFilePath, intSliderNames, null);
+            return ByWorkspacePathSliderNamesAndNewPath(dynFilePath, intSliderNames, null);
         }
 
         /// <summary>
-        /// Creates an automatic Preset set of all combinations from Sliders of a Dynamo project with a specific name and adds them to a preset file.
+        /// Creates Presets of all possible combinations of any given Integer Slider values within a Dynamo workspace and adds them to a new preset file.
         /// </summary>
-        /// <param name="dynFilePath">The .dyn file with the presets to be added.</param>
+        /// <param name="dynFilePath">The path to the .dyn file.</param>
         /// <param name="intSliderNames">The names of the Integer Sliders. If more than one Slider has this name, the will be all iterated.</param>
-        /// <param name="presetFilePath">Filepath for new preset file.</param>
-        /// <returns>The path of the file containing the presets</returns>
-        public static string Create(string dynFilePath, List<string> intSliderNames, string presetFilePath = null)
+        /// <param name="presetFilePath">File path for the new preset file.</param>
+        /// <returns>The path of the new preset file.</returns>
+        public static string ByWorkspacePathSliderNamesAndNewPath(string dynFilePath, List<string> intSliderNames, string presetFilePath = null)
         {
             
             var xmlDocument = new XmlDocument();
@@ -132,8 +132,8 @@ namespace Dynamo.Automation
         /// <summary>
         /// Remove all Presets from a specified file
         /// </summary>
-        /// <param name="dynFilePath">The .dyn file with the presets to be removed.</param>
-        /// <returns>The dynFilePath</returns>
+        /// <param name="dynFilePath">The path to the .dyn file.</param>
+        /// <returns>The dynFilePath.</returns>
         public static string Clear(string dynFilePath)
         {
             var xmlDocument = new XmlDocument();
@@ -142,7 +142,7 @@ namespace Dynamo.Automation
             var xmlWorkspace = xmlDocument.DocumentElement;
             var presets = xmlWorkspace.SelectSingleNode("Presets");
 
-            presets?.RemoveAll();
+            presets.RemoveAll();
 
             xmlDocument.Save(dynFilePath);
 
