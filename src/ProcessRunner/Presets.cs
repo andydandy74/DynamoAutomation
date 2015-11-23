@@ -142,7 +142,7 @@ namespace Dynamo.Automation
             var xmlWorkspace = xmlDocument.DocumentElement;
             var presets = xmlWorkspace.SelectSingleNode("Presets");
 
-            presets.RemoveAll();
+            if (presets != null) presets.RemoveAll();
 
             xmlDocument.Save(dynFilePath);
 
