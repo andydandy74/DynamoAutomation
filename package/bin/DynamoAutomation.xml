@@ -33,19 +33,6 @@
             <param name="dynFilePath">The path to the .dyn file.</param>
             <returns>The dynFilePath.</returns>
         </member>
-        <member name="T:ProcessRunner.Process">
-            <summary>
-            Runs external processes
-            </summary>
-        </member>
-        <member name="M:ProcessRunner.Process.ByPathAndArguments(System.String,System.String)">
-            <summary>
-            Run a process and return the exit code.
-            </summary>
-            <param name="processPath">The path to the process to execute.</param>
-            <param name="args">The command line arguments to the process.</param>
-            <returns>The exit code for the process.</returns>
-        </member>
         <member name="T:Dynamo.Automation.Journal">
             <summary>
             Automates Journal creation.
@@ -66,6 +53,19 @@
             <param name="workspacePath">The path to the Dynamo workspace.</param>
             <param name="journalFilePath">The path of the generated journal file.</param>
             <returns>The path of the generated journal file.</returns>
+        </member>
+        <member name="T:ProcessRunner.Process">
+            <summary>
+            Runs external processes
+            </summary>
+        </member>
+        <member name="M:ProcessRunner.Process.ByPathAndArguments(System.String,System.String)">
+            <summary>
+            Run a process and return the exit code.
+            </summary>
+            <param name="processPath">The path to the process to execute.</param>
+            <param name="args">The command line arguments to the process.</param>
+            <returns>The exit code for the process.</returns>
         </member>
     </members>
 </doc>
