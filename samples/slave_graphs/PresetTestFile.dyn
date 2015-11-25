@@ -1,0 +1,24 @@
+<Workspace Version="0.9.0.3067" X="0" Y="0" zoom="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <DSCoreNodesUI.Input.IntegerSlider guid="ef10c6c3-b467-4e94-91f0-9f1ceb6b9992" type="DSCoreNodesUI.Input.IntegerSlider" nickname="Slider1" x="98" y="308.5" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.Int32>0</System.Int32>
+      <Range min="0" max="5" step="1" />
+    </DSCoreNodesUI.Input.IntegerSlider>
+    <DSCoreNodesUI.Input.IntegerSlider guid="4df94604-e07a-40bb-b2e4-0dd67219677a" type="DSCoreNodesUI.Input.IntegerSlider" nickname="Slider1" x="98" y="374.5" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.Int32>2</System.Int32>
+      <Range min="2" max="5" step="1" />
+    </DSCoreNodesUI.Input.IntegerSlider>
+    <Dynamo.Nodes.CodeBlockNodeModel guid="71267740-9ba0-4833-ae6d-ed77878f3dbd" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="459" y="330" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="a+b;" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Models.ConnectorModel start="ef10c6c3-b467-4e94-91f0-9f1ceb6b9992" start_index="0" end="71267740-9ba0-4833-ae6d-ed77878f3dbd" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="4df94604-e07a-40bb-b2e4-0dd67219677a" start_index="0" end="71267740-9ba0-4833-ae6d-ed77878f3dbd" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
