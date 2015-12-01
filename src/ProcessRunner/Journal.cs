@@ -8,6 +8,7 @@ namespace Dynamo.Automation
     /// </summary>
     public class Journal
     {
+        private Journal() { }
         /// <summary>
         /// Create a journal file for executing a Dynamo workspace on a Revit file.
         /// 

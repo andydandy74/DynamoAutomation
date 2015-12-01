@@ -8,6 +8,7 @@ namespace ProcessRunner
     /// </summary>
     public class Process
     {
+        private Process() { }
         /// <summary>
         /// Run a process and return the exit code.
         /// </summary>
