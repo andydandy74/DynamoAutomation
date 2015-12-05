@@ -2,7 +2,7 @@
 DynamoAutomation is a package for the [Dynamo](https://github.com/DynamoDS/Dynamo) visual programming environment. It allows Dynamo users to batch process multiple Revit models by driving Revit (and the Dynamo addin) from the outside using the Dynamo sandbox, each time using the same Dynamo workflow, e.g. process an entire folder of models. This opens up a lot of possibilities for achieving a higher degree of automation in labour-intensive areas such as quality control and enforcement of company or project standards.
 
 ##Requirements
-Besides the DynamoAutomation package, you will need the following to successfully use DynamoAutomation:
+Besides the DynamoAutomation package itself, you will need the following to successfully use DynamoAutomation:
 - Any Dynamo 0.9 build
   - You must not have another version of Dynamo installed on the same machine (e.g. Dynamo 0.8.x)
 - Revit 2015 or 2016
