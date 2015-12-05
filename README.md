@@ -1,3 +1,17 @@
-# DynamoAutomation
+#DynamoAutomation
+DynamoAutomation is a package for the [Dynamo](https://github.com/DynamoDS/Dynamo) visual programming environment. The package allows Dynamo users to batch process multiple Revit models by driving Revit (and the Dynamo addin) from the outside using the Dynamo sandbox, each time using the same Dynamo workflow, e.g. process an entire folder of models. This opens up a lot of possibilities for achieving a higher degree of automation in labour-intensive areas such as quality control and enforcement of company or project standards.
 
-DynamoAutomation is a package for the [Dynamo](https://github.com/DynamoDS/Dynamo) visual programming environment. It allows Dynamo users to batch process Revit models by driving Revit (and the Dynamo addin) from the outside using the Dynamo sandbox.
+##Requirements
+Besides the DynamoAutomation package, you will need the following to successfully use DynamoAutomation:
+- Any Dynamo 0.9 build
+  - You may not have another version of Dynamo installed on the same machine 
+- Revit 2015 or 2016
+  - This needs to be an English language version.
+- All folders that contain Revit models or Dynamo graphs (and their respective filenames) must not contain whitespaces.
+- Revit models must not contain any warnings that would opo up wehn opening the model (e.g. missing linked files etc.)
+
+##How to Use DynamoAutomation
+To get you started, this repository contains a number of [sample files](https://github.com/andydandy74/DynamoAutomation/tree/master/samples) for different automation scenarios. If you are looking for more in-depth information, please refer to the [DynamoAutomation wiki](https://github.com/andydandy74/DynamoAutomation/wiki).
+ 
+##Updates & Version History
+Since Dynamo's package manager currently does not (yet) have an update notification infrastructure in place, you may want to follow me on [twitter](https://twitter.com/a_dieckmann) for update notifications. Also, you find the [version history](https://github.com/andydandy74/DynamoAutomation/wiki/Version-History) on the wiki.
