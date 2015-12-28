@@ -10,7 +10,7 @@ Besides the DynamoAutomation package itself, you will need the following to succ
 - Revit 2015 or 2016
   - This needs to be an English language version.
 - All folders that contain Revit models or Dynamo graphs (and their respective filenames) must not contain whitespaces.
-- Revit models must not contain any warnings that would opo up wehn opening the model (e.g. missing linked files etc.)
+- Revit models must not contain any warnings that would pop up when opening the model (e.g. missing linked files etc.)
 
 ##How to Use DynamoAutomation
 To get you started, this repository contains a number of [sample files](https://github.com/andydandy74/DynamoAutomation/tree/master/samples) for different automation scenarios. If you are looking for more in-depth information, please refer to the [DynamoAutomation wiki](https://github.com/andydandy74/DynamoAutomation/wiki).
