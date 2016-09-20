@@ -13,6 +13,14 @@ Besides the DynamoAutomation package itself, you will need the following to succ
 - Revit models must **not** contain any warnings that would pop up when opening the model (e.g. missing linked files etc.).
 - Revit models must **not** be saved in a Perspective view.
 
+##Installation Guide
+- Make sure to pick the correct version when downloading/installing
+  - If you're running Dynamo 1.x use DynamoAutomation 1.0.0 or higher
+  - If you're running Dynamo 0.9.x use DynamoAutomation 0.90.3
+- DynamoAutomation has a dependency on the Clockwork package, but Clockwork is updated more frequently than Dynamo.
+  - When installing DynamoAutomation, Dynamo will download and install a version of Clockwork that may not be current anymore.
+  - Ater installing DynamoAutomation check the package manager to see if your installed version of Clockwork can be upgraded to a more recent version.
+
 ##How to Use DynamoAutomation
 To get you started, this repository contains a number of [sample files](https://github.com/andydandy74/DynamoAutomation/tree/master/samples) for different automation scenarios. If you are looking for more in-depth information, please refer to the [DynamoAutomation wiki](https://github.com/andydandy74/DynamoAutomation/wiki).
  
