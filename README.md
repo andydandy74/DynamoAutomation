@@ -6,11 +6,12 @@ DynamoAutomation is a package for the [Dynamo](https://github.com/DynamoDS/Dynam
 ##Requirements
 Besides the DynamoAutomation package itself, you will need the following to successfully use DynamoAutomation:
 - Any Dynamo 0.9.x or 1.x build
-  - You must **not** have another version of Dynamo installed on the same machine
+  - You must **not** have another version of Dynamo installed on the same machine.
 - Revit 2015 or higher
   - This needs to be an **English** language version.
 - All folders that contain Revit models or Dynamo graphs (and their respective filenames) must **not** contain whitespaces.
-- Revit models must **not** contain any warnings that would pop up when opening the model (e.g. missing linked files etc.)
+- Revit models must **not** contain any warnings that would pop up when opening the model (e.g. missing linked files etc.).
+- Revit models must **not** be saved in a Perspective view.
 
 ##How to Use DynamoAutomation
 To get you started, this repository contains a number of [sample files](https://github.com/andydandy74/DynamoAutomation/tree/master/samples) for different automation scenarios. If you are looking for more in-depth information, please refer to the [DynamoAutomation wiki](https://github.com/andydandy74/DynamoAutomation/wiki).
