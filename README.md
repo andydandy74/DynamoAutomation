@@ -16,7 +16,7 @@ Besides the DynamoAutomation package itself, you will need the following to succ
 ##Known bugs
 Although initial tests showed DynamoAutomation running smoothly with Dynamo 1.0.0 and Revit 2017 some major bugs have surfaced that are in all likelihood rooted in different behaviour of the Dynamo 1.x Revit addins for Revit 2016 and 2017:
 - DynamoAutomation does not seem to run at all under Dynamo **1.1.0** and Revit **2017** (https://github.com/andydandy74/DynamoAutomation/issues/13)
-- DynamoAutomation only seems to run with salve graphs that are set to Automatic mode under Dynamo **1.0.0** and Revit **2017** (https://github.com/andydandy74/DynamoAutomation/issues/15)
+- DynamoAutomation only seems to run with slave graphs that are set to Automatic mode under Dynamo **1.0.0** and Revit **2017** (https://github.com/andydandy74/DynamoAutomation/issues/15)
 
 ##Installation Guide
 - Make sure to pick the correct version when downloading/installing
