@@ -1,5 +1,8 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+using Microsoft.Win32;
 
 namespace Dynamo.Automation
 {
@@ -26,16 +29,31 @@ namespace Dynamo.Automation
         /// <returns>The path of the generated journal file.</returns>
         public static string ByWorkspacePath(string revitFilePath, string workspacePath, string journalFilePath, int revitVersion)
         {
+            // Exception if the dyn file isn't found
             if (!File.Exists(workspacePath))
             {
                 throw new FileNotFoundException();
             }
 
+            // Delete journal file if it already exists
             if (File.Exists(journalFilePath))
             {
                 File.Delete(journalFilePath);
             }
 
+            // Finding the installed version of Dynamo Revit
+            // Successfully stole this part from Dynamo StartupUtils.cs and modified it as needed :-)
+            const string regKey64 = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\";
+            //Open HKLM for 64bit registry
+            var regKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
+            //Open Windows/CurrentVersion/Uninstall registry key
+            regKey = regKey.OpenSubKey(regKey64);
+            //Get "Version" value as string for all the subkeys that start with "Dynamo Revit"
+            var installedVersions = regKey.GetSubKeyNames().Where(s => s.StartsWith("Dynamo Revit")).Select((s) => regKey.OpenSubKey(s).GetValue("Version") as string);
+            string dynVersion = installedVersions.First().Substring(0, 3);
+            // This code is not bothering to check if any pre-1.0 Dynamo is installed - lazy...
+
+            // Launch command to be used depends on Revit & Dynamo versions
             string launchCommand;
             if (revitVersion > 2016)
             {
@@ -43,9 +61,10 @@ namespace Dynamo.Automation
             }
             else
             {
-                launchCommand = "Jrn.RibbonEvent \"Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%Visual Programming%Dynamo 1.0:Dynamo.Applications.DynamoRevit\" \n";
+                launchCommand = String.Format("Jrn.RibbonEvent \"Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%Visual Programming%Dynamo {0}:Dynamo.Applications.DynamoRevit\" \n", dynVersion);
             }
 
+            // Create journal file
             using (var tw = new StreamWriter(journalFilePath, true))
             {
                 var journal = String.Format(@"'" +
