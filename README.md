@@ -13,10 +13,6 @@ Besides the DynamoAutomation package itself, you will need the following to succ
 - Revit models must **not** contain any warnings that would pop up when opening the model (e.g. missing linked files etc.).
 - Revit models must **not** be saved in a Perspective view.
 
-##Versions / Compatibility
-- If you're running Dynamo 0.9, be sure to pick up the last compatible version of DynamoAutomation (0.90.3). This will work with Revit 2016 and 2017.
-- If you're running Dynamo 1.x, be sure to pick up the current version of DynamoAutomation. This will work with Revit 2016. For issues with Revit 2017 see below.
-
 ##Known bugs
 Although initial tests showed DynamoAutomation running smoothly with Dynamo 1.0.0 and Revit 2017 some major bugs have surfaced that are in all likelihood rooted in different behaviour of the Dynamo 1.x Revit addins for Revit 2016 and 2017:
 - DynamoAutomation does not seem to run at all under Dynamo **1.1.0** and Revit **2017** (https://github.com/andydandy74/DynamoAutomation/issues/13)
@@ -24,8 +20,8 @@ Although initial tests showed DynamoAutomation running smoothly with Dynamo 1.0.
 
 ##Installation Guide
 - Make sure to pick the correct version when downloading/installing
-  - If you're running Dynamo 1.x use DynamoAutomation 1.0.0 or higher
-  - If you're running Dynamo 0.9.x use DynamoAutomation 0.90.3
+  - If you're running Dynamo 1.x use DynamoAutomation 1.0.0 or higher (works with Revit 2016, issues with Revit 2017 as described above)
+  - If you're running Dynamo 0.9.x use DynamoAutomation 0.90.3 (works with Revit 2015 & 2016)
 - DynamoAutomation has a dependency on the Clockwork package, but Clockwork is updated more frequently than Dynamo.
   - When installing DynamoAutomation, Dynamo will download and install a version of Clockwork that may not be current anymore.
   - Ater installing DynamoAutomation check the package manager to see if your installed version of Clockwork can be upgraded to a more recent version.
