@@ -13,6 +13,7 @@ Besides the DynamoAutomation package itself, you will need the following to succ
 - Revit models must **not** contain any warnings that would pop up when opening the model (e.g. missing linked files etc.).
 - Revit models must **not** be saved in a Perspective view.
 
+##Versions / Compatibility
 - If you're running Dynamo 0.9, be sure to pick up the last compatible version of DynamoAutomation (0.90.3). This will work with Revit 2016 and 2017.
 - If you're running Dynamo 1.x, be sure to pick up the current version of DynamoAutomation. This will work with Revit 2016. For issues with Revit 2017 see below.
 
