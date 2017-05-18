@@ -1,21 +1,39 @@
-<Workspace Version="0.8.3.2580" X="30" Y="352.853765115668" zoom="0.931388012618297" Name="RevitExecutablePath.ByVersion" Description="Returns the path of Revit.exe based on a given Revit version" ID="46ad09be-4c19-4881-b316-6cd5424bad02" Category="DynamoAutomation.FilePath.Create">
+<Workspace Version="1.3.0.875" X="30.3589947003334" Y="393.497883279526" zoom="1.44194916984178" ScaleFactor="1" Name="RevitExecutablePath.ByVersion" Description="Returns the path of Revit.exe based on a given Revit version" ID="46ad09be-4c19-4881-b316-6cd5424bad02" Category="DynamoAutomation.FilePath.Create">
   <NamespaceResolutionMap>
     <ClassMap partialName="String" resolvedName="DSCore.String" assemblyName="DSCoreNodes.dll" />
   </NamespaceResolutionMap>
   <Elements>
-    <Dynamo.Nodes.CodeBlockNodeModel guid="44b96155-1532-4906-97d9-ec826cc98b9f" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="381" y="4.21833333333333" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" CodeText="&quot;C:\Program Files\Autodesk\Revit &quot; + RevitVersion + &quot;\\Revit.exe&quot;;" ShouldFocus="false" />
-    <Dynamo.Nodes.Symbol guid="8f99bb1f-42dd-4773-90ef-e9f832e6bfad" type="Dynamo.Nodes.Symbol" nickname="Input" x="0" y="0" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
-      <Symbol value="RevitVersion : string = &quot;2016&quot;" />
-    </Dynamo.Nodes.Symbol>
-    <Dynamo.Nodes.Output guid="e3804aa6-3bb2-4637-97c5-c754a18d2b47" type="Dynamo.Nodes.Output" nickname="Output" x="1149" y="0" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False">
-      <Symbol value="Revit.exe Path" />
-    </Dynamo.Nodes.Output>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="44b96155-1532-4906-97d9-ec826cc98b9f" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="502" y="-6.07672196210225" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="basepath + RevitVersion + executable;" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CustomNodes.Symbol guid="8f99bb1f-42dd-4773-90ef-e9f832e6bfad" type="Dynamo.Graph.Nodes.CustomNodes.Symbol" nickname="Input" x="125" y="7.28327803789774" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <Symbol value="revitVersion : string = &quot;2017&quot;" />
+    </Dynamo.Graph.Nodes.CustomNodes.Symbol>
+    <Dynamo.Graph.Nodes.CustomNodes.Output guid="e3804aa6-3bb2-4637-97c5-c754a18d2b47" type="Dynamo.Graph.Nodes.CustomNodes.Output" nickname="Output" x="1024" y="-10.2900552954356" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <Symbol value="revitExecutablePath" />
+    </Dynamo.Graph.Nodes.CustomNodes.Output>
+    <CoreNodeModels.Input.StringInput guid="d012b759-15f1-4033-8dfe-6ea50f127cc2" type="CoreNodeModels.Input.StringInput" nickname="String" x="125" y="-76.2900552954356" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>C:\Program Files\Autodesk\Revit </System.String>
+      <System.String value="C:\Program Files\Autodesk\Revit " />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.StringInput guid="486b6aa5-d453-4afb-998e-ba812b753a1c" type="CoreNodeModels.Input.StringInput" nickname="String" x="125" y="90.8566113712311" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>\Revit.exe</System.String>
+      <System.String value="\Revit.exe" />
+    </CoreNodeModels.Input.StringInput>
   </Elements>
   <Connectors>
-    <Dynamo.Models.ConnectorModel start="44b96155-1532-4906-97d9-ec826cc98b9f" start_index="0" end="e3804aa6-3bb2-4637-97c5-c754a18d2b47" end_index="0" portType="0" />
-    <Dynamo.Models.ConnectorModel start="8f99bb1f-42dd-4773-90ef-e9f832e6bfad" start_index="0" end="44b96155-1532-4906-97d9-ec826cc98b9f" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="44b96155-1532-4906-97d9-ec826cc98b9f" start_index="0" end="e3804aa6-3bb2-4637-97c5-c754a18d2b47" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8f99bb1f-42dd-4773-90ef-e9f832e6bfad" start_index="0" end="44b96155-1532-4906-97d9-ec826cc98b9f" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d012b759-15f1-4033-8dfe-6ea50f127cc2" start_index="0" end="44b96155-1532-4906-97d9-ec826cc98b9f" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="486b6aa5-d453-4afb-998e-ba812b753a1c" start_index="0" end="44b96155-1532-4906-97d9-ec826cc98b9f" end_index="2" portType="0" />
   </Connectors>
   <Notes />
   <Annotations />
   <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
 </Workspace>
