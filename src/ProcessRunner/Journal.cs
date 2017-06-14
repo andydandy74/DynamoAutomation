@@ -15,20 +15,29 @@ namespace Dynamo.Automation
         /// <summary>
         /// Find the current Dynamo version
         /// </summary>
+        /// <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
         /// <returns>The first three digits of the active Dynamo version.</returns>
-        private static string GetDynamoVersion()
+        private static string GetDynamoVersion(int revitVersion)
         {
-            // Finding the installed version of Dynamo Revit
-            // Successfully stole this part from Dynamo StartupUtils.cs and modified it as needed :-)
-            const string regKey64 = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\";
-            // Open HKLM for 64bit registry
-            var regKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
-            // Open Windows/CurrentVersion/Uninstall registry key
-            regKey = regKey.OpenSubKey(regKey64);
-            // Get "Version" value as string for all the subkeys that start with "Dynamo Revit"
-            var installedVersions = regKey.GetSubKeyNames().Where(s => s.StartsWith("Dynamo Revit")).Select((s) => regKey.OpenSubKey(s).GetValue("Version") as string);
-            string dynVersion = installedVersions.First().Substring(0, 3);
-            // This code is not bothering to check if any pre-1.0 Dynamo is installed - lazy...
+            string dynVersion;
+            if (revitVersion > 2016)
+            {
+                dynVersion = "";
+            }
+            else
+            {
+                // Finding the installed version of Dynamo Revit
+                // Successfully stole this part from Dynamo StartupUtils.cs and modified it as needed :-)
+                const string regKey64 = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\";
+                // Open HKLM for 64bit registry
+                var regKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
+                // Open Windows/CurrentVersion/Uninstall registry key
+                regKey = regKey.OpenSubKey(regKey64);
+                // Get "Version" value as string for all the subkeys that start with "Dynamo Revit"
+                var installedVersions = regKey.GetSubKeyNames().Where(s => s.StartsWith("Dynamo Revit")).Select((s) => regKey.OpenSubKey(s).GetValue("Version") as string);
+                dynVersion = installedVersions.First().Substring(0, 3);
+                // This code is not bothering to check if any pre-1.0 Dynamo is installed - lazy...
+            }
             return dynVersion;
         }
         /// <summary>
@@ -95,7 +104,7 @@ namespace Dynamo.Automation
             if (revitVersion > 2016)
             {
                 launchDynamo = String.Format("Jrn.Command \"Ribbon\" , \"Launch Dynamo, ID_VISUAL_PROGRAMMING_DYNAMO\" \n" +
-                    "Jrn.Data \"APIStringStringMapJournalData\", 5, \"dynPath\", \"{0}\", \"dynShowUI\", \"true\", \"dynAutomation\", \"false\", \"dynPathExecute\", \"true\", \"dynModelShutDown\", \"true\" \n", workspacePath.Replace(' ', '/'));
+                    "Jrn.Data \"APIStringStringMapJournalData\", 5, \"dynPath\", \"{0}\", \"dynShowUI\", \"false\", \"dynAutomation\", \"false\", \"dynPathExecute\", \"true\", \"dynModelShutDown\", \"true\" \n", workspacePath.Replace(' ', '/'));
             }
             else
             {
@@ -117,7 +126,18 @@ namespace Dynamo.Automation
             }
             return;
         }
-
+        /// <summary>
+        /// Writes the journal file.
+        /// </summary>
+        /// <param name="journalFilePath">The path of the generated journal file.</param>
+        /// <param name="journalString">The string for the journal file.</param>
+        private static void WriteJournalFile(string journalFilePath, string journalString)
+        {
+            var tw = new StreamWriter(journalFilePath, true);
+            tw.Write(journalString);
+            tw.Flush();
+            return;
+        }
         /// <summary>
         /// Create a journal file for executing a Dynamo workspace on a Revit file.
         /// 
@@ -133,16 +153,7 @@ namespace Dynamo.Automation
         public static string ByWorkspacePath(string revitFilePath, string workspacePath, string journalFilePath, int revitVersion)
         {
             DeleteJournalFile(journalFilePath);
-            // Get Dynamo Version if needed
-            string dynVersion;
-            if (revitVersion > 2016)
-            {
-                dynVersion = "";
-            }
-            else
-            {
-                dynVersion = GetDynamoVersion();
-            }
+            string dynVersion = GetDynamoVersion(revitVersion);
             // Create journal string
             string journalString = BuildJournalStart();
             journalString += BuildProjectOpen(revitFilePath);
@@ -150,9 +161,7 @@ namespace Dynamo.Automation
             journalString += BuildProjectClose();
             journalString += BuildJournalEnd();
             // Create journal file
-            var tw = new StreamWriter(journalFilePath, true);
-            tw.Write(journalString);
-            tw.Flush();
+            WriteJournalFile(journalFilePath, journalString);
             return journalFilePath;
         }
         /// <summary>
@@ -170,16 +179,7 @@ namespace Dynamo.Automation
         public static string ByModelPathsWorkspacePath(List<string> revitFilePaths, string workspacePath, string journalFilePath, int revitVersion)
         {
             DeleteJournalFile(journalFilePath);
-            // Get Dynamo Version if needed
-            string dynVersion;
-            if (revitVersion > 2016)
-            {
-                dynVersion = "";
-            }
-            else
-            {
-                dynVersion = GetDynamoVersion();
-            }
+            string dynVersion = GetDynamoVersion(revitVersion);
             // Create journal string
             string journalString = BuildJournalStart();
             foreach (string revitFilePath in revitFilePaths)
@@ -190,9 +190,68 @@ namespace Dynamo.Automation
             }
             journalString += BuildJournalEnd();
             // Create journal file
-            var tw = new StreamWriter(journalFilePath, true);
-            tw.Write(journalString);
-            tw.Flush();
+            WriteJournalFile(journalFilePath, journalString);
+            return journalFilePath;
+        }
+        /// <summary>
+        /// Create a journal file for executing multiple chained Dynamo workspaces on the same Revit file in one continuous Revit session.
+        /// 
+        /// This journal file uses several keys specifically for the purpose of automating Dynamo.
+        /// Dynamo is never run in the idle loop. The workspace is executed immediately, and control is returned to the DynamoRevit
+        /// external application.
+        /// </summary>
+        /// <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file.</param>
+        /// <param name="workspacePaths">The paths to the Dynamo workspaces.</param>
+        /// <param name="journalFilePath">The path of the generated journal file.</param>
+        /// <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
+        /// <returns>The path of the generated journal file.</returns>
+        public static string ByModelPathsWorkspacePath(string revitFilePath, List<string> workspacePaths, string journalFilePath, int revitVersion)
+        {
+            DeleteJournalFile(journalFilePath);
+            string dynVersion = GetDynamoVersion(revitVersion);
+            // Create journal string
+            string journalString = BuildJournalStart();
+            journalString += BuildProjectOpen(revitFilePath);
+            foreach (string workspacePath in workspacePaths)
+            {
+                journalString += BuildLaunchDynamo(workspacePath, revitVersion, dynVersion);
+            }
+            journalString += BuildProjectClose();
+            journalString += BuildJournalEnd();
+            // Create journal file
+            WriteJournalFile(journalFilePath, journalString);
+            return journalFilePath;
+        }
+        /// <summary>
+        /// Create a journal file for executing multiple chained Dynamo workspaces on multiple Revit files in one continuous Revit session.
+        /// 
+        /// This journal file uses several keys specifically for the purpose of automating Dynamo.
+        /// Dynamo is never run in the idle loop. The workspace is executed immediately, and control is returned to the DynamoRevit
+        /// external application.
+        /// </summary>
+        /// <param name="revitFilePaths">The paths to the Revit files. These can be .rvt or .rfa files.</param>
+        /// <param name="workspacePaths">The paths to the Dynamo workspaces.</param>
+        /// <param name="journalFilePath">The path of the generated journal file.</param>
+        /// <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
+        /// <returns>The path of the generated journal file.</returns>
+        public static string ByModelPathsWorkspacePaths(List<string> revitFilePaths, List<string> workspacePaths, string journalFilePath, int revitVersion)
+        {
+            DeleteJournalFile(journalFilePath);
+            string dynVersion = GetDynamoVersion(revitVersion);
+            // Create journal string
+            string journalString = BuildJournalStart();
+            foreach (string revitFilePath in revitFilePaths)
+            {
+                journalString += BuildProjectOpen(revitFilePath);
+                foreach (string workspacePath in workspacePaths)
+                {
+                    journalString += BuildLaunchDynamo(workspacePath, revitVersion, dynVersion);
+                }
+                journalString += BuildProjectClose();
+            }
+            journalString += BuildJournalEnd();
+            // Create journal file
+            WriteJournalFile(journalFilePath, journalString);
             return journalFilePath;
         }
     }

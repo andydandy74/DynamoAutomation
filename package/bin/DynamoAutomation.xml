@@ -38,10 +38,11 @@
             Automates Journal creation.
             </summary>
         </member>
-        <member name="M:Dynamo.Automation.Journal.GetDynamoVersion">
+        <member name="M:Dynamo.Automation.Journal.GetDynamoVersion(System.Int32)">
             <summary>
             Find the current Dynamo version
             </summary>
+            <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
             <returns>The first three digits of the active Dynamo version.</returns>
         </member>
         <member name="M:Dynamo.Automation.Journal.BuildJournalStart">
@@ -84,6 +85,13 @@
             </summary>
             <param name="journalFilePath">The path of the generated journal file.</param>
         </member>
+        <member name="M:Dynamo.Automation.Journal.WriteJournalFile(System.String,System.String)">
+            <summary>
+            Writes the journal file.
+            </summary>
+            <param name="journalFilePath">The path of the generated journal file.</param>
+            <param name="journalString">The string for the journal file.</param>
+        </member>
         <member name="M:Dynamo.Automation.Journal.ByWorkspacePath(System.String,System.String,System.String,System.Int32)">
             <summary>
             Create a journal file for executing a Dynamo workspace on a Revit file.
@@ -108,6 +116,34 @@
             </summary>
             <param name="revitFilePaths">The paths to the Revit files. These can be .rvt or .rfa files.</param>
             <param name="workspacePath">The path to the Dynamo workspace.</param>
+            <param name="journalFilePath">The path of the generated journal file.</param>
+            <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
+            <returns>The path of the generated journal file.</returns>
+        </member>
+        <member name="M:Dynamo.Automation.Journal.ByModelPathsWorkspacePath(System.String,System.Collections.Generic.List{System.String},System.String,System.Int32)">
+            <summary>
+            Create a journal file for executing multiple chained Dynamo workspaces on the same Revit file in one continuous Revit session.
+            
+            This journal file uses several keys specifically for the purpose of automating Dynamo.
+            Dynamo is never run in the idle loop. The workspace is executed immediately, and control is returned to the DynamoRevit
+            external application.
+            </summary>
+            <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file.</param>
+            <param name="workspacePaths">The paths to the Dynamo workspaces.</param>
+            <param name="journalFilePath">The path of the generated journal file.</param>
+            <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
+            <returns>The path of the generated journal file.</returns>
+        </member>
+        <member name="M:Dynamo.Automation.Journal.ByModelPathsWorkspacePaths(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Int32)">
+            <summary>
+            Create a journal file for executing multiple chained Dynamo workspaces on multiple Revit files in one continuous Revit session.
+            
+            This journal file uses several keys specifically for the purpose of automating Dynamo.
+            Dynamo is never run in the idle loop. The workspace is executed immediately, and control is returned to the DynamoRevit
+            external application.
+            </summary>
+            <param name="revitFilePaths">The paths to the Revit files. These can be .rvt or .rfa files.</param>
+            <param name="workspacePaths">The paths to the Dynamo workspaces.</param>
             <param name="journalFilePath">The path of the generated journal file.</param>
             <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
             <returns>The path of the generated journal file.</returns>
