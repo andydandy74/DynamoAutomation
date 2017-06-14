@@ -38,18 +38,75 @@
             Automates Journal creation.
             </summary>
         </member>
+        <member name="M:Dynamo.Automation.Journal.GetDynamoVersion">
+            <summary>
+            Find the current Dynamo version
+            </summary>
+            <returns>The first three digits of the active Dynamo version.</returns>
+        </member>
+        <member name="M:Dynamo.Automation.Journal.BuildJournalStart">
+            <summary>
+            Builds the first part of the journal string
+            </summary>
+            <returns>The first part of the journal string.</returns>
+        </member>
+        <member name="M:Dynamo.Automation.Journal.BuildJournalEnd">
+            <summary>
+            Builds the last part of the journal string
+            </summary>
+            <returns>The last part of the journal string.</returns>
+        </member>
+        <member name="M:Dynamo.Automation.Journal.BuildProjectOpen(System.String)">
+            <summary>
+            Builds the part of the journal string responsible for opening a project
+            </summary>
+            <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file.</param>
+            <returns>The part of the journal string responsible for opening a project.</returns>
+        </member>
+        <member name="M:Dynamo.Automation.Journal.BuildProjectClose">
+            <summary>
+            Builds the part of the journal string responsible for closing a project
+            </summary>
+            <returns>The part of the journal string responsible for closing a project.</returns>
+        </member>
+        <member name="M:Dynamo.Automation.Journal.BuildLaunchDynamo(System.String,System.Int32,System.String)">
+            <summary>
+            Builds the part of the journal string responsible for launching DynamoRevit
+            </summary>
+            <param name="workspacePath">The path to the Dynamo workspace.</param>
+            <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
+            <param name="dynVersion">The version number of Dynamo (e.g. 1.3).</param>
+            <returns>The part of the journal string responsible for launching DynamoRevit.</returns>
+        </member>
+        <member name="M:Dynamo.Automation.Journal.DeleteJournalFile(System.String)">
+            <summary>
+            Deletes the journal file if it already exists.
+            </summary>
+            <param name="journalFilePath">The path of the generated journal file.</param>
+        </member>
         <member name="M:Dynamo.Automation.Journal.ByWorkspacePath(System.String,System.String,System.String,System.Int32)">
             <summary>
             Create a journal file for executing a Dynamo workspace on a Revit file.
             
-            This journal file uses three keys specifically for the purpose of automating Dynamo.
-            dynPath - Specifies the path to the Dynamo workspace to execute.
-            dynShowUI - Specifies whether the Dynamo UI should be visible (set to false - Dynamo will run headless).
-            dynAutomation - Specifies that Dynamo should run in 'automation' mode. This mode is similar to testing in that
+            This journal file uses several keys specifically for the purpose of automating Dynamo.
             Dynamo is never run in the idle loop. The workspace is executed immediately, and control is returned to the DynamoRevit
             external application.
             </summary>
             <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file.</param>
+            <param name="workspacePath">The path to the Dynamo workspace.</param>
+            <param name="journalFilePath">The path of the generated journal file.</param>
+            <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
+            <returns>The path of the generated journal file.</returns>
+        </member>
+        <member name="M:Dynamo.Automation.Journal.ByModelPathsWorkspacePath(System.Collections.Generic.List{System.String},System.String,System.String,System.Int32)">
+            <summary>
+            Create a journal file for executing a Dynamo workspace on multiple Revit file in one continuous Revit session.
+            
+            This journal file uses several keys specifically for the purpose of automating Dynamo.
+            Dynamo is never run in the idle loop. The workspace is executed immediately, and control is returned to the DynamoRevit
+            external application.
+            </summary>
+            <param name="revitFilePaths">The paths to the Revit files. These can be .rvt or .rfa files.</param>
             <param name="workspacePath">The path to the Dynamo workspace.</param>
             <param name="journalFilePath">The path of the generated journal file.</param>
             <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
