@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Collections.Generic;
 using Microsoft.Win32;
 
@@ -26,17 +27,9 @@ namespace Dynamo.Automation
             }
             else
             {
-                // Finding the installed version of Dynamo Revit
-                // Successfully stole this part from Dynamo StartupUtils.cs and modified it as needed :-)
-                const string regKey64 = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\";
-                // Open HKLM for 64bit registry
-                var regKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
-                // Open Windows/CurrentVersion/Uninstall registry key
-                regKey = regKey.OpenSubKey(regKey64);
-                // Get "Version" value as string for all the subkeys that start with "Dynamo Revit"
-                var installedVersions = regKey.GetSubKeyNames().Where(s => s.StartsWith("Dynamo Revit")).Select((s) => regKey.OpenSubKey(s).GetValue("Version") as string);
-                dynVersion = installedVersions.First().Substring(0, 3);
-                // This code is not bothering to check if any pre-1.0 Dynamo is installed - lazy...
+                // Finding the installed version of Dynamo
+                Assembly dynamoCore = Assembly.Load("DynamoCore");
+                dynVersion = dynamoCore.GetName().Version.ToString().Substring(0, 3);
             }
             return dynVersion;
         }
