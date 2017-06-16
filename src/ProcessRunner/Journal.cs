@@ -39,7 +39,7 @@ namespace Dynamo.Automation
         /// <returns>The first part of the journal string.</returns>
         private static string BuildJournalStart()
         {
-            string journalStart = "'" +
+            string journalStart = @"'" +
                 "Dim Jrn \n" +
                 "Set Jrn = CrsJournalScript \n";
             return journalStart;
@@ -92,16 +92,16 @@ namespace Dynamo.Automation
             {
                 throw new FileNotFoundException();
             }
-            string launchDynamo;
+            string launchDynamo = "";
             // Launch command and journal keys differ between pre-2017 and post-2016 Revit
             if (revitVersion > 2016)
             {
-                launchDynamo = String.Format("Jrn.Command \"Ribbon\" , \"Launch Dynamo, ID_VISUAL_PROGRAMMING_DYNAMO\" \n" +
+                launchDynamo += String.Format("Jrn.Command \"Ribbon\" , \"Launch Dynamo, ID_VISUAL_PROGRAMMING_DYNAMO\" \n" +
                     "Jrn.Data \"APIStringStringMapJournalData\", 5, \"dynPath\", \"{0}\", \"dynShowUI\", \"false\", \"dynAutomation\", \"false\", \"dynPathExecute\", \"true\", \"dynModelShutDown\", \"true\" \n", workspacePath.Replace(' ', '/'));
             }
             else
             {
-                launchDynamo = String.Format("Jrn.RibbonEvent \"Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%Visual Programming%Dynamo {0}:Dynamo.Applications.DynamoRevit\" \n" +
+                launchDynamo += String.Format("Jrn.RibbonEvent \"Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%Visual Programming%Dynamo {0}:Dynamo.Applications.DynamoRevit\" \n" +
                     "Jrn.Data \"APIStringStringMapJournalData\", 3, \"dynPath\", \"{1}\", \"dynShowUI\", \"false\", \"dynAutomation\", \"true\" \n", dynVersion, workspacePath.Replace(' ', '/'));
             }
             launchDynamo += "Jrn.Command \"Internal\" , \"Flush undo and redo stacks , ID_FLUSH_UNDO\" \n";
@@ -198,7 +198,7 @@ namespace Dynamo.Automation
         /// <param name="journalFilePath">The path of the generated journal file.</param>
         /// <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
         /// <returns>The path of the generated journal file.</returns>
-        public static string ByModelPathsWorkspacePath(string revitFilePath, List<string> workspacePaths, string journalFilePath, int revitVersion)
+        public static string ByModelPathWorkspacePaths(string revitFilePath, List<string> workspacePaths, string journalFilePath, int revitVersion)
         {
             DeleteJournalFile(journalFilePath);
             string dynVersion = GetDynamoVersion(revitVersion);
