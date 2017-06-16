@@ -1,0 +1,17 @@
+'Dim Jrn 
+Set Jrn = CrsJournalScript 
+Jrn.Command "StartupPage" , "Open this project , ID_FILE_MRU_FIRST" 
+Jrn.Data "MRUFileName"  , "C:\temp\DynamoAutomation\revit_models\dir1\4Walls.rvt" 
+Jrn.Data "Transaction Successful" , "Dynamo-51297CB5 Script" 
+Jrn.RibbonEvent "Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%Visual Programming%Dynamo 1.3:Dynamo.Applications.DynamoRevit" 
+Jrn.Data "APIStringStringMapJournalData", 3, "dynPath", "C:\temp\DynamoAutomation\slave_graphs\CountWalls_R2016.dyn", "dynShowUI", "false", "dynAutomation", "true" 
+Jrn.Command "Internal" , "Flush undo and redo stacks , ID_FLUSH_UNDO" 
+Jrn.Command "Internal" , "Close the active project , ID_REVIT_FILE_CLOSE" 
+Jrn.Command "StartupPage" , "Open this project , ID_FILE_MRU_FIRST" 
+Jrn.Data "MRUFileName"  , "C:\temp\DynamoAutomation\revit_models\dir1\6Walls.rvt" 
+Jrn.Data "Transaction Successful" , "Dynamo-51297CB5 Script" 
+Jrn.RibbonEvent "Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%Visual Programming%Dynamo 1.3:Dynamo.Applications.DynamoRevit" 
+Jrn.Data "APIStringStringMapJournalData", 3, "dynPath", "C:\temp\DynamoAutomation\slave_graphs\CountWalls_R2016.dyn", "dynShowUI", "false", "dynAutomation", "true" 
+Jrn.Command "Internal" , "Flush undo and redo stacks , ID_FLUSH_UNDO" 
+Jrn.Command "Internal" , "Close the active project , ID_REVIT_FILE_CLOSE" 
+Jrn.Command "SystemMenu" , "Quit the application; prompts to save projects , ID_APP_EXIT"
