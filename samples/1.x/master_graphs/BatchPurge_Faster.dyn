@@ -1,0 +1,122 @@
+<Workspace Version="1.3.0.875" X="186.836543382322" Y="445.5479839206" zoom="0.78350721746623" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Input.StringInput guid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" type="CoreNodeModels.Input.StringInput" nickname="Revit Version" x="-198.865039729805" y="-43.1903030323417" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>2016</System.String>
+      <System.String value="2016" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.Directory guid="f78c275d-f336-48c3-9da3-d4fb4153e244" type="CoreNodeModels.Input.Directory" nickname="Directory Path (Revit Models)" x="-199.922338920888" y="28.1060057582705" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>C:\temp\DynamoAutomation\revit_models\dir1</System.String>
+    </CoreNodeModels.Input.Directory>
+    <CoreNodeModels.Input.DirectoryObject guid="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" type="CoreNodeModels.Input.DirectoryObject" nickname="Directory.FromPath" x="175.312733723759" y="28.2533881726904" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Input.DirectoryObject>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="116cfd8a-5ad8-4feb-b723-edb7a4d48925" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Directory.Contents" x="385.79550980215" y="52.9787194758218" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.Directory.Contents@var,string">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="47ac0110-7b7a-46b3-9083-88091cf8dfb3" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="217.872404374871" y="128.560996303108" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;*.rvt&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="RevitExecutablePath.ByVersion" x="1581.84788897578" y="-32.5703919503268" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <ID value="46ad09be-4c19-4881-b316-6cd5424bad02" />
+      <Name value="RevitExecutablePath.ByVersion" />
+      <Description value="Returns the path of Revit.exe based on a given Revit version" />
+      <Inputs>
+        <Input value="revitVersion" />
+      </Inputs>
+      <Outputs>
+        <Output value="revitExecutablePath" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="a111ecb9-0160-43bc-90ad-da27d8c5457b" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="821.82650156427" y="96.5017006425639" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="// Create file names for journal files&#xA;jdir + delimiter + jfilename + &quot;.txt&quot;;" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <CoreNodeModels.Input.Directory guid="96a754c3-68ef-4eee-8e60-71fb1a6cce65" type="CoreNodeModels.Input.Directory" nickname="Directory Path (Journal Files)" x="-200.172429667608" y="126.731322949472" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>C:\temp\DynamoAutomation\output</System.String>
+    </CoreNodeModels.Input.Directory>
+    <CoreNodeModels.Input.StringInput guid="9e7dfb46-10d1-4ada-9807-efda0b079832" type="CoreNodeModels.Input.StringInput" nickname="Journal File Name" x="-197.67373270641" y="227.739266804237" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>DynamoJournalFile</System.String>
+      <System.String value="DynamoJournalFile" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.StringInput guid="13ebb7b8-91b7-4b3b-81cf-a07b2013e4b9" type="CoreNodeModels.Input.StringInput" nickname="String" x="692.93365913546" y="109.052494955565" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>\</System.String>
+      <System.String value="\" />
+    </CoreNodeModels.Input.StringInput>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="8a65d3fb-50f4-47dd-b6ea-b3012f6c4d83" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Process.ByPathAndArguments" x="1958.66343888008" y="9.70166108847826" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="..\..\..\..\..\dynamo packages\DynamoAutomation\bin\DynamoAutomation.dll" function="ProcessRunner.Process.ByPathAndArguments@string,string">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="a1337e05-f254-4ba8-a06b-042def2beda0" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Journal.RevitStartupArguments" x="1622.36175202529" y="69.1519388598645" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <ID value="8c58facf-53a2-4304-8245-992a2442a437" />
+      <Name value="Journal.RevitStartupArguments" />
+      <Description value="Creates startup arguments for Revit" />
+      <Inputs>
+        <Input value="journalPath" />
+        <Input value="disableSplashScreen" />
+      </Inputs>
+      <Outputs>
+        <Output value="args" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="db3ed6f5-3997-4907-9334-1c964334e59a" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="String.ToNumber" x="1047.49826450904" y="233.778283818909" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.ToNumber@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="f7beb593-783d-4ed5-a5a1-24a108bbbeb7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Journal.PurgeModels" x="1286.42399905287" y="142.898462552044" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="..\..\..\..\..\dynamo packages\DynamoAutomation\bin\DynamoAutomation.dll" function="Dynamo.Automation.Journal.PurgeModels@string[],string,int">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="4270b4df-1a46-4508-84bb-2b0496d7ce3c" start_index="0" end="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="4270b4df-1a46-4508-84bb-2b0496d7ce3c" start_index="0" end="db3ed6f5-3997-4907-9334-1c964334e59a" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="f78c275d-f336-48c3-9da3-d4fb4153e244" start_index="0" end="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" start_index="0" end="116cfd8a-5ad8-4feb-b723-edb7a4d48925" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="116cfd8a-5ad8-4feb-b723-edb7a4d48925" start_index="0" end="f7beb593-783d-4ed5-a5a1-24a108bbbeb7" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="47ac0110-7b7a-46b3-9083-88091cf8dfb3" start_index="0" end="116cfd8a-5ad8-4feb-b723-edb7a4d48925" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" start_index="0" end="8a65d3fb-50f4-47dd-b6ea-b3012f6c4d83" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a111ecb9-0160-43bc-90ad-da27d8c5457b" start_index="0" end="f7beb593-783d-4ed5-a5a1-24a108bbbeb7" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="96a754c3-68ef-4eee-8e60-71fb1a6cce65" start_index="0" end="a111ecb9-0160-43bc-90ad-da27d8c5457b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9e7dfb46-10d1-4ada-9807-efda0b079832" start_index="0" end="a111ecb9-0160-43bc-90ad-da27d8c5457b" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="13ebb7b8-91b7-4b3b-81cf-a07b2013e4b9" start_index="0" end="a111ecb9-0160-43bc-90ad-da27d8c5457b" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a1337e05-f254-4ba8-a06b-042def2beda0" start_index="0" end="8a65d3fb-50f4-47dd-b6ea-b3012f6c4d83" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="db3ed6f5-3997-4907-9334-1c964334e59a" start_index="0" end="f7beb593-783d-4ed5-a5a1-24a108bbbeb7" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="f7beb593-783d-4ed5-a5a1-24a108bbbeb7" start_index="0" end="a1337e05-f254-4ba8-a06b-042def2beda0" end_index="0" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Graph.Notes.NoteModel guid="36d07363-c026-4eba-ade5-4fa956aa772a" text="Example for purging Revit projects/families.&#xD;&#xA;Will open all Revit models in a single Revit session.&#xD;&#xA;&#xD;&#xA;REQUIRED PACKAGES:&#xD;&#xA;- Clockwork for Dynamo 1.x&#xD;&#xA;- DynamoAutomation" x="-197.07379105553" y="-176.611651274947" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="77fd9b0d-7ae0-466b-be55-0be30965eac5" annotationText="INPUTS" left="-210.172429667608" top="-222.611651274947" width="310.098638612078" height="518.350918079184" fontSize="30" InitialTop="-176.611651274947" InitialHeight="493.250030035248" TextblockHeight="36" backgrouund="#FF848484">
+      <Models ModelGuid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" />
+      <Models ModelGuid="f78c275d-f336-48c3-9da3-d4fb4153e244" />
+      <Models ModelGuid="96a754c3-68ef-4eee-8e60-71fb1a6cce65" />
+      <Models ModelGuid="9e7dfb46-10d1-4ada-9807-efda0b079832" />
+      <Models ModelGuid="36d07363-c026-4eba-ade5-4fa956aa772a" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="3abdf6e1-fc24-484c-8df7-6a43034cbe5b" annotationText="Create list of Revit files" left="165.312733723759" top="-17.7466118273096" width="490.482776078391" height="239.307608130418" fontSize="30" InitialTop="28.2533881726904" InitialHeight="220.967890618731" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" />
+      <Models ModelGuid="116cfd8a-5ad8-4feb-b723-edb7a4d48925" />
+      <Models ModelGuid="47ac0110-7b7a-46b3-9083-88091cf8dfb3" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="aad60285-6aa0-4f28-947b-6f79b68becb2" annotationText="Create journal file" left="682.93365913546" top="50.5017006425639" width="857.49033991741" height="276.276583176345" fontSize="30" InitialTop="96.5017006425639" InitialHeight="300.906579018511" TextblockHeight="36" backgrouund="#FF48B9FF">
+      <Models ModelGuid="a111ecb9-0160-43bc-90ad-da27d8c5457b" />
+      <Models ModelGuid="13ebb7b8-91b7-4b3b-81cf-a07b2013e4b9" />
+      <Models ModelGuid="db3ed6f5-3997-4907-9334-1c964334e59a" />
+      <Models ModelGuid="f7beb593-783d-4ed5-a5a1-24a108bbbeb7" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="63137442-b4a2-4433-8971-95051be282fd" annotationText="Batch-purge Revit models" left="1571.84788897578" top="-78.5703919503268" width="606.8155499043" height="266.722330810191" fontSize="30" InitialTop="-32.5703919503268" InitialHeight="209.614407160124" TextblockHeight="36" backgrouund="#FFFF7BAC">
+      <Models ModelGuid="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" />
+      <Models ModelGuid="8a65d3fb-50f4-47dd-b6ea-b3012f6c4d83" />
+      <Models ModelGuid="a1337e05-f254-4ba8-a06b-042def2beda0" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
