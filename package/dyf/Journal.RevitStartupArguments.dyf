@@ -1,0 +1,47 @@
+<Workspace Version="1.3.0.875" X="269" Y="146" zoom="1" ScaleFactor="1" Name="Journal.RevitStartupArguments" Description="Creates startup arguments for Revit" ID="8c58facf-53a2-4304-8245-992a2442a437" Category="DynamoAutomation.Journal.Create">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Logic.If guid="3f38a41e-8f2e-4590-a480-00dd18e4bb23" type="CoreNodeModels.Logic.If" nickname="If" x="377.051081773953" y="6.71333333333335" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </CoreNodeModels.Logic.If>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="9249611d-6f6c-4630-8652-a15008b9e2eb" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="604.051081773953" y="69.9266666666667" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot; /language ENU &quot; + nosplash + jpath;" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <CoreNodeModels.Input.StringInput guid="80a334ac-556f-44eb-a205-27f4d1882b0e" type="CoreNodeModels.Input.StringInput" nickname="String" x="90.0510817739525" y="32.7133333333333" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>/nosplash </System.String>
+      <System.String value="/nosplash " />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.StringInput guid="f91dc0fe-7ff2-4fcc-9a4f-f03b42003905" type="CoreNodeModels.Input.StringInput" nickname="String" x="90.0510817739525" y="115.713333333333" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>
+      </System.String>
+      <System.String value="" />
+    </CoreNodeModels.Input.StringInput>
+    <Dynamo.Graph.Nodes.CustomNodes.Symbol guid="6d9ef22a-8453-4032-9b76-ba3a31ff6c7e" type="Dynamo.Graph.Nodes.CustomNodes.Symbol" nickname="Input" x="377.051081773953" y="142.286666666667" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <Symbol value="journalPath" />
+    </Dynamo.Graph.Nodes.CustomNodes.Symbol>
+    <Dynamo.Graph.Nodes.CustomNodes.Output guid="9af2bdcd-fe4c-40a6-b55f-ae1ba0b5040c" type="Dynamo.Graph.Nodes.CustomNodes.Output" nickname="Output" x="1106.05108177395" y="65.7133333333333" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <Symbol value="args" />
+    </Dynamo.Graph.Nodes.CustomNodes.Output>
+    <Dynamo.Graph.Nodes.CustomNodes.Symbol guid="aaf6ff1f-60c8-408a-8eb5-39016761e9e6" type="Dynamo.Graph.Nodes.CustomNodes.Symbol" nickname="Input" x="90.0510817739525" y="-50.2866666666667" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <Symbol value="disableSplashScreen" />
+    </Dynamo.Graph.Nodes.CustomNodes.Symbol>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="3f38a41e-8f2e-4590-a480-00dd18e4bb23" start_index="0" end="9249611d-6f6c-4630-8652-a15008b9e2eb" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9249611d-6f6c-4630-8652-a15008b9e2eb" start_index="0" end="9af2bdcd-fe4c-40a6-b55f-ae1ba0b5040c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="80a334ac-556f-44eb-a205-27f4d1882b0e" start_index="0" end="3f38a41e-8f2e-4590-a480-00dd18e4bb23" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="f91dc0fe-7ff2-4fcc-9a4f-f03b42003905" start_index="0" end="3f38a41e-8f2e-4590-a480-00dd18e4bb23" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6d9ef22a-8453-4032-9b76-ba3a31ff6c7e" start_index="0" end="9249611d-6f6c-4630-8652-a15008b9e2eb" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="aaf6ff1f-60c8-408a-8eb5-39016761e9e6" start_index="0" end="3f38a41e-8f2e-4590-a480-00dd18e4bb23" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
