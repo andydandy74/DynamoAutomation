@@ -195,7 +195,33 @@ namespace Dynamo.Automation
             WriteJournalFile(journalFilePath, journalString);
             return journalFilePath;
         }
-        
+
+        /// <summary>
+        /// Create a journal file for purging and subsequently saving multiple Revit files in a single Revit session.
+        /// 
+        /// </summary>
+        /// <param name="revitFilePaths">The paths to the Revit files. These can be .rvt or .rfa files.</param>
+        /// <param name="journalFilePath">The path of the generated journal file.</param>
+        /// <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
+        /// <returns>The path of the generated journal file.</returns>
+        public static string PurgeModels(List<string> revitFilePaths, string journalFilePath, int revitVersion)
+        {
+            DeleteJournalFile(journalFilePath);
+            // Create journal string
+            string journalString = BuildJournalStart(true);
+            foreach (string revitFilePath in revitFilePaths)
+            {
+                journalString += BuildProjectOpen(revitFilePath);
+                journalString += BuildProjectPurge();
+                journalString += BuildProjectSave();
+                journalString += BuildProjectClose();
+            }
+            journalString += BuildJournalEnd();
+            // Create journal file
+            WriteJournalFile(journalFilePath, journalString);
+            return journalFilePath;
+        }
+
         /// <summary>
         /// Create a journal file for executing a Dynamo workspace on a Revit file.
         /// 
