@@ -1,4 +1,4 @@
-<Workspace Version="1.0.0.1180" X="238.282484731178" Y="274.834181976884" zoom="0.856663544400492" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="1.0.0.1180" X="238.282484731178" Y="274.834181976884" zoom="0.856663544400492" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap />
   <Elements>
     <CoreNodeModels.Input.Filename guid="67216c37-2ed7-4ea5-9c18-47f2efffa549" type="CoreNodeModels.Input.Filename" nickname="File Path (Dynamo File)" x="-136.853643372729" y="127.006083382426" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
@@ -10,7 +10,7 @@
       <System.String value="2016" />
     </CoreNodeModels.Input.StringInput>
     <CoreNodeModels.Input.Directory guid="f78c275d-f336-48c3-9da3-d4fb4153e244" type="CoreNodeModels.Input.Directory" nickname="Directory Path (Revit Models)" x="-135.296162688205" y="26.56728727654" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.String>C:\temp\DynamoAutomation\revit_models\models_with_warnings</System.String>
+      <System.String>C:\temp\DynamoAutomation\revit_models\dir1</System.String>
       <HintPath>C:\temp\DynamoAutomation\revit_models\models_with_warnings</HintPath>
     </CoreNodeModels.Input.Directory>
     <CoreNodeModels.Input.DirectoryObject guid="adbcc18e-1b70-4b25-ac5c-d17bd7c298fb" type="CoreNodeModels.Input.DirectoryObject" nickname="Directory.FromPath" x="308.41807802962" y="27.942554368216" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
@@ -94,7 +94,7 @@
       </Outputs>
     </Dynamo.Graph.Nodes.CustomNodes.Function>
     <CoreNodeModels.Input.BoolSelector guid="ebeb18e2-dc0e-427c-8500-bc94747b248c" type="CoreNodeModels.Input.BoolSelector" nickname="Run journals in Debug mode?" x="-129.90220659974" y="474.125251013638" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.Boolean>True</System.Boolean>
+      <System.Boolean>False</System.Boolean>
     </CoreNodeModels.Input.BoolSelector>
   </Elements>
   <Connectors>
@@ -127,7 +127,7 @@
     <Dynamo.Graph.Notes.NoteModel guid="36d07363-c026-4eba-ade5-4fa956aa772a" text="Example for scenario A1:&#xD;&#xA;Process a directory of standalone Revit models&#xD;&#xA;The slave graph will count the walls in each model and write the results into C:\temp\DynamoAutomation\output\AutomatedReport.CSV&#xD;&#xA;&#xD;&#xA;REQUIRED PACKAGES:&#xD;&#xA;- Clockwork for Dynamo 1.x&#xD;&#xA;- DynamoAutomation" x="-138.39236185446" y="-201.478237673034" />
   </Notes>
   <Annotations>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="77fd9b0d-7ae0-466b-be55-0be30965eac5" annotationText="INPUTS" left="-148.39236185446" top="-247.478237673034" width="404.096199166255" height="789.603488686672" fontSize="30" InitialTop="-201.478237673034" InitialHeight="493.250030035248" TextblockHeight="36" backgrouund="#FF848484">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="77fd9b0d-7ae0-466b-be55-0be30965eac5" annotationText="INPUTS" left="-148.39236185446" top="-247.478237673034" width="306.096199166255" height="789.603488686672" fontSize="30" InitialTop="-201.478237673034" InitialHeight="493.250030035248" TextblockHeight="36" backgrouund="#FF848484">
       <Models ModelGuid="67216c37-2ed7-4ea5-9c18-47f2efffa549" />
       <Models ModelGuid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" />
       <Models ModelGuid="f78c275d-f336-48c3-9da3-d4fb4153e244" />
@@ -151,7 +151,7 @@
       <Models ModelGuid="13ebb7b8-91b7-4b3b-81cf-a07b2013e4b9" />
       <Models ModelGuid="cea50f9b-5741-4f12-89dd-d233180f7d44" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="63137442-b4a2-4433-8971-95051be282fd" annotationText="Batch-process Revit files" left="2132.20793838179" top="-141.771175462369" width="786.502540013745" height="282.125713730593" fontSize="30" InitialTop="-95.7711754623686" InitialHeight="209.614407160124" TextblockHeight="36" backgrouund="#FFFF7BAC">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="63137442-b4a2-4433-8971-95051be282fd" annotationText="Batch-process Revit files" left="2132.20793838179" top="-141.771175462369" width="786.50254001374" height="282.125713730593" fontSize="30" InitialTop="-95.7711754623686" InitialHeight="209.614407160124" TextblockHeight="36" backgrouund="#FFFF7BAC">
       <Models ModelGuid="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" />
       <Models ModelGuid="a661f91b-b550-4d46-b2b0-5e20340ab532" />
       <Models ModelGuid="8a65d3fb-50f4-47dd-b6ea-b3012f6c4d83" />
