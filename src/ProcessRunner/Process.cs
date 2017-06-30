@@ -27,16 +27,25 @@ namespace ProcessRunner
             process.WaitForExit();
             return process.ExitCode;
         }
+
         /// <summary>
         /// Kill the current process and return the exit code.
+        /// ATTENTION: Use carefully! If run in DynamoSandbox this node will kill the DynamoSandbox.exe process, if run in DynamoRevit it will kill the Revit.exe process!
         /// </summary>
-        /// <param name="input">An object.</param>
+        /// <param name="toggle">Should the current process be terminted?</param>
         /// <returns>The exit code for the process.</returns>
-        public static int KillCurrentProcess(dynamic input)
+        public static int KillCurrentProcess(bool toggle = false)
         {
-            System.Diagnostics.Process currentProcess = System.Diagnostics.Process.GetCurrentProcess();
-            currentProcess.Kill();
-            return currentProcess.ExitCode;
+            if (toggle)
+            {
+                System.Diagnostics.Process currentProcess = System.Diagnostics.Process.GetCurrentProcess();
+                currentProcess.Kill();
+                return currentProcess.ExitCode;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
