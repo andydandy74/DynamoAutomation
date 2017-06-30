@@ -27,5 +27,16 @@ namespace ProcessRunner
             process.WaitForExit();
             return process.ExitCode;
         }
+        /// <summary>
+        /// Kill the current process and return the exit code.
+        /// </summary>
+        /// <param name="input">An object.</param>
+        /// <returns>The exit code for the process.</returns>
+        public static int KillCurrentProcess(dynamic input)
+        {
+            System.Diagnostics.Process currentProcess = System.Diagnostics.Process.GetCurrentProcess();
+            currentProcess.Kill();
+            return currentProcess.ExitCode;
+        }
     }
 }
