@@ -1,7 +1,7 @@
 <Workspace Version="1.0.0.1180" X="114.4086729786" Y="118.876885707749" zoom="0.77844164656518" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap />
   <Elements>
-    <DSRevitNodesUI.Categories guid="a1b481e4-3038-4e53-b00e-f21a4b13d76c" type="DSRevitNodesUI.Categories" nickname="Categories" x="67.4905696124428" y="321.073853689766" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="540:Walls" />
+    <DSRevitNodesUI.Categories guid="a1b481e4-3038-4e53-b00e-f21a4b13d76c" type="DSRevitNodesUI.Categories" nickname="Categories" x="67.4905696124428" y="321.073853689766" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="572:Walls" />
     <DSRevitNodesUI.ElementsOfCategory guid="86da885a-5120-45bc-a54f-e1c67eb5fb34" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="494.707927658824" y="509.320646527581" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
     <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9a0d06cb-240d-4ac3-8d11-aba6891cec85" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="719.707927658824" y="509.320646527581" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
     <CoreNodeModels.Input.Directory guid="b066a9d0-31d4-4f28-ba3c-4d161303c593" type="CoreNodeModels.Input.Directory" nickname="Directory Path (CSV File)" x="67.4905696124428" y="147.631105928971" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
@@ -70,7 +70,7 @@
     <Dynamo.Graph.Connectors.ConnectorModel start="94a4e67e-3af3-44d2-92fc-8a2f2aa19bc9" start_index="0" end="d04bec68-946e-4c37-9a39-d4153e4fdd2c" end_index="0" portType="0" />
   </Connectors>
   <Notes>
-    <Dynamo.Graph.Notes.NoteModel guid="28730600-1a38-415a-a7ad-aa24f8ea8aeb" text="Example for a slave graph that retrieves information from a model and adds it to an existing CSV file." x="68.3821246464702" y="79.7112424141703" />
+    <Dynamo.Graph.Notes.NoteModel guid="28730600-1a38-415a-a7ad-aa24f8ea8aeb" text="Example for a slave graph that retrieves information from a model and adds it to an existing CSV file.&#xD;&#xA;&#xD;&#xA;REQUIRED PACKAGES:&#xD;&#xA;- Clockwork for Dynamo 1.x&#xD;&#xA;- DynamoAutomation" x="70.9513602581887" y="25.757294568083" />
   </Notes>
   <Annotations>
     <Dynamo.Graph.Annotations.AnnotationModel guid="1ce2f105-a096-4d98-ba41-7590b939f38b" annotationText="Collect data from model" left="484.707927658824" top="357.597289559919" width="782.060830860533" height="340.217422249561" fontSize="30" InitialTop="403.597289559919" InitialHeight="239" TextblockHeight="36" backgrouund="#FFC1D676">
@@ -81,7 +81,7 @@
       <Models ModelGuid="3b0e1d84-1c7f-4901-ae43-65997be36a23" />
       <Models ModelGuid="1d21f7c1-ae2d-4871-a7be-1599b35fa678" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="93920b2d-76ac-4eb4-a490-813b68b9dd6f" annotationText="INPUTS" left="56.2751373195962" top="33.7112424141703" width="316.106987326874" height="538.017092294625" fontSize="30" InitialTop="79.7112424141703" InitialHeight="126" TextblockHeight="36" backgrouund="#FF848484">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="93920b2d-76ac-4eb4-a490-813b68b9dd6f" annotationText="INPUTS" left="56.2751373195962" top="-20.242705431917" width="318.676222938593" height="591.971040140713" fontSize="30" InitialTop="25.757294568083" InitialHeight="126" TextblockHeight="36" backgrouund="#FF848484">
       <Models ModelGuid="b066a9d0-31d4-4f28-ba3c-4d161303c593" />
       <Models ModelGuid="a1b481e4-3038-4e53-b00e-f21a4b13d76c" />
       <Models ModelGuid="1fbc42df-1ae6-4c3d-b85c-55de2c264070" />
@@ -99,7 +99,7 @@
       <Models ModelGuid="be472102-c3b3-4093-9b24-6537e1b4dfad" />
       <Models ModelGuid="1bff762a-58a3-40ae-adf9-ff51f9273071" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="0d2a0837-02f2-477f-99c2-60247b29f354" annotationText="Terminate Revit" left="1758.39373008306" top="341.98716524349" width="465.396011371477" height="166.410184743835" fontSize="30" InitialTop="387.98716524349" InitialHeight="150.410184743835" TextblockHeight="36" backgrouund="#FFBB87C6">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="0d2a0837-02f2-477f-99c2-60247b29f354" annotationText="Terminate Revit" left="1758.39373008306" top="341.98716524349" width="465.39601137148" height="166.410184743835" fontSize="30" InitialTop="387.98716524349" InitialHeight="150.410184743835" TextblockHeight="36" backgrouund="#FFBB87C6">
       <Models ModelGuid="4169263b-00d1-4a78-b6eb-74a72c7b2145" />
       <Models ModelGuid="d04bec68-946e-4c37-9a39-d4153e4fdd2c" />
     </Dynamo.Graph.Annotations.AnnotationModel>

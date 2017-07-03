@@ -1,18 +1,11 @@
-<Workspace Version="1.3.0.875" X="-1415.39332404976" Y="-2245.61430753141" zoom="1" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+<Workspace Version="1.0.0.1180" X="-1415.39332404976" Y="-2245.61430753141" zoom="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap />
   <Elements>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="03e90539-fd5b-441e-b768-5864d507d1ae" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CSV.WriteToFile" x="2539.07337737553" y="2550.56678961014" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.CSV.WriteToFile@string,var[][]">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="03e90539-fd5b-441e-b768-5864d507d1ae" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CSV.WriteToFile" x="2539.07337737553" y="2550.56678961014" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.CSV.WriteToFile@string,var[][]" />
     <CoreNodeModels.Input.Directory guid="dfd88367-b44f-4b70-9746-6fdb77c34e4b" type="CoreNodeModels.Input.Directory" nickname="Directory Path" x="1638.71327072399" y="2429.82250656192" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <System.String>C:\temp\DynamoAutomation\output</System.String>
     </CoreNodeModels.Input.Directory>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="59a73fdd-86c0-408f-bd29-e2071025ba8a" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="2103.8055562314" y="2489.8611111405" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="dir + delimiter + csvname + &quot;.CSV&quot;;" ShouldFocus="false">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-      <PortInfo index="2" default="False" />
-    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="59a73fdd-86c0-408f-bd29-e2071025ba8a" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="2103.8055562314" y="2489.8611111405" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="dir + delimiter + csvname + &quot;.CSV&quot;;" ShouldFocus="false" />
     <CoreNodeModels.Input.StringInput guid="7a494372-1851-4ea3-9297-2303678eda08" type="CoreNodeModels.Input.StringInput" nickname="Report CSV File Name" x="1645.60007661145" y="2534.71901995117" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <System.String>LinkedFiles</System.String>
       <System.String value="LinkedFiles" />
@@ -50,12 +43,12 @@
       <Models ModelGuid="7a494372-1851-4ea3-9297-2303678eda08" />
       <Models ModelGuid="80c9b716-ad48-4baf-8709-23b5a96d7580" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="a1c52184-0f2c-4bc0-976c-7e33cc6b8db0" annotationText="Write data to CSV file" left="1972.64822263732" top="2443.8611111405" width="757.42515473821" height="225.70567846964" fontSize="30" InitialTop="2489.8611111405" InitialHeight="149" TextblockHeight="36" backgrouund="#FF48B9FF">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="a1c52184-0f2c-4bc0-976c-7e33cc6b8db0" annotationText="Write data to CSV file" left="1972.64822263732" top="2443.8611111405" width="697.42515473821" height="225.70567846964" fontSize="30" InitialTop="2489.8611111405" InitialHeight="149" TextblockHeight="36" backgrouund="#FF48B9FF">
       <Models ModelGuid="03e90539-fd5b-441e-b768-5864d507d1ae" />
       <Models ModelGuid="59a73fdd-86c0-408f-bd29-e2071025ba8a" />
       <Models ModelGuid="108cfede-4b21-4225-938e-747dda326f74" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="1097992f-2815-48ed-9dd3-1822dbfb3395" annotationText="Collect data from model" left="1973.11732239563" top="2686.4061085009" width="151" height="289" fontSize="30" InitialTop="2804.4061085009" InitialHeight="201" TextblockHeight="108" backgrouund="#FFC1D676">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="1097992f-2815-48ed-9dd3-1822dbfb3395" annotationText="Collect data from model" left="1973.11732239563" top="2686.4061085009" width="146" height="289" fontSize="30" InitialTop="2804.4061085009" InitialHeight="201" TextblockHeight="108" backgrouund="#FFC1D676">
       <Models ModelGuid="68632d58-596c-4b8a-adba-0e52504239a2" />
     </Dynamo.Graph.Annotations.AnnotationModel>
   </Annotations>

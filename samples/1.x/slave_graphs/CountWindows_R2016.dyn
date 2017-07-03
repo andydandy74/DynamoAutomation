@@ -1,15 +1,11 @@
-<Workspace Version="1.3.0.875" X="-57.2487485117549" Y="36.208648332079" zoom="0.605724044770035" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+<Workspace Version="1.0.0.1180" X="-57.2487485117549" Y="36.208648332079" zoom="0.605724044770035" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap>
     <ClassMap partialName="List.crea" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
   </NamespaceResolutionMap>
   <Elements>
     <DSRevitNodesUI.Categories guid="a1b481e4-3038-4e53-b00e-f21a4b13d76c" type="DSRevitNodesUI.Categories" nickname="Categories" x="147.417856258293" y="618.078514962301" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="150:Windows" />
-    <DSRevitNodesUI.ElementsOfCategory guid="86da885a-5120-45bc-a54f-e1c67eb5fb34" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="496.960247655954" y="615.179686392689" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </DSRevitNodesUI.ElementsOfCategory>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9a0d06cb-240d-4ac3-8d11-aba6891cec85" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="717.455607661694" y="615.179686392689" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <DSRevitNodesUI.ElementsOfCategory guid="86da885a-5120-45bc-a54f-e1c67eb5fb34" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="496.960247655954" y="615.179686392689" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9a0d06cb-240d-4ac3-8d11-aba6891cec85" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="717.455607661694" y="615.179686392689" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]" />
     <CoreNodeModels.Input.Directory guid="b066a9d0-31d4-4f28-ba3c-4d161303c593" type="CoreNodeModels.Input.Directory" nickname="Directory Path (Reports)" x="148.414289946127" y="713.823482765929" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <System.String>C:\temp\DynamoAutomation\output</System.String>
     </CoreNodeModels.Input.Directory>
@@ -22,45 +18,20 @@
       <System.String>CountWindows_R2016.dyn</System.String>
       <System.String value="CountWindows_R2016.dyn" />
     </CoreNodeModels.Input.StringInput>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="696670e2-b1dd-4a9a-a93e-6efd1f101c13" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="953.617456357149" y="468.681463003462" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Checked Model: &quot; + path;&#xA;&quot;Script Name: &quot; + scriptname;&#xA;&quot;Timestamp: &quot; + now;&#xA;&quot;Windows Counted: &quot; + count;" ShouldFocus="false">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-      <PortInfo index="2" default="False" />
-      <PortInfo index="3" default="False" />
-    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction guid="b482e6c9-cd66-4b16-83a7-b84e2e3f5407" type="Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction" nickname="String.Join" x="1374.4617809273" y="421.35299247154" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Join@string,string[]" inputcount="5">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-      <PortInfo index="2" default="False" />
-      <PortInfo index="3" default="False" />
-      <PortInfo index="4" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="696670e2-b1dd-4a9a-a93e-6efd1f101c13" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="953.617456357149" y="468.681463003462" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Checked Model: &quot; + path;&#xA;&quot;Script Name: &quot; + scriptname;&#xA;&quot;Timestamp: &quot; + now;&#xA;&quot;Windows Counted: &quot; + count;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction guid="b482e6c9-cd66-4b16-83a7-b84e2e3f5407" type="Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction" nickname="String.Join" x="1374.4617809273" y="421.35299247154" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Join@string,string[]" inputcount="5" />
     <CoreNodeModels.Input.StringInput guid="78055ca1-35ef-4039-b4da-46f85004503a" type="CoreNodeModels.Input.StringInput" nickname="String" x="1242.7010610952" y="380.811232523201" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <System.String>
 </System.String>
       <System.String value="&#xD;&#xA;" />
     </CoreNodeModels.Input.StringInput>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="82455624-bc47-4d11-a2c3-d340c714e9ef" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="DateTime.Components" x="954.250676314663" y="826.745855071104" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.DateTime.Components@var">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="80cb212c-56df-41e6-8677-7dd9921a398e" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1853.89383020332" y="771.063808541007" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="dir + delimiter + filename + &quot;_&quot; + year + month + day + &quot;-&quot; + hour + min + sec + &quot;.txt&quot;;" ShouldFocus="false">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-      <PortInfo index="2" default="False" />
-      <PortInfo index="3" default="False" />
-      <PortInfo index="4" default="False" />
-      <PortInfo index="5" default="False" />
-      <PortInfo index="6" default="False" />
-      <PortInfo index="7" default="False" />
-      <PortInfo index="8" default="False" />
-    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="82455624-bc47-4d11-a2c3-d340c714e9ef" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="DateTime.Components" x="954.250676314663" y="826.745855071104" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.DateTime.Components@var" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="80cb212c-56df-41e6-8677-7dd9921a398e" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1853.89383020332" y="771.063808541007" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="dir + delimiter + filename + &quot;_&quot; + year + month + day + &quot;-&quot; + hour + min + sec + &quot;.txt&quot;;" ShouldFocus="false" />
     <CoreNodeModels.Input.StringInput guid="89e54ddf-c04c-43b4-bcd7-bacbef28e695" type="CoreNodeModels.Input.StringInput" nickname="String" x="1694.88652336002" y="894.987994243314" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <System.String>\</System.String>
       <System.String value="\" />
     </CoreNodeModels.Input.StringInput>
     <Dynamo.Graph.Nodes.CustomNodes.Function guid="06d39325-6de8-451e-b24a-7449a126d934" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="List.WithLeadingZeroes" x="1426.87161006799" y="975.157640715678" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
       <ID value="cc7a7beb-dd4d-4de0-bc89-f189d28a2ec9" />
       <Name value="List.WithLeadingZeroes" />
       <Description value="Adds leading zeros to a sequence of numbers" />
@@ -73,23 +44,10 @@
       </Outputs>
     </Dynamo.Graph.Nodes.CustomNodes.Function>
     <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="5548ac4b-0e52-4ffd-b573-ca467f6ed0e9" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1273.15569302919" y="1085.75796761651" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="2;" ShouldFocus="false" />
-    <CoreNodeModels.CreateList guid="4a6d8d7e-0e54-44e6-9190-dd50a15b2a12" type="CoreNodeModels.CreateList" nickname="List.Create" x="1227.5550164292" y="876.487432379325" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="5">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-      <PortInfo index="2" default="False" />
-      <PortInfo index="3" default="False" />
-      <PortInfo index="4" default="False" />
-    </CoreNodeModels.CreateList>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="e5d50d43-1124-40a5-85b4-46f5b98eceae" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1634.18014858525" y="977.924476080483" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="seq[0];&#xA;seq[1];&#xA;seq[2];&#xA;seq[3];&#xA;seq[4];" ShouldFocus="false">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="cb6c13c2-99e1-4007-89d8-9a7f24fd7b4c" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="File.WriteText" x="2682.00589028531" y="678.541505091107" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.File.WriteText@string,string">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="162d7419-0f59-44dd-ae87-66ea7dd3eee7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Document.FilePath" x="668.899888547449" y="412.816925403912" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Application.Document.FilePath">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.CreateList guid="4a6d8d7e-0e54-44e6-9190-dd50a15b2a12" type="CoreNodeModels.CreateList" nickname="List.Create" x="1227.5550164292" y="876.487432379325" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="5" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="e5d50d43-1124-40a5-85b4-46f5b98eceae" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1634.18014858525" y="977.924476080483" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="seq[0];&#xA;seq[1];&#xA;seq[2];&#xA;seq[3];&#xA;seq[4];" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="cb6c13c2-99e1-4007-89d8-9a7f24fd7b4c" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="File.WriteText" x="2682.00589028531" y="678.541505091107" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.File.WriteText@string,string" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="162d7419-0f59-44dd-ae87-66ea7dd3eee7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Document.FilePath" x="668.899888547449" y="412.816925403912" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Application.Document.FilePath" />
     <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="7c62b2d3-b0ed-4196-9aaa-e763ae06a7f3" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Document.Current" x="488.442989448109" y="412.816925403912" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Application.Document.Current" />
   </Elements>
   <Connectors>
@@ -127,10 +85,10 @@
     <Dynamo.Graph.Connectors.ConnectorModel start="7c62b2d3-b0ed-4196-9aaa-e763ae06a7f3" start_index="0" end="162d7419-0f59-44dd-ae87-66ea7dd3eee7" end_index="0" portType="0" />
   </Connectors>
   <Notes>
-    <Dynamo.Graph.Notes.NoteModel guid="f0b1093a-d622-4e11-b121-6fefbdcec4d1" text="Example for a slave graph that retrieves information from a model and writes it to individual report files.&#xD;&#xA;&#xD;&#xA;REQUIRED PACKAGES:&#xD;&#xA;- Clockwork for Dynamo 1.x&#xD;&#xA;- DynamoAutomation" x="144.827392248922" y="351.78682583215" />
+    <Dynamo.Graph.Notes.NoteModel guid="f0b1093a-d622-4e11-b121-6fefbdcec4d1" text="Example for a slave graph that retrieves information from a model and writes it to individual report files.&#xD;&#xA;&#xD;&#xA;REQUIRED PACKAGES:&#xD;&#xA;- Clockwork for Dynamo 1.x" x="144.827392248922" y="351.78682583215" />
   </Notes>
   <Annotations>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="1ce2f105-a096-4d98-ba41-7590b939f38b" annotationText="Collect data from model" left="478.442989448109" top="366.816925403912" width="420.012618213585" height="341.362760988777" fontSize="30" InitialTop="412.816925403912" InitialHeight="239" TextblockHeight="36" backgrouund="#FFC1D676">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="1ce2f105-a096-4d98-ba41-7590b939f38b" annotationText="Collect data from model" left="478.442989448109" top="366.816925403912" width="360.175681244596" height="341.362760988777" fontSize="30" InitialTop="412.816925403912" InitialHeight="239" TextblockHeight="36" backgrouund="#FFC1D676">
       <Models ModelGuid="86da885a-5120-45bc-a54f-e1c67eb5fb34" />
       <Models ModelGuid="9a0d06cb-240d-4ac3-8d11-aba6891cec85" />
       <Models ModelGuid="7495ef22-b2a1-4e7a-86c4-89f415e2fb44" />
@@ -144,12 +102,12 @@
       <Models ModelGuid="54df5cc7-46dd-4f16-a1cf-da37fbe7caea" />
       <Models ModelGuid="f0b1093a-d622-4e11-b121-6fefbdcec4d1" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="3634f893-d239-44c4-b6c0-03000d0944e7" annotationText="Create report content" left="943.617456357149" top="334.811232523201" width="638.844324570151" height="272.870230480261" fontSize="30" InitialTop="380.811232523201" InitialHeight="256.870230480261" TextblockHeight="36" backgrouund="#FFC1D676">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="3634f893-d239-44c4-b6c0-03000d0944e7" annotationText="Create report content" left="943.617456357149" top="334.811232523201" width="576.844324570151" height="272.870230480261" fontSize="30" InitialTop="380.811232523201" InitialHeight="256.870230480261" TextblockHeight="36" backgrouund="#FFC1D676">
       <Models ModelGuid="696670e2-b1dd-4a9a-a93e-6efd1f101c13" />
       <Models ModelGuid="b482e6c9-cd66-4b16-83a7-b84e2e3f5407" />
       <Models ModelGuid="78055ca1-35ef-4039-b4da-46f85004503a" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="718e677c-0d3c-4a49-bb8a-8d005efa6d53" annotationText="Write report to file" left="944.250676314663" top="632.541505091107" width="1938.75521397065" height="546.216462525403" fontSize="30" InitialTop="678.541505091107" InitialHeight="437.6941590755" TextblockHeight="36" backgrouund="#FF48B9FF">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="718e677c-0d3c-4a49-bb8a-8d005efa6d53" annotationText="Write report to file" left="944.250676314663" top="632.541505091107" width="1879.75521397065" height="546.216462525403" fontSize="30" InitialTop="678.541505091107" InitialHeight="437.6941590755" TextblockHeight="36" backgrouund="#FF48B9FF">
       <Models ModelGuid="82455624-bc47-4d11-a2c3-d340c714e9ef" />
       <Models ModelGuid="80cb212c-56df-41e6-8677-7dd9921a398e" />
       <Models ModelGuid="89e54ddf-c04c-43b4-bcd7-bacbef28e695" />
