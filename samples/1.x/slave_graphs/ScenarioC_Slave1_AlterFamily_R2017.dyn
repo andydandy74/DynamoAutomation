@@ -65,7 +65,7 @@
       <System.String value="\" />
     </CoreNodeModels.Input.StringInput>
     <CoreNodeModels.Input.BoolSelector guid="86699520-f247-4fbd-a7c2-7243e50dbf98" type="CoreNodeModels.Input.BoolSelector" nickname="Terminate Revit when done?" x="-320.039033259968" y="650.797287726776" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.Boolean>False</System.Boolean>
+      <System.Boolean>True</System.Boolean>
     </CoreNodeModels.Input.BoolSelector>
     <Dynamo.Graph.Nodes.CustomNodes.Function guid="a9f46a28-0f81-4125-bfe0-96f8f30b9ebe" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Passthrough" x="2282.91482624092" y="382.371178962167" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
       <ID value="ecce77dc-1290-438e-a056-970b256fd553" />

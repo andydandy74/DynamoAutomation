@@ -1,4 +1,4 @@
-<Workspace Version="1.0.0.1180" X="-32.8433702914765" Y="282.840795773513" zoom="0.382622222236251" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+<Workspace Version="1.0.0.1180" X="-27.7031213367763" Y="202.9700399565" zoom="0.351357976738615" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap>
     <ClassMap partialName="List.crea" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
   </NamespaceResolutionMap>
@@ -15,8 +15,8 @@
       <System.String value="AutomatedReport" />
     </CoreNodeModels.Input.StringInput>
     <CoreNodeModels.Input.StringInput guid="54df5cc7-46dd-4f16-a1cf-da37fbe7caea" type="CoreNodeModels.Input.StringInput" nickname="Script Name" x="166.761198987981" y="757.952643310407" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.String>FixWindowOrientation_R2016.dyn</System.String>
-      <System.String value="FixWindowOrientation_R2016.dyn" />
+      <System.String>FixWindowOrientation_R2017.dyn</System.String>
+      <System.String value="FixWindowOrientation_R2017.dyn" />
     </CoreNodeModels.Input.StringInput>
     <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="696670e2-b1dd-4a9a-a93e-6efd1f101c13" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1897.61049432213" y="669.92619693208" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Checked Model: &quot; + path;&#xA;&quot;Script Name: &quot; + scriptname;&#xA;&quot;Timestamp: &quot; + now;&#xA;&quot;Windows Counted: &quot; + count1;&#xA;&quot;Windows Fixed: &quot; + count2;" ShouldFocus="false" />
     <Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction guid="b482e6c9-cd66-4b16-83a7-b84e2e3f5407" type="Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction" nickname="String.Join" x="2318.45481889228" y="622.59772640016" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Join@string,string[]" inputcount="6" />
