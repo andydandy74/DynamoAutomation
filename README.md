@@ -15,9 +15,13 @@ Besides the DynamoAutomation package itself, you will need the following to succ
 - Revit models must **not** be saved in a Perspective view.
 
 ## Known bugs
-Although initial tests showed DynamoAutomation running smoothly with Dynamo 1.0.0 and Revit 2017 some major bugs have surfaced that are in all likelihood rooted in different behaviour of the Dynamo 1.x Revit addins for Revit 2016 and 2017:
-- DynamoAutomation does not seem to run at all under Dynamo **1.1.0** and later versions on top of Revit **2017** (https://github.com/andydandy74/DynamoAutomation/issues/13)
-- DynamoAutomation only seems to run with slave graphs that are set to Automatic mode under Dynamo **1.0.0** and Revit **2017** (https://github.com/andydandy74/DynamoAutomation/issues/15)
+No version of DynamoAutomation that is currently published on the package manager will run under Dynamo 1.x and Revit 2017/18. This bug has now been fixed for Revit 2017 and a new package version will soon be published after further tests in Revit 2018. If you are feeling adventurous, you can already download the package contents from this repository:
+
+https://github.com/andydandy74/DynamoAutomation/tree/master/package
+
+Note that the setup of both master and slave graphs has changed slightly, so be sure to visit the new Dynamo 1.x samples section:
+
+https://github.com/andydandy74/DynamoAutomation/tree/master/samples/1.x
 
 ## Installation Guide
 - Make sure to pick the correct version when downloading/installing
@@ -29,8 +33,6 @@ Although initial tests showed DynamoAutomation running smoothly with Dynamo 1.0.
 
 ## How to Use DynamoAutomation
 To get you started, this repository contains a number of [sample files](https://github.com/andydandy74/DynamoAutomation/tree/master/samples) for different automation scenarios. If you are looking for more in-depth information, please refer to the [DynamoAutomation wiki](https://github.com/andydandy74/DynamoAutomation/wiki).
-
-**Please note that the sample files have not yet been checked for compatibility with Dynamo 1.x and Revit 2017.**
  
 ## Updates & Version History
 Since Dynamo's package manager currently does not (yet) have an update notification infrastructure in place, you may want to follow me on [twitter](https://twitter.com/a_dieckmann) for update notifications. Also, you can find the [version history](https://github.com/andydandy74/DynamoAutomation/wiki/Version-History) on the wiki.
