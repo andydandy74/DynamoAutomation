@@ -6,8 +6,8 @@
       <HintPath>C:\temp\DynamoAutomation\slave_graphs\CountWalls_R2017.dyn</HintPath>
     </CoreNodeModels.Input.Filename>
     <CoreNodeModels.Input.StringInput guid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" type="CoreNodeModels.Input.StringInput" nickname="Revit Version" x="-186.52325022272" y="-54.9474161800083" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.String>2017</System.String>
-      <System.String value="2017" />
+      <System.String>2018</System.String>
+      <System.String value="2018" />
     </CoreNodeModels.Input.StringInput>
     <CoreNodeModels.Input.Directory guid="f78c275d-f336-48c3-9da3-d4fb4153e244" type="CoreNodeModels.Input.Directory" nickname="Directory Path (Revit Models)" x="-193.861586929672" y="29.0879359656603" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <System.String>C:\temp\DynamoAutomation\revit_models\dir2</System.String>
@@ -160,7 +160,7 @@
       <Models ModelGuid="116cfd8a-5ad8-4feb-b723-edb7a4d48925" />
       <Models ModelGuid="47ac0110-7b7a-46b3-9083-88091cf8dfb3" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="aad60285-6aa0-4f28-947b-6f79b68becb2" annotationText="Create journal files" left="784.176550319692" top="53.051821770604" width="1321.85177394502" height="330.648010585336" fontSize="30" InitialTop="99.051821770604" InitialHeight="300.906579018511" TextblockHeight="36" backgrouund="#FFC1D676">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="aad60285-6aa0-4f28-947b-6f79b68becb2" annotationText="Create journal files" left="784.176550319692" top="53.051821770604" width="1321.85177394503" height="330.648010585336" fontSize="30" InitialTop="99.051821770604" InitialHeight="300.906579018511" TextblockHeight="36" backgrouund="#FFC1D676">
       <Models ModelGuid="8ba379e8-7c70-49d3-9b2b-7e60f85136f8" />
       <Models ModelGuid="cce77cd9-6a3f-416f-bb4b-fcbffb3877ff" />
       <Models ModelGuid="d05804dc-6876-4664-976e-4aac4ad33d51" />
@@ -169,7 +169,7 @@
       <Models ModelGuid="13ebb7b8-91b7-4b3b-81cf-a07b2013e4b9" />
       <Models ModelGuid="e21d5570-f871-446c-bd0c-142d70302735" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="63137442-b4a2-4433-8971-95051be282fd" annotationText="Batch-process Revit files" left="2155.48439798587" top="-84.6030241259109" width="935.232587884053" height="272.762316650698" fontSize="30" InitialTop="-38.6030241259109" InitialHeight="209.614407160124" TextblockHeight="36" backgrouund="#FFFFAA45">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="63137442-b4a2-4433-8971-95051be282fd" annotationText="Batch-process Revit files" left="2155.48439798587" top="-84.6030241259109" width="935.23258788405" height="272.762316650698" fontSize="30" InitialTop="-38.6030241259109" InitialHeight="209.614407160124" TextblockHeight="36" backgrouund="#FFFFAA45">
       <Models ModelGuid="af7a835e-6f0d-4d78-ae7a-7e2a84f360ff" />
       <Models ModelGuid="a661f91b-b550-4d46-b2b0-5e20340ab532" />
       <Models ModelGuid="7cc1c550-fded-4922-9839-adbeb42c802c" />
@@ -222,6 +222,32 @@
       <CoreNodeModels.Input.StringInput guid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" type="CoreNodeModels.Input.StringInput" nickname="Revit Version" x="-193.861586929672" y="-91.639099714768" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
         <System.String>2017</System.String>
         <System.String value="2017" />
+      </CoreNodeModels.Input.StringInput>
+      <CoreNodeModels.Input.Directory guid="f78c275d-f336-48c3-9da3-d4fb4153e244" type="CoreNodeModels.Input.Directory" nickname="Directory Path (Revit Models)" x="-193.861586929672" y="29.0879359656603" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+        <System.String>C:\temp\DynamoAutomation\revit_models\dir2</System.String>
+      </CoreNodeModels.Input.Directory>
+    </Dynamo.Graph.Presets.PresetModel>
+    <Dynamo.Graph.Presets.PresetModel Name="Revit 2018, dir1" Description="" guid="bb8ee981-3f1a-4490-bab9-8cfce324daad">
+      <CoreNodeModels.Input.Filename guid="67216c37-2ed7-4ea5-9c18-47f2efffa549" type="CoreNodeModels.Input.Filename" nickname="File Path (Dynamo File)" x="-184.688666045982" y="133.123299881958" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+        <System.String>..\slave_graphs\CountWalls_R2017.dyn</System.String>
+        <HintPath>C:\temp\DynamoAutomation\slave_graphs\CountWalls_R2017.dyn</HintPath>
+      </CoreNodeModels.Input.Filename>
+      <CoreNodeModels.Input.StringInput guid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" type="CoreNodeModels.Input.StringInput" nickname="Revit Version" x="-186.52325022272" y="-54.9474161800083" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+        <System.String>2018</System.String>
+        <System.String value="2018" />
+      </CoreNodeModels.Input.StringInput>
+      <CoreNodeModels.Input.Directory guid="f78c275d-f336-48c3-9da3-d4fb4153e244" type="CoreNodeModels.Input.Directory" nickname="Directory Path (Revit Models)" x="-193.861586929672" y="29.0879359656603" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+        <System.String>C:\temp\DynamoAutomation\revit_models\dir1</System.String>
+      </CoreNodeModels.Input.Directory>
+    </Dynamo.Graph.Presets.PresetModel>
+    <Dynamo.Graph.Presets.PresetModel Name="Revit 2018, dir2" Description="" guid="100d769c-fb82-4ff3-83ef-ac6ab6c12d7a">
+      <CoreNodeModels.Input.Filename guid="67216c37-2ed7-4ea5-9c18-47f2efffa549" type="CoreNodeModels.Input.Filename" nickname="File Path (Dynamo File)" x="-184.688666045982" y="133.123299881958" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+        <System.String>..\slave_graphs\CountWalls_R2017.dyn</System.String>
+        <HintPath>C:\temp\DynamoAutomation\slave_graphs\CountWalls_R2017.dyn</HintPath>
+      </CoreNodeModels.Input.Filename>
+      <CoreNodeModels.Input.StringInput guid="4270b4df-1a46-4508-84bb-2b0496d7ce3c" type="CoreNodeModels.Input.StringInput" nickname="Revit Version" x="-186.52325022272" y="-54.9474161800083" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+        <System.String>2018</System.String>
+        <System.String value="2018" />
       </CoreNodeModels.Input.StringInput>
       <CoreNodeModels.Input.Directory guid="f78c275d-f336-48c3-9da3-d4fb4153e244" type="CoreNodeModels.Input.Directory" nickname="Directory Path (Revit Models)" x="-193.861586929672" y="29.0879359656603" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
         <System.String>C:\temp\DynamoAutomation\revit_models\dir2</System.String>
