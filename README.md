@@ -9,12 +9,12 @@ Besides the DynamoAutomation package itself, you will need the following to succ
   - You must **not** have another version of Dynamo installed on the same machine.
 - Revit 2015 or later
   - DynamoAutomation should run on top of Revit 2015 but that hasn't been tested for a while now
-- All folders that contain Revit models or Dynamo graphs (and their respective filenames) must **not** contain whitespaces.
+- All folders that contain Revit models or Dynamo graphs (and their respective filenames) must **not** contain whitespaces or special characters.
 - Revit models must **not** be saved in a Perspective view.
 
 ## Installation Guide
 - Make sure to pick the correct version when downloading/installing
-  - If you're running Dynamo 1.x use DynamoAutomation 1.3.3 or higher
+  - If you're running Dynamo 1.x use the latest version of DynamoAutomation
   - If you're running Dynamo 0.9.x use DynamoAutomation 0.90.3 (works with Revit 2015 & 2016)
 - DynamoAutomation has a dependency on the Clockwork package, but Clockwork is updated more frequently than Dynamo.
   - When installing DynamoAutomation, Dynamo will download and install a version of Clockwork that may not be current anymore.
