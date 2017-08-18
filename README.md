@@ -6,7 +6,7 @@ DynamoAutomation is a package for the [Dynamo](https://github.com/DynamoDS/Dynam
 ## Requirements
 Besides the DynamoAutomation package itself, you will need the following to successfully use DynamoAutomation:
 - Any Dynamo 0.9.x or 1.x build
-  - You must **not** have another version of Dynamo installed on the same machine.
+  - You must **not** have more than one version of Dynamo installed on the same machine.
 - Revit 2015 or later
   - DynamoAutomation should run on top of Revit 2015 but that hasn't been tested for a while now
 - All folders that contain Revit models or Dynamo graphs (and their respective filenames) must **not** contain whitespaces or special characters.
@@ -19,6 +19,7 @@ Besides the DynamoAutomation package itself, you will need the following to succ
 - DynamoAutomation has a dependency on the Clockwork package, but Clockwork is updated more frequently than Dynamo.
   - When installing DynamoAutomation, Dynamo will download and install a version of Clockwork that may not be current anymore.
   - Ater installing DynamoAutomation check the package manager to see if your installed version of Clockwork can be upgraded to a more recent version.
+  - Alternatively, download DynamoAutomation from http://www.dynamopackages.com (without Clockwork) and copy manually to your Dynamo packages directory.
 
 ## How to Use DynamoAutomation
 To get you started, this repository contains a number of [sample files](https://github.com/andydandy74/DynamoAutomation/tree/master/samples) for different automation scenarios. If you are looking for more in-depth information, please refer to the [DynamoAutomation wiki](https://github.com/andydandy74/DynamoAutomation/wiki).
