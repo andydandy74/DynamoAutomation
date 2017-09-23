@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Dynamo.Automation
 {
@@ -69,9 +70,31 @@ namespace Dynamo.Automation
         /// <returns>A boolean to indicate success/failure</returns>
         private static bool CheckFilePath(string filePath, string paramName)
         {
-            if (filePath.Contains(" "))
+            // This regular expression finds all but the following characters:
+            // 0-1 a-z A-Z (no accented characters like Umlaute)
+            // also _ - + { } ( ) [ ] . : \
+            string regexpat = "[^0-9\\u0041-\\u005A\\u0061-\\u007A-_+:{}()\\[\\]\\.\\\\]";
+            Regex regexp = new Regex(regexpat);
+            MatchCollection matches;
+            matches = regexp.Matches(filePath);
+            if (matches.Count > 0)
             {
-                throw new ArgumentException("The file path is not valid because it contains whitespace.", paramName);
+                List<string> str_matches = new List<string>();
+                for (int i = 0; i < matches.Count; i++)
+                {
+                    if (!str_matches.Contains(matches[i].Value))
+                    {
+                        str_matches.Add(matches[i].Value);
+                    }
+                }
+                string exmsg = "The file path is not valid because it contains characters not compatible with Revit journal files: ";
+                for (int i = 0; i < str_matches.Count; i++)
+                {
+                    exmsg += "[" + str_matches[i] + "], ";
+                }
+                exmsg = exmsg.Replace("[ ]", "[WHITESPACE]");
+                exmsg = exmsg.Substring(0, exmsg.Length - 2);
+                throw new ArgumentException(exmsg, paramName);
             }
             else
             {
@@ -97,33 +120,22 @@ namespace Dynamo.Automation
             }
             return journalStart;
         }
-
+        
         /// <summary>
         /// Builds the part of the journal string responsible for opening a project
         /// </summary>
         /// <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file.</param>
-        /// <param name="openDetached">Should workshared models be opened detached from central model?</param>
-        /// <param name="openWorksetsMode">This setting can be used to suppress the Specify Open Worksets dialog. Possible input values are "All" (load all worksets), "Editable" (load editable worksets only) and "Custom" (load last used worksets only).</param>
         /// <returns>The part of the journal string responsible for opening a project.</returns>
-        private static string BuildProjectOpen(string revitFilePath, bool openDetached = false, string openWorksetsMode = "")
+        private static string BuildProjectOpen(string revitFilePath)
         {
+            CheckFilePath(revitFilePath, "revitFilePath");
             // Exception if the rvt/rfa file isn't found
             if (!File.Exists(revitFilePath))
             {
                 throw new FileNotFoundException();
             }
-            string projectOpen = "Jrn.Command \"StartupPage\" , \"Open this project , ID_FILE_MRU_FIRST\" \n";
-            if (openDetached)
-            {
-                projectOpen += "Jrn.Data \"FileOpenSubDialog\" , \"OpenAsLocalCheckBox\", \"False\" \n";
-                projectOpen += "Jrn.Data \"FileOpenSubDialog\" , \"DetachCheckBox\", \"True\" \n";
-                // ToDo: This won't be enough. We'll need to decide if to keep or discard worksets...
-            }
-            projectOpen += String.Format("Jrn.Data \"MRUFileName\" , \"{0}\" \n", revitFilePath);
-            if (openWorksetsMode == "All" || openWorksetsMode == "Editable" || openWorksetsMode == "Custom")
-            {
-                projectOpen += String.Format("Jrn.Data \"WorksetConfig\" , \"{0}\", 0 \n", openWorksetsMode);
-            }
+            string projectOpen = String.Format("Jrn.Command \"StartupPage\" , \"Open this project , ID_FILE_MRU_FIRST\" \n" +
+                                            "Jrn.Data \"MRUFileName\" , \"{0}\" \n", revitFilePath);
             return projectOpen;
         }
         
@@ -136,6 +148,7 @@ namespace Dynamo.Automation
         /// <returns>The part of the journal string responsible for launching DynamoRevit.</returns>
         private static string BuildDynamoLaunch(string workspacePath, dynamic revitVersion, string dynVersion)
         {
+            CheckFilePath(workspacePath, "workspacePath");
             // Exception if the dyn file isn't found
             if (!File.Exists(workspacePath))
             {
@@ -236,50 +249,35 @@ namespace Dynamo.Automation
         /// Create a journal file for purging and subsequently saving a Revit file.
         /// 
         /// </summary>
-        /// <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file. The path may not contain any whitespace.</param>
+        /// <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file. The path may not contain whitespace or accented characters.</param>
         /// <param name="journalFilePath">The path of the generated journal file.</param>
         /// <returns>The path of the generated journal file.</returns>
         public static string PurgeModel(string revitFilePath, string journalFilePath)
         {
-            if (CheckFilePath(revitFilePath, "revitFilePath"))
-            {
-                DeleteJournalFile(journalFilePath);
-                // Create journal string
-                // Journal needs to be in debug mode. 
-                // Otherwise the journal playback may stop if there is nothing to purge.
-                string journalString = BuildJournalStart(true);
-                journalString += BuildProjectOpen(revitFilePath);
-                journalString += BuildProjectPurge();
-                journalString += BuildProjectSave();
-                journalString += BuildProjectClose();
-                journalString += BuildJournalEnd();
-                // Create journal file
-                WriteJournalFile(journalFilePath, journalString);
-                return journalFilePath;
-            }
-            else
-            {
-                return null;
-            }
-            
+            DeleteJournalFile(journalFilePath);
+            // Create journal string
+            // Journal needs to be in debug mode. 
+            // Otherwise the journal playback may stop if there is nothing to purge.
+            string journalString = BuildJournalStart(true);
+            journalString += BuildProjectOpen(revitFilePath);
+            journalString += BuildProjectPurge();
+            journalString += BuildProjectSave();
+            journalString += BuildProjectClose();
+            journalString += BuildJournalEnd();
+            // Create journal file
+            WriteJournalFile(journalFilePath, journalString);
+            return journalFilePath;
         }
 
         /// <summary>
         /// Create a journal file for purging and subsequently saving multiple Revit files in a single Revit session.
         /// 
         /// </summary>
-        /// <param name="revitFilePaths">The paths to the Revit files. These can be .rvt or .rfa files. The paths may not contain any whitespace.</param>
+        /// <param name="revitFilePaths">The paths to the Revit files. These can be .rvt or .rfa files. The paths may not contain whitespace or accented characters.</param>
         /// <param name="journalFilePath">The path of the generated journal file.</param>
         /// <returns>The path of the generated journal file.</returns>
         public static string PurgeModels(List<string> revitFilePaths, string journalFilePath)
         {
-            foreach (string revitFilePath in revitFilePaths)
-            {
-                if (!CheckFilePath(revitFilePath, "revitFilePaths"))
-                {
-                    return null;
-                }
-            }
             DeleteJournalFile(journalFilePath);
             // Create journal string
             string journalString = BuildJournalStart(true);
@@ -304,47 +302,31 @@ namespace Dynamo.Automation
         /// Dynamo is never run in the idle loop. The workspace is executed immediately, and control is returned to the DynamoRevit
         /// external application.
         /// </summary>
-        /// <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file. The path may not contain any whitespace.</param>
-        /// <param name="workspacePath">The path to the Dynamo workspace. The path may not contain any whitespace.</param>
+        /// <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file. The path may not contain whitespace or accented characters.</param>
+        /// <param name="workspacePath">The path to the Dynamo workspace. The path may not contain whitespace or accented characters.</param>
         /// <param name="journalFilePath">The path of the generated journal file.</param>
         /// <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
         /// <param name="debugMode">Should the journal file be run in debug mode? Set this to true if you expect models to have warnings (e.g. missing links etc.).</param>
-        /// <param name="openWorksetsMode">This setting can be used to suppress the Specify Open Worksets dialog. Possible input values are "All" (load all worksets), "Editable" (load editable worksets only) and "Custom" (load last used worksets only).</param>
-        /// <param name="openDetached">Should workshared models be opened detached from central model?</param>
         /// <returns>The path of the generated journal file.</returns>
-        public static string ByWorkspacePath(string revitFilePath, string workspacePath, string journalFilePath, dynamic revitVersion, bool debugMode = false, bool openDetached = false, string openWorksetsMode = "")
+        public static string ByWorkspacePath(string revitFilePath, string workspacePath, string journalFilePath, dynamic revitVersion, bool debugMode = false)
         {
-            if (CheckFilePath(revitFilePath, "revitFilePath"))
+            DeleteJournalFile(journalFilePath);
+            int revitVersionInt = RevitVersionAsInt(revitVersion);
+            string dynVersion = GetDynamoVersion(revitVersionInt);
+            // Create journal string
+            string journalString = BuildJournalStart(debugMode);
+            journalString += BuildProjectOpen(revitFilePath);
+            journalString += BuildDynamoLaunch(workspacePath, revitVersionInt, dynVersion);
+            // In newer Revit versions the slave graph will only run if there are no journal commands after launching Dynamo.
+            // The slave graph will then need to terminte itself.
+            if (revitVersionInt < 2017)
             {
-                if (CheckFilePath(workspacePath, "workspacePath"))
-                {
-                    DeleteJournalFile(journalFilePath);
-                    int revitVersionInt = RevitVersionAsInt(revitVersion);
-                    string dynVersion = GetDynamoVersion(revitVersionInt);
-                    // Create journal string
-                    string journalString = BuildJournalStart(debugMode);
-                    journalString += BuildProjectOpen(revitFilePath, openDetached, openWorksetsMode);
-                    journalString += BuildDynamoLaunch(workspacePath, revitVersionInt, dynVersion);
-                    // In newer Revit versions the slave graph will only run if there are no journal commands after launching Dynamo.
-                    // The slave graph will then need to terminte itself.
-                    if (revitVersionInt < 2017)
-                    {
-                        journalString += BuildProjectClose();
-                        journalString += BuildJournalEnd();
-                    }
-                    // Create journal file
-                    WriteJournalFile(journalFilePath, journalString);
-                    return journalFilePath;
-                }
-                else
-                {
-                    return null;
-                }
+                journalString += BuildProjectClose();
+                journalString += BuildJournalEnd();
             }
-            else
-            {
-                return null;
-            }
+            // Create journal file
+            WriteJournalFile(journalFilePath, journalString);
+            return journalFilePath;
         }
     }
 }
