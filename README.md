@@ -9,9 +9,9 @@ Besides the DynamoAutomation package itself, you will need the following to succ
   - You must **not** have more than one version of Dynamo installed on the same machine.
 - Revit 2015 or later
   - DynamoAutomation should run on top of Revit 2015 but that hasn't been tested for a while now
-- All folders that contain Revit models or Dynamo graphs (and their respective filenames) must **not** contain whitespaces or special characters (e.g. accented characters).
+- All folders that contain Revit models or Dynamo graphs (and their respective filenames) must **not** contain whitespaces or special characters (e.g. accented characters like an umlaut).
 - Revit models must **not** be saved in a Perspective view.
-- Workshared models may not be set to Specify Worksets on open.
+- Workshared models may **not** be set to Specify Worksets on open.
 
 ## Installation Guide
 - Make sure to pick the correct version when downloading/installing
