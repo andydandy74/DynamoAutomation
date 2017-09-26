@@ -72,8 +72,8 @@ namespace Dynamo.Automation
         {
             // This regular expression finds all but the following characters:
             // 0-1 a-z A-Z (no accented characters like Umlaute)
-            // also _ - + { } ( ) [ ] . : \
-            string regexpat = "[^0-9\\u0041-\\u005A\\u0061-\\u007A-_+:{}()\\[\\]\\.\\\\]";
+            // also _ - + { } ( ) [ ] . : \ , °
+            string regexpat = "[^0-9\\u0041-\\u005A\\u0061-\\u007A-_+,°:{}()\\[\\]\\.\\\\]";
             Regex regexp = new Regex(regexpat);
             MatchCollection matches;
             matches = regexp.Matches(filePath);
@@ -120,13 +120,14 @@ namespace Dynamo.Automation
             }
             return journalStart;
         }
-        
+
         /// <summary>
         /// Builds the part of the journal string responsible for opening a project
         /// </summary>
         /// <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file.</param>
+        /// <param name="circumventPerspectiveViews">Should the document switch to the default 3D view?</param>
         /// <returns>The part of the journal string responsible for opening a project.</returns>
-        private static string BuildProjectOpen(string revitFilePath)
+        private static string BuildProjectOpen(string revitFilePath, bool circumventPerspectiveViews = false)
         {
             CheckFilePath(revitFilePath, "revitFilePath");
             // Exception if the rvt/rfa file isn't found
@@ -136,6 +137,10 @@ namespace Dynamo.Automation
             }
             string projectOpen = String.Format("Jrn.Command \"StartupPage\" , \"Open this project , ID_FILE_MRU_FIRST\" \n" +
                                             "Jrn.Data \"MRUFileName\" , \"{0}\" \n", revitFilePath);
+            if (circumventPerspectiveViews)
+            {
+                projectOpen += "Jrn.Command \"Ribbon\" , \"Create a default 3D orthographic view. , ID_VIEW_DEFAULT_3DVIEW\" \n";
+            }
             return projectOpen;
         }
         
@@ -307,15 +312,16 @@ namespace Dynamo.Automation
         /// <param name="journalFilePath">The path of the generated journal file.</param>
         /// <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
         /// <param name="debugMode">Should the journal file be run in debug mode? Set this to true if you expect models to have warnings (e.g. missing links etc.).</param>
+        /// <param name="circumventPerspectiveViews">Should the document switch to the default 3D view? Set this to true if you expect models will open with a perspective view as last saved view / starting view.</param>
         /// <returns>The path of the generated journal file.</returns>
-        public static string ByWorkspacePath(string revitFilePath, string workspacePath, string journalFilePath, dynamic revitVersion, bool debugMode = false)
+        public static string ByWorkspacePath(string revitFilePath, string workspacePath, string journalFilePath, dynamic revitVersion, bool debugMode = false, bool circumventPerspectiveViews = false)
         {
             DeleteJournalFile(journalFilePath);
             int revitVersionInt = RevitVersionAsInt(revitVersion);
             string dynVersion = GetDynamoVersion(revitVersionInt);
             // Create journal string
             string journalString = BuildJournalStart(debugMode);
-            journalString += BuildProjectOpen(revitFilePath);
+            journalString += BuildProjectOpen(revitFilePath, circumventPerspectiveViews);
             journalString += BuildDynamoLaunch(workspacePath, revitVersionInt, dynVersion);
             // In newer Revit versions the slave graph will only run if there are no journal commands after launching Dynamo.
             // The slave graph will then need to terminte itself.
