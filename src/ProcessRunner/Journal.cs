@@ -87,7 +87,7 @@ namespace Dynamo.Automation
                         str_matches.Add(matches[i].Value);
                     }
                 }
-                string exmsg = "The file path is not valid because it contains characters not compatible with Revit journal files: ";
+                string exmsg = String.Format("The file path [{0}] is not valid because it contains characters not compatible with Revit journal files: ", filePath);
                 for (int i = 0; i < str_matches.Count; i++)
                 {
                     exmsg += "[" + str_matches[i] + "], ";
