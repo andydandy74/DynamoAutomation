@@ -1,0 +1,73 @@
+<Workspace Version="1.0.0.1180" X="228.387686811033" Y="311.629851775966" zoom="0.838977339055614" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="File" resolvedName="DSCore.IO.File" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="System.IO.FileInfo" resolvedName="System.IO.FileInfo" assemblyName="" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <CoreNodeModels.Input.Filename guid="19fd1f7b-c2dc-4f95-9b5f-26ec82af2d4a" type="CoreNodeModels.Input.Filename" nickname="File Path" x="327.113913355827" y="184.413101591123" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>c:\netz\adieckmann\Desktop\journal.0797.txt</System.String>
+      <HintPath>c:\netz\adieckmann\Desktop\journal.0797.txt</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <CoreNodeModels.Input.FileObject guid="fbf3e296-e2e2-4ba0-9585-dfc942d02331" type="CoreNodeModels.Input.FileObject" nickname="File.FromPath" x="697.113913355827" y="184.413101591123" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="224d1090-db1c-4aa7-bcde-13ad40cd42bb" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="JournalFile.ExtractCommands" x="904.113913355827" y="184.413101591123" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <ID value="2e00a676-1271-4234-bcd9-19ef43541d99" />
+      <Name value="JournalFile.ExtractCommands" />
+      <Description value="Extracts all commands from a journal file" />
+      <Inputs>
+        <Input value="file" />
+      </Inputs>
+      <Outputs>
+        <Output value="ID" />
+        <Output value="Description" />
+        <Output value="Type" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <CoreNodeModels.Watch guid="54f8db47-6920-4ea3-a881-db3249944d33" type="CoreNodeModels.Watch" nickname="Watch" x="1187.11391335583" y="-320.586898408877" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <CoreNodeModels.Watch guid="88e9f0ea-634b-4054-b196-c954fab63bc2" type="CoreNodeModels.Watch" nickname="Watch" x="1187.11391335583" y="-148.586898408877" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="12df848d-e0d3-4f5b-a8ff-0b34ae213eab" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="JournalFile.ExtractAPIErrors" x="904.113913355827" y="-247.586898408877" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <ID value="e6a6b3f0-2ed5-4be1-9857-0a8c6ebcc1e2" />
+      <Name value="JournalFile.ExtractAPIErrors" />
+      <Description value="Extracts all API errors from a Revit journal file" />
+      <Inputs>
+        <Input value="file" />
+      </Inputs>
+      <Outputs>
+        <Output value="error" />
+        <Output value="line" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <CoreNodeModels.Watch guid="13a686dd-17de-4e82-9294-dc2cf6d48440" type="CoreNodeModels.Watch" nickname="Watch" x="1187.11391335583" y="210.413101591123" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <CoreNodeModels.Watch guid="5567254d-47e3-4f3e-a089-bb6091670b54" type="CoreNodeModels.Watch" nickname="Watch" x="1187.11391335583" y="7.41310159112328" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <CoreNodeModels.Watch guid="50805507-d801-4a25-9880-8126007894a6" type="CoreNodeModels.Watch" nickname="Watch" x="1187.11391335583" y="430.413101591123" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="c3b0a0c4-946d-4471-8976-451305ba9b46" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="JournalFile.StripComments" x="904.113913355827" y="633.413101591123" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <ID value="9b302445-cae4-41cd-bda8-df6432199ea2" />
+      <Name value="JournalFile.StripComments" />
+      <Description value="Strips all comments from a Revit journal file." />
+      <Inputs>
+        <Input value="file" />
+      </Inputs>
+      <Outputs>
+        <Output value="str" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <CoreNodeModels.Watch guid="ba22eb73-fa89-442e-be79-5d2a4d83e062" type="CoreNodeModels.Watch" nickname="Watch" x="1187.11391335583" y="633.413101591123" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="19fd1f7b-c2dc-4f95-9b5f-26ec82af2d4a" start_index="0" end="fbf3e296-e2e2-4ba0-9585-dfc942d02331" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="fbf3e296-e2e2-4ba0-9585-dfc942d02331" start_index="0" end="224d1090-db1c-4aa7-bcde-13ad40cd42bb" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="fbf3e296-e2e2-4ba0-9585-dfc942d02331" start_index="0" end="12df848d-e0d3-4f5b-a8ff-0b34ae213eab" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="fbf3e296-e2e2-4ba0-9585-dfc942d02331" start_index="0" end="c3b0a0c4-946d-4471-8976-451305ba9b46" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="224d1090-db1c-4aa7-bcde-13ad40cd42bb" start_index="0" end="5567254d-47e3-4f3e-a089-bb6091670b54" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="224d1090-db1c-4aa7-bcde-13ad40cd42bb" start_index="1" end="13a686dd-17de-4e82-9294-dc2cf6d48440" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="224d1090-db1c-4aa7-bcde-13ad40cd42bb" start_index="2" end="50805507-d801-4a25-9880-8126007894a6" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="12df848d-e0d3-4f5b-a8ff-0b34ae213eab" start_index="0" end="54f8db47-6920-4ea3-a881-db3249944d33" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="12df848d-e0d3-4f5b-a8ff-0b34ae213eab" start_index="1" end="88e9f0ea-634b-4054-b196-c954fab63bc2" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c3b0a0c4-946d-4471-8976-451305ba9b46" start_index="0" end="ba22eb73-fa89-442e-be79-5d2a4d83e062" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Hintergrundvorschau" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
