@@ -125,9 +125,9 @@ namespace Dynamo.Automation
         /// Builds the part of the journal string responsible for opening a project
         /// </summary>
         /// <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file.</param>
-        /// <param name="circumventPerspectiveViews">Should the document switch to the default 3D view?</param>
+        /// <param name="startInDefault3DView">Should the document switch to the default 3D view?</param>
         /// <returns>The part of the journal string responsible for opening a project.</returns>
-        private static string BuildProjectOpen(string revitFilePath, bool circumventPerspectiveViews = false)
+        private static string BuildProjectOpen(string revitFilePath, bool startInDefault3DView = false)
         {
             CheckFilePath(revitFilePath, "revitFilePath");
             // Exception if the rvt/rfa file isn't found
@@ -137,7 +137,7 @@ namespace Dynamo.Automation
             }
             string projectOpen = String.Format("Jrn.Command \"StartupPage\" , \"Open this project , ID_FILE_MRU_FIRST\" \n" +
                                             "Jrn.Data \"MRUFileName\" , \"{0}\" \n", revitFilePath);
-            if (circumventPerspectiveViews)
+            if (startInDefault3DView)
             {
                 projectOpen += "Jrn.Command \"Ribbon\" , \"Create a default 3D orthographic view. , ID_VIEW_DEFAULT_3DVIEW\" \n";
             }
@@ -312,16 +312,16 @@ namespace Dynamo.Automation
         /// <param name="journalFilePath">The path of the generated journal file.</param>
         /// <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
         /// <param name="debugMode">Should the journal file be run in debug mode? Set this to true if you expect models to have warnings (e.g. missing links etc.).</param>
-        /// <param name="circumventPerspectiveViews">Should the document switch to the default 3D view? Set this to true if you expect models will open with a perspective view as last saved view / starting view.</param>
+        /// <param name="startInDefault3DView">Should the document switch to the default 3D view? Set this to true if you expect models will open with a perspective view as last saved view / starting view.</param>
         /// <returns>The path of the generated journal file.</returns>
-        public static string ByWorkspacePath(string revitFilePath, string workspacePath, string journalFilePath, dynamic revitVersion, bool debugMode = false, bool circumventPerspectiveViews = false)
+        public static string ByWorkspacePath(string revitFilePath, string workspacePath, string journalFilePath, dynamic revitVersion, bool debugMode = false, bool startInDefault3DView = false)
         {
             DeleteJournalFile(journalFilePath);
             int revitVersionInt = RevitVersionAsInt(revitVersion);
             string dynVersion = GetDynamoVersion(revitVersionInt);
             // Create journal string
             string journalString = BuildJournalStart(debugMode);
-            journalString += BuildProjectOpen(revitFilePath, circumventPerspectiveViews);
+            journalString += BuildProjectOpen(revitFilePath, startInDefault3DView);
             journalString += BuildDynamoLaunch(workspacePath, revitVersionInt, dynVersion);
             // In newer Revit versions the slave graph will only run if there are no journal commands after launching Dynamo.
             // The slave graph will then need to terminte itself.

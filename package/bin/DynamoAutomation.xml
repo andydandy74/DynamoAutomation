@@ -64,7 +64,7 @@
             Builds the part of the journal string responsible for opening a project
             </summary>
             <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file.</param>
-            <param name="circumventPerspectiveViews">Should the document switch to the default 3D view?</param>
+            <param name="startInDefault3DView">Should the document switch to the default 3D view?</param>
             <returns>The part of the journal string responsible for opening a project.</returns>
         </member>
         <member name="M:Dynamo.Automation.Journal.BuildDynamoLaunch(System.String,System.Object,System.String)">
@@ -144,7 +144,7 @@
             <param name="journalFilePath">The path of the generated journal file.</param>
             <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
             <param name="debugMode">Should the journal file be run in debug mode? Set this to true if you expect models to have warnings (e.g. missing links etc.).</param>
-            <param name="circumventPerspectiveViews">Should the document switch to the default 3D view? Set this to true if you expect models will open with a perspective view as last saved view / starting view.</param>
+            <param name="startInDefault3DView">Should the document switch to the default 3D view? Set this to true if you expect models will open with a perspective view as last saved view / starting view.</param>
             <returns>The path of the generated journal file.</returns>
         </member>
     </members>
