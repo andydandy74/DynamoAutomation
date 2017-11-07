@@ -126,8 +126,10 @@ namespace Dynamo.Automation
         /// </summary>
         /// <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file.</param>
         /// <param name="startInDefault3DView">Should the document switch to the default 3D view?</param>
+        /// <param name="openDetached">Should a (workshared) model be detached from central on open?</param>
+        /// <param name="discardWorksets">When detaching a (workshared) model from central, should worksets be discarded?</param>
         /// <returns>The part of the journal string responsible for opening a project.</returns>
-        private static string BuildProjectOpen(string revitFilePath, bool startInDefault3DView = false)
+        private static string BuildProjectOpen(string revitFilePath, bool startInDefault3DView = false, bool openDetached = false, bool discardWorksets = false)
         {
             CheckFilePath(revitFilePath, "revitFilePath");
             // Exception if the rvt/rfa file isn't found
@@ -135,8 +137,31 @@ namespace Dynamo.Automation
             {
                 throw new FileNotFoundException();
             }
-            string projectOpen = String.Format("Jrn.Command \"StartupPage\" , \"Open this project , ID_FILE_MRU_FIRST\" \n" +
-                                            "Jrn.Data \"MRUFileName\" , \"{0}\" \n", revitFilePath);
+            string projectOpen = "";
+            if (openDetached)
+            {
+                projectOpen += "Jrn.Data \"FileOpenSubDialog\" , \"DetachCheckBox\", \"True\" \n";
+                projectOpen += String.Format("Jrn.Data \"File Name\" , \"IDOK\", \"{0}\" \n", revitFilePath);
+                projectOpen += "Jrn.Data \"WorksetConfig\" , \"Custom\", 0 \n";
+                string discardButtonText = "";
+                string discardButtonID = "";
+                if (discardWorksets)
+                {
+                    discardButtonText = "Detach and discard worksets";
+                    discardButtonID = "1002";
+                }
+                else
+                {
+                    discardButtonText = "Detach and preserve worksets";
+                    discardButtonID = "1001";
+                }
+                projectOpen += String.Format("Jrn.Data \"TaskDialogResult\" , \"Detaching this model will create an independent model. You will be unable to synchronize your changes with the original central model.\" & vbLf & \"What do you want to do?\", \"{0}\", \"{1}\" \n", discardButtonText, discardButtonID);
+            }
+            else
+            {
+                projectOpen += "Jrn.Command \"StartupPage\" , \"Open this project , ID_FILE_MRU_FIRST\" \n";
+                projectOpen += String.Format("Jrn.Data \"MRUFileName\" , \"{0}\" \n", revitFilePath);
+            }
             if (startInDefault3DView)
             {
                 projectOpen += "Jrn.Command \"Ribbon\" , \"Create a default 3D orthographic view. , ID_VIEW_DEFAULT_3DVIEW\" \n";
@@ -312,16 +337,18 @@ namespace Dynamo.Automation
         /// <param name="journalFilePath">The path of the generated journal file.</param>
         /// <param name="revitVersion">The version number of Revit (e.g. 2017).</param>
         /// <param name="debugMode">Should the journal file be run in debug mode? Set this to true if you expect models to have warnings (e.g. missing links etc.).</param>
-        /// <param name="startInDefault3DView">Should the document switch to the default 3D view? Set this to true if you expect models will open with a perspective view as last saved view / starting view.</param>
+        /// <param name="startInDefault3DView">Should the model be switched to the default 3D view on open? Set this to true if you expect models will open with a perspective view as last saved view / starting view.</param>
+        /// <param name="openDetached">Should a (workshared) model be detached from central on open?</param>
+        /// <param name="discardWorksets">When detaching a (workshared) model from central, should worksets be discarded?</param>
         /// <returns>The path of the generated journal file.</returns>
-        public static string ByWorkspacePath(string revitFilePath, string workspacePath, string journalFilePath, dynamic revitVersion, bool debugMode = false, bool startInDefault3DView = false)
+        public static string ByWorkspacePath(string revitFilePath, string workspacePath, string journalFilePath, dynamic revitVersion, bool debugMode = false, bool startInDefault3DView = false, bool openDetached = false, bool discardWorksets = false)
         {
             DeleteJournalFile(journalFilePath);
             int revitVersionInt = RevitVersionAsInt(revitVersion);
             string dynVersion = GetDynamoVersion(revitVersionInt);
             // Create journal string
             string journalString = BuildJournalStart(debugMode);
-            journalString += BuildProjectOpen(revitFilePath, startInDefault3DView);
+            journalString += BuildProjectOpen(revitFilePath, startInDefault3DView, openDetached, discardWorksets);
             journalString += BuildDynamoLaunch(workspacePath, revitVersionInt, dynVersion);
             // In newer Revit versions the slave graph will only run if there are no journal commands after launching Dynamo.
             // The slave graph will then need to terminte itself.
