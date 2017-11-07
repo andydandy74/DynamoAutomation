@@ -140,6 +140,7 @@ namespace Dynamo.Automation
             string projectOpen = "";
             if (openDetached)
             {
+                projectOpen += "Jrn.Command \"Ribbon\" , \"Open an existing project, ID_REVIT_FILE_OPEN\" \n";
                 projectOpen += "Jrn.Data \"FileOpenSubDialog\" , \"DetachCheckBox\", \"True\" \n";
                 projectOpen += String.Format("Jrn.Data \"File Name\" , \"IDOK\", \"{0}\" \n", revitFilePath);
                 projectOpen += "Jrn.Data \"WorksetConfig\" , \"Custom\", 0 \n";
