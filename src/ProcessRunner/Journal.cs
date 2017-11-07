@@ -282,15 +282,17 @@ namespace Dynamo.Automation
         /// </summary>
         /// <param name="revitFilePath">The path to the Revit file. This can be an .rvt or .rfa file. The path may not contain whitespace or accented characters.</param>
         /// <param name="journalFilePath">The path of the generated journal file.</param>
+        /// <param name="openDetached">Should a (workshared) model be detached from central on open?</param>
+        /// <param name="discardWorksets">When detaching a (workshared) model from central, should worksets be discarded?</param>
         /// <returns>The path of the generated journal file.</returns>
-        public static string PurgeModel(string revitFilePath, string journalFilePath)
+        public static string PurgeModel(string revitFilePath, string journalFilePath, bool openDetached = false, bool discardWorksets = false)
         {
             DeleteJournalFile(journalFilePath);
             // Create journal string
             // Journal needs to be in debug mode. 
             // Otherwise the journal playback may stop if there is nothing to purge.
             string journalString = BuildJournalStart(true);
-            journalString += BuildProjectOpen(revitFilePath);
+            journalString += BuildProjectOpen(revitFilePath, false, openDetached, discardWorksets);
             journalString += BuildProjectPurge();
             journalString += BuildProjectSave();
             journalString += BuildProjectClose();
@@ -306,8 +308,10 @@ namespace Dynamo.Automation
         /// </summary>
         /// <param name="revitFilePaths">The paths to the Revit files. These can be .rvt or .rfa files. The paths may not contain whitespace or accented characters.</param>
         /// <param name="journalFilePath">The path of the generated journal file.</param>
+        /// <param name="openDetached">Should a (workshared) model be detached from central on open?</param>
+        /// <param name="discardWorksets">When detaching a (workshared) model from central, should worksets be discarded?</param>
         /// <returns>The path of the generated journal file.</returns>
-        public static string PurgeModels(List<string> revitFilePaths, string journalFilePath)
+        public static string PurgeModels(List<string> revitFilePaths, string journalFilePath, bool openDetached = false, bool discardWorksets = false)
         {
             DeleteJournalFile(journalFilePath);
             // Create journal string
@@ -315,7 +319,7 @@ namespace Dynamo.Automation
             // Open, purge, save and close all models
             foreach (string revitFilePath in revitFilePaths)
             {
-                journalString += BuildProjectOpen(revitFilePath);
+                journalString += BuildProjectOpen(revitFilePath, false, openDetached, discardWorksets);
                 journalString += BuildProjectPurge();
                 journalString += BuildProjectSave();
                 journalString += BuildProjectClose();
