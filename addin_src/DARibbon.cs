@@ -58,6 +58,7 @@ namespace DynamoAutomation
         {
             try
             {
+                uiCtrlApp = application;
                 // Only try to remove the event handlers if they were actually assigned
                 if (journalModeChecked)
                 {
