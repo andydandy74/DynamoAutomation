@@ -25,13 +25,14 @@ namespace DynamoAutomation
 		
 		private static UIControlledApplication uiCtrlApp;
 		private static EventHandler<DocumentOpeningEventArgs> openingHandler;
+		private static EventHandler<DocumentClosingEventArgs> closingHandler;
 		private static EventHandler<DialogBoxShowingEventArgs> dialogHandler;
 		private static EventHandler<FailuresProcessingEventArgs> warningsHandler;
 		
-		private static string prevDoc;
-		private static int errorsNum;
+		private static int popupsNum;
 		private static int warningsNum;
-		private static StringBuilder report;
+		private static string currDocName;
+		private static string reportPath;
 		
 		#endregion
 		
@@ -44,11 +45,6 @@ namespace DynamoAutomation
 		/// <returns>Return the status of the external application.</returns>
 		public Result OnStartup(UIControlledApplication application)
 		{
-			prevDoc = null;
-			report = new StringBuilder();
-			errorsNum = 0;
-			warningsNum = 0;
-			
 			try
 			{
 				journalChecked = false;
@@ -57,11 +53,15 @@ namespace DynamoAutomation
 				// This handler will be disconnected at the end of the opening trigger
 				openingHandler = new EventHandler<DocumentOpeningEventArgs>(ActivateSwallowers);
 				application.ControlledApplication.DocumentOpening += openingHandler;
+				string jrnPath = application.ControlledApplication.RecordingJournalFilename;
+				jrnPath.Replace(".txt.", "");
+				reportPath = jrnPath + "_ErrorReport.txt";
 				return Result.Succeeded;
 			}
+			
 			catch (Exception ex)
 			{
-				//don't use a dialog to display these, we block those! :)
+				//don't use a dialog to display these, we might block those! :)
 				System.Windows.Forms.MessageBox.Show(ex.ToString(), "DynamoAutomation Error");
 				return Result.Failed;
 			}
@@ -79,12 +79,9 @@ namespace DynamoAutomation
 				uiCtrlApp.ControlledApplication.DocumentOpening -= openingHandler;
 				if (journalModeIsPermissive)
 				{
-					//add the last file to the report and save it
-					PopulateReport();
-					WriteReport(application.ControlledApplication.RecordingJournalFilename);
-					
 					application.DialogBoxShowing -= dialogHandler;
 					application.ControlledApplication.FailuresProcessing -= warningsHandler;
+					application.ControlledApplication.DocumentClosing -= closingHandler;
 				}
 				return Result.Succeeded;
 			}
@@ -101,18 +98,19 @@ namespace DynamoAutomation
 		/// </summary>
 		private void ActivateSwallowers(object o, DocumentOpeningEventArgs e)
 		{
-			PopulateReport();  //record previous stats, if any, then prep for the new doc
-			prevDoc = Path.GetFileNameWithoutExtension(e.PathName);
+			currDocName = Path.GetFileNameWithoutExtension(e.PathName);
 			warningsNum = 0;
-			errorsNum = 0;
+			popupsNum = 0;
 			
 			// And we'll only want to add them if the journal is actually running in permissive mode
 			if (!journalChecked && CheckJournalingMode() )
 			{
 				dialogHandler = new EventHandler<DialogBoxShowingEventArgs>(DismissAllDialogs);
 				warningsHandler = new EventHandler<FailuresProcessingEventArgs>(DismissAllWarnings);
+				closingHandler = new EventHandler<DocumentClosingEventArgs >(PopulateReport);
 				uiCtrlApp.DialogBoxShowing += dialogHandler;
 				uiCtrlApp.ControlledApplication.FailuresProcessing += warningsHandler;
+				uiCtrlApp.ControlledApplication.DocumentClosing += closingHandler;
 				journalChecked = true;
 			}
 		}
@@ -154,30 +152,31 @@ namespace DynamoAutomation
 			}
 		}
 		
-		private void PopulateReport()
+		private void PopulateReport(object o, DocumentClosingEventArgs e)
 		{
-			if (prevDoc != null)
-			{
-				string line;
-				if (warningsNum != 0 || errorsNum != 0)
-				{
-					line = String.Format("Document '{0}' contained {1} warnings and {2} popup dialogs",
-				                            prevDoc, warningsNum, errorsNum);
-				}
-				else
-				{
-					line = String.Format("Document '{0}' contained NO warnings & popup dialogs", prevDoc);
-				}
-				report.AppendLine(line);
-			}
+			PopulateReport();
 		}
 		
-		private void WriteReport(string currentJournalPath)
+		private void PopulateReport()
 		{
-			if (report.Length > 0)
+			string line;
+			if (warningsNum != 0 || popupsNum != 0)
 			{
-				string savePath = currentJournalPath.Replace(".txt", "_ErrReport.txt");
-				File.WriteAllText(savePath, report.ToString() );
+				line = String.Format("Document '{0}' contained {1} warnings and {2} popups{3}",
+				                     currDocName, warningsNum, popupsNum, Environment.NewLine);
+			}
+			else
+			{
+				line = String.Format("Document '{0}' contained NO warnings & popups{1}",
+				                     currDocName, Environment.NewLine);
+			}
+			try
+			{
+				File.AppendAllText(reportPath, line);
+			}
+			catch (Exception ex)
+			{
+				System.Windows.Forms.MessageBox.Show(ex.ToString(), "DynamoAutomation Error");
 			}
 		}
 
@@ -187,7 +186,7 @@ namespace DynamoAutomation
 		private void DismissAllDialogs(object o, DialogBoxShowingEventArgs e)
 		{
 			e.OverrideResult(1);
-			errorsNum += 1;
+			popupsNum += 1;
 		}
 
 		/// <summary>
@@ -198,10 +197,11 @@ namespace DynamoAutomation
 			FailuresAccessor fa = e.GetFailuresAccessor();
 			IList<FailureMessageAccessor> failList = fa.GetFailureMessages();
 			// Inside event handler, get all warnings
-			warningsNum += failList.Count;
+//			warningsNum += failList.Count;
 			foreach (FailureMessageAccessor failure in failList)
 			{
 				fa.DeleteWarning(failure);
+				warningsNum += 1;
 			}
 		}
 	}
