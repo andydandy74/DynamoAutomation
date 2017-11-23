@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <RevitAddIns>
   <AddIn Type="Application">
     <Name>External Tool</Name>
-    <Assembly>DynamoAutomation.dll</Assembly>
-    <ClientId>C5736837-82CA-4E27-B682-DCE8614DB929</ClientId>
+    <Assembly>DAWN.dll</Assembly>
+    <ClientId>80C3539A-6972-498F-A919-4FCC1989B8C3</ClientId>
     <FullClassName>DynamoAutomation.Swallower</FullClassName>
     <VendorId>BaMo</VendorId>
     <VendorDescription>Bad Monkeys</VendorDescription>
