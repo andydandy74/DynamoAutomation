@@ -12,6 +12,8 @@ Besides the DynamoAutomation package itself, you will need the following to succ
 - All folders that contain Revit models or Dynamo graphs (and their respective filenames) must **not** contain whitespaces or special characters (e.g. accented characters like an umlaut).
 - Workshared models may **not** be set to Specify Worksets on open.
 
+If you have the Screencast addin installed, it may be advisable to disable when processing larger numbers of models.
+
 ## Installation Guide
 - Make sure to pick the correct version when downloading/installing
   - If you're running Dynamo 1.x use the latest version of DynamoAutomation
