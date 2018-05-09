@@ -1,17 +1,35 @@
-<Workspace Version="1.0.0.1180" X="231.798959605264" Y="470.105811818464" zoom="0.838193354943797" Name="JournalFiles.Cleanup" Description="Moves all journal files created during a batch-processing operation to a specified directory" ID="85066088-1616-40b1-96e1-c33e685c6948" Category="DynamoAutomation.Journal.Actions">
+<Workspace Version="1.3.1.1736" X="-839.163844230243" Y="34.1214002449175" zoom="1.12517133883071" ScaleFactor="1" Name="JournalFiles.Cleanup" Description="Moves all journal files created during a batch-processing operation to a specified directory" ID="85066088-1616-40b1-96e1-c33e685c6948" Category="DynamoAutomation.Journal.Actions">
   <NamespaceResolutionMap />
   <Elements>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="695f3bb7-2906-4a0b-ab72-b8a22b77f139" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="String.Replace" x="1964.20454473824" y="100.533463860731" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Replace@string,string,string" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="695f3bb7-2906-4a0b-ab72-b8a22b77f139" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="String.Replace" x="1964.20454473824" y="100.533463860731" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Replace@string,string,string">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
     <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="6b7f919a-2326-49b9-91fd-9389e6657f1a" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="File.Move" x="2463.5925707384" y="76.846951308132" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.File.Move@string,string,bool">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
       <PortInfo index="2" default="True" />
     </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
     <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="f2fe9de9-5b00-4422-b570-593e6f199e68" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Directory.Contents" x="841.92050073773" y="183.597491069826" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.Directory.Contents@var,string">
+      <PortInfo index="0" default="False" />
       <PortInfo index="1" default="True" />
     </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <CoreNodeModels.Input.DirectoryObject guid="d31afb2e-914b-4e53-b9ea-be682e8b2ca6" type="CoreNodeModels.Input.DirectoryObject" nickname="Directory.FromPath" x="640.634974786379" y="184.051674239661" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="539aee80-39ce-461c-ac82-f83da0a1b8a9" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FirstItem" x="483.252149588558" y="114.310608861015" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FirstItem@var[]..[]" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction guid="bf9a9df6-3ab4-4a40-a1d9-375ebbd28b76" type="Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction" nickname="List.Join" x="1648.40542696385" y="22.6552810209156" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.Join@var[]..[]" inputcount="4" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="6e48d0cc-3588-4446-b583-c831a2c080fd" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FilePath.DirectoryName" x="272.904165221588" y="115.742694392765" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.FilePath.DirectoryName@string" />
+    <CoreNodeModels.Input.DirectoryObject guid="d31afb2e-914b-4e53-b9ea-be682e8b2ca6" type="CoreNodeModels.Input.DirectoryObject" nickname="Directory.FromPath" x="640.634974786379" y="184.051674239661" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Input.DirectoryObject>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="539aee80-39ce-461c-ac82-f83da0a1b8a9" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FirstItem" x="483.252149588558" y="114.310608861015" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FirstItem@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction guid="bf9a9df6-3ab4-4a40-a1d9-375ebbd28b76" type="Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction" nickname="List.Join" x="1648.40542696385" y="22.6552810209156" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.Join@var[]..[]" inputcount="4">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+      <PortInfo index="3" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="6e48d0cc-3588-4446-b583-c831a2c080fd" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FilePath.DirectoryName" x="272.904165221588" y="115.742694392765" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.FilePath.DirectoryName@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
     <Dynamo.Graph.Nodes.CustomNodes.Symbol guid="f5d49ece-a2fb-4341-8e61-f4712d6d7543" type="Dynamo.Graph.Nodes.CustomNodes.Symbol" nickname="Input" x="1629.73295869108" y="213.91302641742" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <Symbol value="destinationDirectory : string" />
     </Dynamo.Graph.Nodes.CustomNodes.Symbol>
@@ -24,30 +42,24 @@
     <Dynamo.Graph.Nodes.CustomNodes.Symbol guid="a596e595-5510-412c-a9b1-10142e116e4d" type="Dynamo.Graph.Nodes.CustomNodes.Symbol" nickname="Input" x="-102.870502617224" y="15.6578778383881" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <Symbol value="generatedJournalFiles : string[]" />
     </Dynamo.Graph.Nodes.CustomNodes.Symbol>
-    <Dynamo.Graph.Nodes.CustomNodes.Output guid="505a5cc4-1e71-40cc-a4ee-198e83677897" type="Dynamo.Graph.Nodes.CustomNodes.Output" nickname="Output" x="2657.3915838285" y="75.665302208009" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+    <Dynamo.Graph.Nodes.CustomNodes.Output guid="505a5cc4-1e71-40cc-a4ee-198e83677897" type="Dynamo.Graph.Nodes.CustomNodes.Output" nickname="Output" x="2698.27424623955" y="79.2203163307086" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
       <Symbol value="" />
     </Dynamo.Graph.Nodes.CustomNodes.Output>
-    <Dynamo.Graph.Nodes.CustomNodes.Function guid="0a16660b-f26e-48bd-a117-79fd85b4864b" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Passthrough" x="2195.09283665434" y="23.4727435666231" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <ID value="ecce77dc-1290-438e-a056-970b256fd553" />
-      <Name value="Passthrough" />
-      <Description value="Forces a sequential order of execution. The node wired into the output of the Passthrough node will be executed *after* the node wired into the waitFor input (e.g. important for some Revit operations). The value of the passThrough input will be passed on to the node wired into the output port of the Passthrough node." />
-      <Inputs>
-        <Input value="passThrough" />
-        <Input value="waitFor" />
-      </Inputs>
-      <Outputs>
-        <Output value="passThrough" />
-      </Outputs>
-    </Dynamo.Graph.Nodes.CustomNodes.Function>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="595135ed-c889-4d7e-a9c1-37e7e37785cb" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FilterByBoolMask" x="1434.97068798933" y="-157.071075958557" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
-    <Dynamo.Graph.Nodes.CustomNodes.Function guid="58631eac-a05a-4d56-8306-dcca00081a3a" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="String.MatchRegularExpression" x="1181.71312909921" y="-131.239960118596" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="595135ed-c889-4d7e-a9c1-37e7e37785cb" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FilterByBoolMask" x="1434.97068798933" y="-157.071075958557" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="58631eac-a05a-4d56-8306-dcca00081a3a" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="String.ContainsRegularExpression" x="1181.71312909921" y="-131.239960118596" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
       <PortInfo index="2" default="True" />
       <PortInfo index="3" default="True" />
       <PortInfo index="4" default="True" />
       <PortInfo index="5" default="True" />
-      <ID value="f7ef95e1-3082-4cda-a204-a35fd8dc81ed" />
-      <Name value="String.MatchRegularExpression" />
-      <Description value="Determines if a regular expression matches a string (or a list of strings) and returns a boolean value (or a list, depending on the input). The syntax for regular expressions is explained at&#xD;&#xA;http://ironpython-test.readthedocs.org/en/latest/howto/regex.html" />
+      <ID value="5d14d77d-c2c5-4691-9ae0-f423aef03489" />
+      <Name value="Regex.ContainsRegularExpression" />
+      <Description value="Determines if a regular expression matches a string (or a list of strings), i.e. occurs anywhere in the string, and returns a boolean value (or a list, depending on the input). The syntax for regular expressions is explained at&#xD;&#xA;http://ironpython-test.readthedocs.org/en/latest/howto/regex.html" />
       <Inputs>
         <Input value="RegEx" />
         <Input value="str" />
@@ -60,14 +72,16 @@
         <Output value="bool" />
       </Outputs>
     </Dynamo.Graph.Nodes.CustomNodes.Function>
-    <Dynamo.Graph.Nodes.CustomNodes.Function guid="31a6907c-e18f-4c93-a6a3-d115e69ae0d0" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="String.MatchRegularExpression" x="1181.21376141832" y="101.546598161324" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="31a6907c-e18f-4c93-a6a3-d115e69ae0d0" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="String.ContainsRegularExpression" x="1181.21376141832" y="101.546598161324" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
       <PortInfo index="2" default="True" />
       <PortInfo index="3" default="True" />
       <PortInfo index="4" default="True" />
       <PortInfo index="5" default="True" />
-      <ID value="f7ef95e1-3082-4cda-a204-a35fd8dc81ed" />
-      <Name value="String.MatchRegularExpression" />
-      <Description value="Determines if a regular expression matches a string (or a list of strings) and returns a boolean value (or a list, depending on the input). The syntax for regular expressions is explained at&#xD;&#xA;http://ironpython-test.readthedocs.org/en/latest/howto/regex.html" />
+      <ID value="5d14d77d-c2c5-4691-9ae0-f423aef03489" />
+      <Name value="Regex.ContainsRegularExpression" />
+      <Description value="Determines if a regular expression matches a string (or a list of strings), i.e. occurs anywhere in the string, and returns a boolean value (or a list, depending on the input). The syntax for regular expressions is explained at&#xD;&#xA;http://ironpython-test.readthedocs.org/en/latest/howto/regex.html" />
       <Inputs>
         <Input value="RegEx" />
         <Input value="str" />
@@ -80,16 +94,24 @@
         <Output value="bool" />
       </Outputs>
     </Dynamo.Graph.Nodes.CustomNodes.Function>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="4cbf95c8-41dc-4e6f-aafb-91c7f6d9b7e7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FilterByBoolMask" x="1436.93258479695" y="75.0496049793703" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="4f551367-cba8-4e33-b3d9-c8f18b4e7731" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FilterByBoolMask" x="1442.25902801393" y="302.108007047417" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
-    <Dynamo.Graph.Nodes.CustomNodes.Function guid="abf1ef98-a16b-47c8-9f6e-5e386ad9e9c3" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="String.MatchRegularExpression" x="1185.39297599256" y="328.737242315028" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="4cbf95c8-41dc-4e6f-aafb-91c7f6d9b7e7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FilterByBoolMask" x="1436.93258479695" y="75.0496049793703" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="4f551367-cba8-4e33-b3d9-c8f18b4e7731" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FilterByBoolMask" x="1442.25902801393" y="302.108007047417" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="abf1ef98-a16b-47c8-9f6e-5e386ad9e9c3" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="String.ContainsRegularExpression" x="1185.39297599256" y="328.737242315028" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
       <PortInfo index="2" default="True" />
       <PortInfo index="3" default="True" />
       <PortInfo index="4" default="True" />
       <PortInfo index="5" default="True" />
-      <ID value="f7ef95e1-3082-4cda-a204-a35fd8dc81ed" />
-      <Name value="String.MatchRegularExpression" />
-      <Description value="Determines if a regular expression matches a string (or a list of strings) and returns a boolean value (or a list, depending on the input). The syntax for regular expressions is explained at&#xD;&#xA;http://ironpython-test.readthedocs.org/en/latest/howto/regex.html" />
+      <ID value="5d14d77d-c2c5-4691-9ae0-f423aef03489" />
+      <Name value="Regex.ContainsRegularExpression" />
+      <Description value="Determines if a regular expression matches a string (or a list of strings), i.e. occurs anywhere in the string, and returns a boolean value (or a list, depending on the input). The syntax for regular expressions is explained at&#xD;&#xA;http://ironpython-test.readthedocs.org/en/latest/howto/regex.html" />
       <Inputs>
         <Input value="RegEx" />
         <Input value="str" />
@@ -114,7 +136,13 @@
       <System.String>dump.[0-9]+.txt</System.String>
       <System.String value="dump.[0-9]+.txt" />
     </CoreNodeModels.Input.StringInput>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="5a5ddd36-8b7d-4dfb-926d-205acc8a4ee6" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.UniqueItems" x="1803.05197573491" y="22.2116398159104" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.UniqueItems@var[]..[]" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="5a5ddd36-8b7d-4dfb-926d-205acc8a4ee6" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.UniqueItems" x="1803.05197573491" y="22.2116398159104" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.UniqueItems@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="6cbc39c9-280e-4bb0-9f8e-8f03733e377a" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="2122.89718357169" y="25.9817846223918" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="{passthrough,waitfor}[0];" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
   </Elements>
   <Connectors>
     <Dynamo.Graph.Connectors.ConnectorModel start="695f3bb7-2906-4a0b-ab72-b8a22b77f139" start_index="0" end="6b7f919a-2326-49b9-91fd-9389e6657f1a" end_index="1" portType="0" />
@@ -132,10 +160,9 @@
     <Dynamo.Graph.Connectors.ConnectorModel start="6e48d0cc-3588-4446-b583-c831a2c080fd" start_index="0" end="539aee80-39ce-461c-ac82-f83da0a1b8a9" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="f5d49ece-a2fb-4341-8e61-f4712d6d7543" start_index="0" end="695f3bb7-2906-4a0b-ab72-b8a22b77f139" end_index="2" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="9e85beb7-12fd-4a40-9b55-e9680107903a" start_index="0" end="6b7f919a-2326-49b9-91fd-9389e6657f1a" end_index="2" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="64c00cb9-f0e8-4558-8daf-d2e0290fc4f4" start_index="0" end="0a16660b-f26e-48bd-a117-79fd85b4864b" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="64c00cb9-f0e8-4558-8daf-d2e0290fc4f4" start_index="0" end="6cbc39c9-280e-4bb0-9f8e-8f03733e377a" end_index="1" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="a596e595-5510-412c-a9b1-10142e116e4d" start_index="0" end="bf9a9df6-3ab4-4a40-a1d9-375ebbd28b76" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="a596e595-5510-412c-a9b1-10142e116e4d" start_index="0" end="6e48d0cc-3588-4446-b583-c831a2c080fd" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="0a16660b-f26e-48bd-a117-79fd85b4864b" start_index="0" end="6b7f919a-2326-49b9-91fd-9389e6657f1a" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="595135ed-c889-4d7e-a9c1-37e7e37785cb" start_index="0" end="bf9a9df6-3ab4-4a40-a1d9-375ebbd28b76" end_index="1" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="58631eac-a05a-4d56-8306-dcca00081a3a" start_index="0" end="595135ed-c889-4d7e-a9c1-37e7e37785cb" end_index="1" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="31a6907c-e18f-4c93-a6a3-d115e69ae0d0" start_index="0" end="4cbf95c8-41dc-4e6f-aafb-91c7f6d9b7e7" end_index="1" portType="0" />
@@ -145,8 +172,9 @@
     <Dynamo.Graph.Connectors.ConnectorModel start="e36d5d4c-7dfa-4be0-85bd-7a3ac41b903f" start_index="0" end="abf1ef98-a16b-47c8-9f6e-5e386ad9e9c3" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="aa03792b-68e6-4db3-b360-8c76cce00965" start_index="0" end="58631eac-a05a-4d56-8306-dcca00081a3a" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="4f6a80f1-cc38-4bfb-8f67-36286be12b8c" start_index="0" end="31a6907c-e18f-4c93-a6a3-d115e69ae0d0" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="5a5ddd36-8b7d-4dfb-926d-205acc8a4ee6" start_index="0" end="0a16660b-f26e-48bd-a117-79fd85b4864b" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="5a5ddd36-8b7d-4dfb-926d-205acc8a4ee6" start_index="0" end="695f3bb7-2906-4a0b-ab72-b8a22b77f139" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="5a5ddd36-8b7d-4dfb-926d-205acc8a4ee6" start_index="0" end="6cbc39c9-280e-4bb0-9f8e-8f03733e377a" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6cbc39c9-280e-4bb0-9f8e-8f03733e377a" start_index="0" end="6b7f919a-2326-49b9-91fd-9389e6657f1a" end_index="0" portType="0" />
   </Connectors>
   <Notes />
   <Annotations />
