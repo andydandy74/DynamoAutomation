@@ -3,6 +3,8 @@ DynamoAutomation is a package for the [Dynamo](https://github.com/DynamoDS/Dynam
 
 [DynamoAutomation Teaser Video](http://www.youtube.com/watch?v=vu4i-gEzzUo&autoplay=1)
 
+**DynamoAutomation has not yet been tested with Dynamo 2.x - any feedback welcome.**
+
 ## Requirements
 Besides the DynamoAutomation package itself, you will need the following to successfully use DynamoAutomation:
 - Any Dynamo 0.9.x or 1.x build
