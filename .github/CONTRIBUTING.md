@@ -10,5 +10,4 @@ Some simple rules for posting issues and pull requests for DynamoAutomation
 
 ### Pull Requests
 - **Describe the purpose of your PR and what you have changed in the original code.**
-- **Do *not* submit anything authored in a post-1.0.0 build** (build numbers larger than 1.0.0.1180).
 - **Make sure you are running the *latest available version** of DynamoAutomation (see https://github.com/andydandy74/DynamoAutomation/wiki/Version-History)
