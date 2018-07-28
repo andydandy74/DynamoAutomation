@@ -1,4 +1,4 @@
-<Workspace Version="1.3.1.1736" X="-839.163844230243" Y="34.1214002449175" zoom="1.12517133883071" ScaleFactor="1" Name="JournalFiles.Cleanup" Description="Moves all journal files created during a batch-processing operation to a specified directory" ID="85066088-1616-40b1-96e1-c33e685c6948" Category="DynamoAutomation.Journal.Actions">
+<Workspace Version="1.3.2.2480" X="-220.000546173923" Y="157.315151957092" zoom="0.509228422110201" ScaleFactor="1" Name="JournalFiles.Cleanup" Description="Moves all journal files created during a batch-processing operation to a specified directory" ID="85066088-1616-40b1-96e1-c33e685c6948" Category="DynamoAutomation.Journal.Actions">
   <NamespaceResolutionMap />
   <Elements>
     <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="695f3bb7-2906-4a0b-ab72-b8a22b77f139" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="String.Replace" x="1964.20454473824" y="100.533463860731" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Replace@string,string,string">
@@ -50,14 +50,14 @@
       <PortInfo index="0" default="False" />
       <PortInfo index="1" default="False" />
     </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.CustomNodes.Function guid="58631eac-a05a-4d56-8306-dcca00081a3a" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="String.ContainsRegularExpression" x="1181.71312909921" y="-131.239960118596" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="58631eac-a05a-4d56-8306-dcca00081a3a" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Regex.ContainsRegularExpression" x="1181.71312909921" y="-131.239960118596" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
       <PortInfo index="0" default="False" />
       <PortInfo index="1" default="False" />
       <PortInfo index="2" default="True" />
       <PortInfo index="3" default="True" />
       <PortInfo index="4" default="True" />
       <PortInfo index="5" default="True" />
-      <ID value="5d14d77d-c2c5-4691-9ae0-f423aef03489" />
+      <ID value="ee4bdd16-d600-41f2-ae6b-18a676be42a2" />
       <Name value="Regex.ContainsRegularExpression" />
       <Description value="Determines if a regular expression matches a string (or a list of strings), i.e. occurs anywhere in the string, and returns a boolean value (or a list, depending on the input). The syntax for regular expressions is explained at&#xD;&#xA;http://ironpython-test.readthedocs.org/en/latest/howto/regex.html" />
       <Inputs>
@@ -72,14 +72,14 @@
         <Output value="bool" />
       </Outputs>
     </Dynamo.Graph.Nodes.CustomNodes.Function>
-    <Dynamo.Graph.Nodes.CustomNodes.Function guid="31a6907c-e18f-4c93-a6a3-d115e69ae0d0" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="String.ContainsRegularExpression" x="1181.21376141832" y="101.546598161324" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="31a6907c-e18f-4c93-a6a3-d115e69ae0d0" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Regex.ContainsRegularExpression" x="1181.21376141832" y="101.546598161324" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
       <PortInfo index="0" default="False" />
       <PortInfo index="1" default="False" />
       <PortInfo index="2" default="True" />
       <PortInfo index="3" default="True" />
       <PortInfo index="4" default="True" />
       <PortInfo index="5" default="True" />
-      <ID value="5d14d77d-c2c5-4691-9ae0-f423aef03489" />
+      <ID value="ee4bdd16-d600-41f2-ae6b-18a676be42a2" />
       <Name value="Regex.ContainsRegularExpression" />
       <Description value="Determines if a regular expression matches a string (or a list of strings), i.e. occurs anywhere in the string, and returns a boolean value (or a list, depending on the input). The syntax for regular expressions is explained at&#xD;&#xA;http://ironpython-test.readthedocs.org/en/latest/howto/regex.html" />
       <Inputs>
@@ -102,14 +102,14 @@
       <PortInfo index="0" default="False" />
       <PortInfo index="1" default="False" />
     </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.CustomNodes.Function guid="abf1ef98-a16b-47c8-9f6e-5e386ad9e9c3" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="String.ContainsRegularExpression" x="1185.39297599256" y="328.737242315028" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="abf1ef98-a16b-47c8-9f6e-5e386ad9e9c3" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Regex.ContainsRegularExpression" x="1185.39297599256" y="328.737242315028" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
       <PortInfo index="0" default="False" />
       <PortInfo index="1" default="False" />
       <PortInfo index="2" default="True" />
       <PortInfo index="3" default="True" />
       <PortInfo index="4" default="True" />
       <PortInfo index="5" default="True" />
-      <ID value="5d14d77d-c2c5-4691-9ae0-f423aef03489" />
+      <ID value="ee4bdd16-d600-41f2-ae6b-18a676be42a2" />
       <Name value="Regex.ContainsRegularExpression" />
       <Description value="Determines if a regular expression matches a string (or a list of strings), i.e. occurs anywhere in the string, and returns a boolean value (or a list, depending on the input). The syntax for regular expressions is explained at&#xD;&#xA;http://ironpython-test.readthedocs.org/en/latest/howto/regex.html" />
       <Inputs>
@@ -180,6 +180,6 @@
   <Annotations />
   <Presets />
   <Cameras>
-    <Camera Name="Hintergrundvorschau" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
   </Cameras>
 </Workspace>
