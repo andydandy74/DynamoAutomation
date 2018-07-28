@@ -3,6 +3,8 @@ DynamoAutomation is a package for the [Dynamo](https://github.com/DynamoDS/Dynam
 
 [DynamoAutomation Teaser Video](http://www.youtube.com/watch?v=vu4i-gEzzUo&autoplay=1)
 
+**DynamoAutomation has not yet been tested with Dynamo 2.x - any feedback welcome.**
+
 ## Requirements
 Besides the DynamoAutomation package itself, you will need the following to successfully use DynamoAutomation:
 - Any Dynamo 0.9.x or 1.x build
@@ -10,8 +12,9 @@ Besides the DynamoAutomation package itself, you will need the following to succ
 - Revit 2015 or later
   - DynamoAutomation should run on top of Revit 2015 but that hasn't been tested for a while now
 - All folders that contain Revit models or Dynamo graphs (and their respective filenames) must **not** contain whitespaces or special characters (e.g. accented characters like an umlaut).
-- Revit models must **not** be saved in a Perspective view.
 - Workshared models may **not** be set to Specify Worksets on open.
+
+If you have the Screencast addin installed, it may be advisable to disable when processing larger numbers of models.
 
 ## Installation Guide
 - Make sure to pick the correct version when downloading/installing
