@@ -2,7 +2,7 @@
 
 ![Image](https://raw.githubusercontent.com/andydandy74/DynamoAutomation/master/icon/raw/DynamoAutomationLogo.png)
 
-**DynamoAutomation** is a package for the [Dynamo](https://github.com/DynamoDS/Dynamo) visual programming environment. It allows Dynamo users to batch process or batch purge multiple Revit models by driving Revit (and the Dynamo addin) from the outside using the Dynamo sandbox, each time using the same Dynamo workflow, e.g. process an entire folder of models. This opens up a lot of possibilities for achieving a higher degree of automation in labour-intensive areas such as quality control and enforcement of company or project standards.
+**DynamoAutomation** is a package for the [Dynamo](http://www.dynamobim.com) visual programming environment. It allows Dynamo users to batch process or batch purge multiple Revit models by driving Revit (and the Dynamo addin) from the outside using the Dynamo sandbox, each time using the same Dynamo workflow, e.g. process an entire folder of models. This opens up a lot of possibilities for achieving a higher degree of automation in labour-intensive areas such as quality control and enforcement of company or project standards.
 
 You can find the [version history](https://github.com/andydandy74/DynamoAutomation/wiki/Version-History) on the wiki.
 
