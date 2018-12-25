@@ -5,7 +5,7 @@
 
 You can find the [version history](https://github.com/andydandy74/DynamoAutomation/wiki/Version-History) on the wiki.
 
-[DynamoAutomation Teaser Video](http://www.youtube.com/watch?v=vu4i-gEzzUo&autoplay=1)
+[RTCEUR 2015 DynamoAutomation Teaser Video](http://www.youtube.com/watch?v=vu4i-gEzzUo&autoplay=1)
 
 **DynamoAutomation has not yet been tested with Dynamo 2.x - any feedback welcome.**
 
