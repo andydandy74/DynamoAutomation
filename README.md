@@ -1,5 +1,9 @@
-# DynamoAutomation
-DynamoAutomation is a package for the [Dynamo](https://github.com/DynamoDS/Dynamo) visual programming environment. It allows Dynamo users to batch process or batch purge multiple Revit models by driving Revit (and the Dynamo addin) from the outside using the Dynamo sandbox, each time using the same Dynamo workflow, e.g. process an entire folder of models. This opens up a lot of possibilities for achieving a higher degree of automation in labour-intensive areas such as quality control and enforcement of company or project standards.
+[![](https://img.shields.io/badge/current%201.x%20version-1.31.1-brightgreen.svg)](http://dynamopackages.com/) ![Image](https://img.shields.io/badge/current%202.x%20version-none-brightgreen.svg)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/andydandy74/DynamoAutomation/blob/master/.github/CONTRIBUTING.md) [![](https://img.shields.io/twitter/follow/a_dieckmann.svg?label=Follow&style=social)](https://twitter.com/a_dieckmann)
+
+**DynamoAutomation** is a package for the [Dynamo](https://github.com/DynamoDS/Dynamo) visual programming environment. It allows Dynamo users to batch process or batch purge multiple Revit models by driving Revit (and the Dynamo addin) from the outside using the Dynamo sandbox, each time using the same Dynamo workflow, e.g. process an entire folder of models. This opens up a lot of possibilities for achieving a higher degree of automation in labour-intensive areas such as quality control and enforcement of company or project standards.
+
+You can find the [version history](https://github.com/andydandy74/DynamoAutomation/wiki/Version-History) on the wiki.
 
 [DynamoAutomation Teaser Video](http://www.youtube.com/watch?v=vu4i-gEzzUo&autoplay=1)
 
@@ -20,13 +24,10 @@ If you have the Screencast addin installed, it may be advisable to disable when 
 - Make sure to pick the correct version when downloading/installing
   - If you're running Dynamo 1.x use the latest version of DynamoAutomation
   - If you're running Dynamo 0.9.x use DynamoAutomation 0.90.3 (works with Revit 2015 & 2016)
-- DynamoAutomation has a dependency on the Clockwork package, but Clockwork is updated more frequently than Dynamo.
+- DynamoAutomation has a dependency on the Clockwork package, but Clockwork is updated more frequently than DynamoAutomation.
   - When installing DynamoAutomation, Dynamo will download and install a version of Clockwork that may not be current anymore.
   - Ater installing DynamoAutomation check the package manager to see if your installed version of Clockwork can be upgraded to a more recent version.
   - Alternatively, download DynamoAutomation from http://www.dynamopackages.com (without Clockwork) and copy manually to your Dynamo packages directory.
 
 ## How to Use DynamoAutomation
 To get you started, this repository contains a number of [sample files](https://github.com/andydandy74/DynamoAutomation/tree/master/samples) for different automation scenarios. If you are looking for more in-depth information, please refer to the [DynamoAutomation wiki](https://github.com/andydandy74/DynamoAutomation/wiki).
- 
-## Updates & Version History
-Since Dynamo's package manager currently does not (yet) have an update notification infrastructure in place, you may want to follow me on [twitter](https://twitter.com/a_dieckmann) for update notifications. Also, you can find the [version history](https://github.com/andydandy74/DynamoAutomation/wiki/Version-History) on the wiki.
