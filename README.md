@@ -10,6 +10,13 @@ You can find the [version history](https://github.com/andydandy74/DynamoAutomati
 
 **DynamoAutomation has not yet been tested with Dynamo 2.x - any feedback welcome.**
 
+## Alternatives
+I haven't worked on DynamoAutomation for a while now because I haven't used it myself for quite some time - and I am not sure if / when I will find the time to work on it again.
+
+In the meantime, you might want to check out these alternatives for automating Dynamo tasks:
+* Revit Batch Processor (free): https://github.com/DanRumery/RevitBatchProcessor
+* IMAGINiT Clarity (commercial): https://www.imaginit.com/software/imaginit-utilities-other-products/clarity
+
 ## Requirements
 Besides the DynamoAutomation package itself, you will need the following to successfully use DynamoAutomation:
 - Any Dynamo 0.9.x or 1.x build
