@@ -1,4 +1,11 @@
-![Maintained](https://img.shields.io/badge/maintained-not%20right%20now-yellow.svg) [![Current version](https://img.shields.io/badge/current%201.x%20version-1.31.1-brightgreen.svg)](http://dynamopackages.com/) ![Node count](https://img.shields.io/badge/node%20count-11-brightgreen.svg) [![Dependency](https://img.shields.io/badge/dependency-Clockwork-brightgreen.svg)](https://github.com/andydandy74/ClockworkForDynamo) [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/andydandy74/DynamoAutomation/blob/master/.github/CONTRIBUTING.md) [![Follow me on LinkedIn for updates](https://img.shields.io/badge/LinkedIn-0077B5?style=social&logo=linkedin)](https://www.linkedin.com/in/andreasdieckmann) 
+![Maintained](https://img.shields.io/badge/Maintained-not%20right%20now-yellow.svg) 
+[![Current version](https://img.shields.io/badge/current%201.x%20version-1.31.1-brightgreen.svg)](http://dynamopackages.com/) 
+![Node count](https://img.shields.io/badge/Node%20count-11-brightgreen.svg) 
+[![Open issues](https://img.shields.io/github/issues-raw/andydandy74/DynamoAutomation?label=Open%20issues&color=brightgreen)](https://github.com/andydandy74/DynamoAutomation/issues?q=is%3Aopen+is%3Aissue)
+[![Closed issues](https://img.shields.io/github/issues-closed-raw/andydandy74/DynamoAutomation?label=Closed%20issues&color=brightgreen)](https://github.com/andydandy74/DynamoAutomation/issues?q=is%3Aissue+is%3Aclosed)
+[![Dependency](https://img.shields.io/badge/Dependency-Clockwork-brightgreen.svg)](https://github.com/andydandy74/ClockworkForDynamo) 
+[![Contributions welcome](https://img.shields.io/badge/Contributions-welcome-brightgreen.svg?style=flat)](https://github.com/andydandy74/DynamoAutomation/blob/master/.github/CONTRIBUTING.md) 
+[![Follow me on LinkedIn for updates](https://img.shields.io/badge/LinkedIn-0077B5?style=social&logo=linkedin)](https://www.linkedin.com/in/andreasdieckmann) 
 
 ![Image](https://raw.githubusercontent.com/andydandy74/DynamoAutomation/master/icon/raw/DynamoAutomationLogo.png)
 
