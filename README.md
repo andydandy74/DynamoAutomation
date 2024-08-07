@@ -22,6 +22,7 @@ I haven't worked on DynamoAutomation for a while now because I haven't used it m
 
 In the meantime, you might want to check out these alternatives for automating Dynamo tasks:
 * Revit Batch Processor (free): https://github.com/DanRumery/RevitBatchProcessor
+* Bird Tools Dynamo Multiplayer (free): https://www.birdtools-developers.com/dmu.html
 * IMAGINiT Clarity (commercial): https://www.imaginit.com/software/imaginit-utilities-other-products/clarity
 
 ## Requirements
