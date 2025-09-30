@@ -25,6 +25,7 @@ In the meantime, you might want to check out these alternatives for automating D
 * Bird Tools Dynamo Multiplayer (free): https://www.birdtools-developers.com/dmu.html
 * IMAGINiT Clarity (commercial): https://www.imaginit.com/software/imaginit-utilities-other-products/clarity
 * Orkestra (commercial): https://orkestra.online/
+* DynaOne (commercial): https://camilion.eu/product/revit-plugin-to-run-a-dynamo-script/
 
 ## Requirements
 Besides the DynamoAutomation package itself, you will need the following to successfully use DynamoAutomation:
